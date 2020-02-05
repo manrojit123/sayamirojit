@@ -6,9 +6,11 @@
 /* Large Mobile :480px. */
 /* 1. Theme default css */
 @import url("https://fonts.googleapis.com/css?family=Alata|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Playfair+Display|Poppins|Quicksand&display=swap');
+
 /* line 5, ../../Arafath/CL/December/230. Portfolio/HTML/scss/theme-default.scss */
 body {
-  font-family: "Alata", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -33,7 +35,8 @@ a,
 
 /* line 20, ../../Arafath/CL/December/230. Portfolio/HTML/scss/theme-default.scss */
 a:focus,
-.button:focus, button:focus {
+.button:focus,
+button:focus {
   text-decoration: none;
   outline: none;
 }
@@ -59,7 +62,11 @@ button {
 }
 
 /* line 39, ../../Arafath/CL/December/230. Portfolio/HTML/scss/theme-default.scss */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Alata", sans-serif;
   color: #191d34;
 }
@@ -266,7 +273,7 @@ h3 {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', endColorstr='#007db9e8',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5db2ff', endColorstr='#007db9e8', GradientType=1);
   /* IE6-9 */
   top: 0;
   left: 0;
@@ -688,6 +695,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 24, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_section_title.scss */
   .section_title h3 {
     font-size: 30px;
@@ -696,6 +704,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 24, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_section_title.scss */
   .section_title h3 {
     font-size: 36px;
@@ -704,6 +713,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 41, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_section_title.scss */
   .section_title h3 br {
     display: none;
@@ -728,6 +738,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 60, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_section_title.scss */
   .section_title p br {
     display: none;
@@ -756,6 +767,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 80, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_section_title.scss */
   .mb-50 {
     margin-bottom: 40px;
@@ -763,6 +775,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 4, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slick-nav.scss */
   .mobile_menu {
     position: absolute;
@@ -801,6 +814,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 35, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slick-nav.scss */
   .slicknav_menu .slicknav_nav a i {
     display: none;
@@ -808,6 +822,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 35, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slick-nav.scss */
   .slicknav_menu .slicknav_nav a i {
     display: none;
@@ -839,6 +854,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 12, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slick-nav.scss */
   .slicknav_menu {
     margin-right: 0px;
@@ -881,6 +897,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area {
     padding-top: 0;
@@ -888,6 +905,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area {
     padding-top: 0;
@@ -902,6 +920,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 16, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area {
     padding: 10px 0px;
@@ -909,6 +928,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 16, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area {
     padding: 10px 15px;
@@ -916,6 +936,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 16, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area {
     padding: 25px 50px;
@@ -923,6 +944,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 16, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area {
     padding: 25px 85px;
@@ -936,6 +958,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 34, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area.details_nav_bg {
     padding-bottom: 10px;
@@ -948,6 +971,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 54, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img {
     text-align: left;
@@ -955,6 +979,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 54, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img {
     text-align: left;
@@ -962,6 +987,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 54, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img {
     text-align: left;
@@ -969,6 +995,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 68, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img img {
     width: 70px;
@@ -976,6 +1003,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 68, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .logo-img img {
     width: 70px;
@@ -1001,6 +1029,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 84, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .Appointment .search_button {
     margin-right: 15px;
@@ -1008,6 +1037,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 84, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .Appointment .search_button {
     margin-right: 15px;
@@ -1046,6 +1076,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 113, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
     font-size: 15px;
@@ -1053,6 +1084,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 113, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a {
     font-size: 15px;
@@ -1065,6 +1097,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 132, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a i {
     display: none !important;
@@ -1072,6 +1105,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 132, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li a i {
     display: none !important;
@@ -1109,6 +1143,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 167, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li .submenu {
     left: -40px;
@@ -1116,6 +1151,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 167, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area .main-menu ul li .submenu {
     left: -40px;
@@ -1151,14 +1187,14 @@ h3 {
 }
 
 /* line 203, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
-.header-area .main-header-area .main-menu ul li:hover > .submenu {
+.header-area .main-header-area .main-menu ul li:hover>.submenu {
   opacity: 1;
   visibility: visible;
   top: 150%;
 }
 
 /* line 208, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
-.header-area .main-header-area .main-menu ul li:hover > a::before {
+.header-area .main-header-area .main-menu ul li:hover>a::before {
   opacity: 1;
   transform: scaleX(1);
 }
@@ -1185,6 +1221,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 218, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area.sticky {
     padding: 10px 0px;
@@ -1192,6 +1229,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 218, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .main-header-area.sticky {
     padding: 10px 0px;
@@ -1220,6 +1258,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 261, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .header-top_area .social_media_links {
     text-align: center;
@@ -1244,6 +1283,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 274, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .header-top_area .short_contact_list {
     text-align: center;
@@ -1263,6 +1303,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 282, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header-area .header-top_area .short_contact_list ul li a {
     margin-left: 0;
@@ -1288,6 +1329,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 304, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header_bottom_border.white_border {
     padding: 0;
@@ -1296,6 +1338,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 304, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header_bottom_border.white_border {
     padding: 0;
@@ -1304,6 +1347,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 301, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_header.scss */
   .header_bottom_border {
     padding: 0;
@@ -1323,6 +1367,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 3, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .slider_area .single_slider {
     height: 500px;
@@ -1330,6 +1375,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 3, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .slider_area .single_slider {
     height: 620px;
@@ -1345,13 +1391,14 @@ h3 {
 /* line 21, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
 .slider_area .single_slider .slider_text h3 {
   color: #FFF;
-  font-family: "Alata", sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 34px;
   font-weight: 400;
   line-height: 62px;
 }
 
 @media (max-width: 767px) {
+
   /* line 21, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
     font-size: 25px;
@@ -1360,6 +1407,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 21, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
     font-size: 30px;
@@ -1368,11 +1416,12 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 21, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
     font-size: 33px;
     letter-spacing: 3px;
-    line-height: 55px;
+    line-height: 40px;
   }
 }
 
@@ -1389,6 +1438,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 44, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text span {
     font-size: 16px;
@@ -1396,6 +1446,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 44, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text span {
     font-size: 16px;
@@ -1419,6 +1470,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 64, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .outline_text {
     font-size: 120px;
@@ -1426,6 +1478,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 64, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .outline_text {
     font-size: 150px;
@@ -1463,6 +1516,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 99, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .outline_text.testmonial {
     font-size: 120px;
@@ -1470,6 +1524,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 99, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_slider.scss */
   .outline_text.testmonial {
     font-size: 150px;
@@ -1493,6 +1548,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area {
     padding: 30px 0 40px 0;
@@ -1500,6 +1556,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area {
     padding: 30px 0 40px 0;
@@ -1522,6 +1579,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 19, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_main_wrap {
     padding: 30px 0;
@@ -1529,6 +1587,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 25, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_main_wrap .about_image img {
     width: 100%;
@@ -1536,6 +1595,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 32, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info2 {
     margin-bottom: 30px;
@@ -1551,6 +1611,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 36, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info2 h3 {
     font-size: 30px;
@@ -1559,6 +1620,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 36, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info2 h3 {
     font-size: 35px;
@@ -1567,6 +1629,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 36, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info2 h3 {
     font-size: 30px;
@@ -1586,6 +1649,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 62, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info2 p br {
     display: none;
@@ -1598,6 +1662,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 69, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info {
     padding-top: 50px;
@@ -1608,6 +1673,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 69, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info {
     padding-left: 30px;
@@ -1617,6 +1683,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 69, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info {
     padding-left: 30px;
@@ -1626,6 +1693,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 69, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info {
     padding-left: 30px;
@@ -1642,6 +1710,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 93, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info h3 {
     font-size: 30px;
@@ -1650,6 +1719,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 93, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info h3 {
     font-size: 38px;
@@ -1658,6 +1728,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 93, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info h3 {
     font-size: 30px;
@@ -1666,6 +1737,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 110, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info h3 br {
     display: none;
@@ -1673,6 +1745,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 110, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info h3 br {
     display: none;
@@ -1680,6 +1753,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 110, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info h3 br {
     display: none;
@@ -1696,6 +1770,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 128, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info p br {
     display: none;
@@ -1708,6 +1783,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 134, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .features_area .features_info ul {
     margin-bottom: 30px;
@@ -1756,6 +1832,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 168, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .productivity_area {
     padding: 100px 0;
@@ -1771,6 +1848,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 177, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .productivity_area h3 {
     font-size: 30px;
@@ -1781,6 +1859,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 177, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .productivity_area h3 {
     margin-bottom: 30px;
@@ -1793,6 +1872,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 192, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .productivity_area .app_download {
     text-align: center;
@@ -1800,6 +1880,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 192, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .productivity_area .app_download {
     text-align: center;
@@ -1812,6 +1893,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 200, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_features.scss */
   .productivity_area .app_download img {
     margin: 5px 0;
@@ -1825,6 +1907,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_counter.scss */
   .counter_area {
     padding-bottom: 30px;
@@ -1856,6 +1939,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 15, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_counter.scss */
   .counter_area .single_counter h3 span {
     font-size: 35px;
@@ -1897,6 +1981,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 9, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_area .about_info {
     padding-left: 0;
@@ -1905,6 +1990,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 9, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_area .about_info {
     padding-left: 0;
@@ -1914,6 +2000,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 9, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_area .about_info {
     padding-left: 20px;
@@ -1929,6 +2016,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 23, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_area .about_info h3 {
     font-size: 30px;
@@ -1938,6 +2026,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 23, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_area .about_info h3 {
     font-size: 30px;
@@ -1947,6 +2036,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 38, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_area .about_info h3 br {
     display: none;
@@ -1954,6 +2044,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 38, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_area .about_info h3 br {
     display: none;
@@ -1974,6 +2065,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 56, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_wrap_area {
     padding-top: 70px;
@@ -1981,6 +2073,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 56, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_wrap_area {
     padding-top: 70px;
@@ -1993,6 +2086,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 64, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_wrap_area .about_heading {
     margin-bottom: 50px;
@@ -2000,6 +2094,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 64, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_wrap_area .about_heading {
     margin-bottom: 30px;
@@ -2014,6 +2109,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 72, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_wrap_area .about_heading h3 {
     font-size: 30px;
@@ -2021,6 +2117,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 72, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_wrap_area .about_heading h3 {
     font-size: 30px;
@@ -2033,6 +2130,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 85, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_wrap_area .about_info_wrap .single_info {
     margin-bottom: 30px;
@@ -2040,6 +2138,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 85, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_about.scss */
   .about_wrap_area .about_info_wrap .single_info {
     margin-bottom: 30px;
@@ -2057,6 +2156,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 2, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .mt-50 {
     margin-top: 30px;
@@ -2069,6 +2169,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 8, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .mb-50 {
     margin-bottom: 30px;
@@ -2104,6 +2205,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 28, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery {
     width: 100%;
@@ -2111,6 +2213,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 28, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery {
     width: 50%;
@@ -2118,6 +2221,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 28, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery {
     width: 50%;
@@ -2125,6 +2229,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 28, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery {
     width: 33.33333%;
@@ -2153,6 +2258,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 46, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery::before {
     width: 250px;
@@ -2166,6 +2272,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 64, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery.small_width {
     width: 100%;
@@ -2173,6 +2280,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 64, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery.small_width {
     width: 50%;
@@ -2180,6 +2288,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 64, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery.small_width {
     width: 50%;
@@ -2187,6 +2296,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 64, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery.small_width {
     width: 33.33333%;
@@ -2200,6 +2310,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 79, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery .thumb {
     height: 300px;
@@ -2207,6 +2318,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 79, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery .thumb {
     height: 370px;
@@ -2214,6 +2326,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 79, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery .thumb {
     height: 350px;
@@ -2221,6 +2334,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 79, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery .thumb {
     height: auto;
@@ -2239,7 +2353,7 @@ h3 {
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  padding:20px;
+  padding: 20px;
 }
 
 /* line 103, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
@@ -2258,6 +2372,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 107, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery .gallery_hover .hover_inner {
     padding-left: 15px;
@@ -2283,6 +2398,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 116, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery .gallery_hover .hover_inner span {
     font-size: 14px;
@@ -2306,6 +2422,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 131, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery .gallery_hover .hover_inner h3 {
     font-size: 20px;
@@ -2320,6 +2437,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 149, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery:hover::before {
     left: -10%;
@@ -2327,6 +2445,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 149, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery:hover::before {
     left: -13%;
@@ -2334,6 +2453,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 149, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
   .portfolio_area .single_gallery:hover::before {
     left: -10%;
@@ -2341,7 +2461,8 @@ h3 {
 }
 
 /* line 167, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_gallery.scss */
-.portfolio_area .single_gallery:hover .hover_inner h3, .portfolio_area .single_gallery:hover .hover_inner span {
+.portfolio_area .single_gallery:hover .hover_inner h3,
+.portfolio_area .single_gallery:hover .hover_inner span {
   opacity: 1 !important;
   left: 0%;
 }
@@ -2370,6 +2491,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 7, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_footer.scss */
   .footer .footer_top {
     padding-top: 60px;
@@ -2393,6 +2515,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 16, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_footer.scss */
   .footer .footer_top .footer_widget .footer_title {
     margin-bottom: 20px;
@@ -2409,6 +2532,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 27, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_footer.scss */
   .footer .footer_top .footer_widget .footer_logo {
     margin-bottom: 20px;
@@ -2482,6 +2606,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 82, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_footer.scss */
   .footer .copy-right_text .copy_right {
     font-size: 13px;
@@ -2499,6 +2624,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 95, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_footer.scss */
   .footer .socail_links {
     margin-top: 30px;
@@ -2569,6 +2695,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 13, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_bradcam.scss */
   .bradcam_area {
     padding: 120px 0;
@@ -2586,6 +2713,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 36, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_bradcam.scss */
   .bradcam_area h3 {
     font-size: 30px;
@@ -2897,6 +3025,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 2, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_tesmonial.scss */
   .testimonial_area {
     padding: 50px 0;
@@ -2904,6 +3033,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 2, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_tesmonial.scss */
   .testimonial_area {
     padding: 100px 0;
@@ -2921,6 +3051,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 16, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_tesmonial.scss */
   .testimonial_area .single_testmonial p {
     margin-bottom: 25px;
@@ -2928,6 +3059,7 @@ h3 {
 }
 
 @media (min-width: 320px) and (max-width: 1500px) {
+
   /* line 26, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_tesmonial.scss */
   .testimonial_area .single_testmonial p br {
     display: none;
@@ -2988,6 +3120,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_discuss.scss */
   .discuss_projects {
     padding: 70px 0 55px 0;
@@ -2995,6 +3128,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_discuss.scss */
   .discuss_projects {
     padding: 120px 0 105px 0;
@@ -3010,6 +3144,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 14, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_discuss.scss */
   .discuss_projects .project_text h3 {
     font-size: 38px;
@@ -3017,6 +3152,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 14, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_discuss.scss */
   .discuss_projects .project_text h3 {
     font-size: 48px;
@@ -3040,6 +3176,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_service.scss */
   .service_area {
     padding-bottom: 30px;
@@ -3048,6 +3185,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_service.scss */
   .service_area {
     padding-bottom: 50px;
@@ -3063,14 +3201,17 @@ h3 {
   transition: 0.3s;
   margin-bottom: 30px;
 }
+
 .service_area .single_service {
   text-align: center;
 }
-.single_service img{
+
+.single_service img {
   height: 55px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 13, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_service.scss */
   .service_area .single_service {
     padding: 30px 20px;
@@ -3087,6 +3228,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 22, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_service.scss */
   .service_area .single_service h3 {
     font-size: 22px;
@@ -3099,6 +3241,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 34, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_service.scss */
   .service_area .single_service p br {
     display: none;
@@ -3106,6 +3249,7 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+
   /* line 34, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_service.scss */
   .service_area .single_service p br {
     /* display: none; */
@@ -3119,6 +3263,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_video.scss */
   .video_area {
     padding-top: 50px;
@@ -3156,6 +3301,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 14, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_video.scss */
   .video_area .video_wrap .thumb .video_icon a {
     width: 50px;
@@ -3170,6 +3316,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 32, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_video.scss */
   .video_area .video_wrap .thumb .video_icon a i {
     font-size: 13px;
@@ -3185,6 +3332,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 42, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_video.scss */
   .video_area .video_wrap .video_text p {
     font-size: 18px;
@@ -3193,6 +3341,7 @@ h3 {
 }
 
 @media (min-width: 320px) and (max-width: 991px) {
+
   /* line 51, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_video.scss */
   .video_area .video_wrap .video_text p br {
     display: none;
@@ -3211,6 +3360,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_experts.scss */
   .expert_doctors_area {
     padding-top: 80px;
@@ -3226,6 +3376,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 12, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_experts.scss */
   .expert_doctors_area .doctors_title h3 {
     font-size: 24px;
@@ -3358,6 +3509,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 3, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_emergency_contact.scss */
   .Emergency_contact .single_emergency {
     padding: 40px;
@@ -3378,6 +3530,7 @@ h3 {
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
+
   /* line 14, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_emergency_contact.scss */
   .Emergency_contact .single_emergency .info h3 {
     font-size: 20px;
@@ -3421,6 +3574,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_prising.scss */
   .prising_area {
     padding: 50px 0 20px 0;
@@ -3433,6 +3587,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 10, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_prising.scss */
   .prising_area .section_title {
     padding-bottom: 30px;
@@ -3440,6 +3595,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 10, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_prising.scss */
   .prising_area .section_title {
     padding-bottom: 50px;
@@ -3524,6 +3680,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_create_blog.scss */
   .creative_blog_area {
     padding-top: 100px;
@@ -3531,6 +3688,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_create_blog.scss */
   .creative_blog_area {
     padding-top: 100px;
@@ -3568,6 +3726,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 33, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_create_blog.scss */
   .creative_blog_area .blog_title h3 {
     font-size: 30px;
@@ -3577,6 +3736,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 33, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_create_blog.scss */
   .creative_blog_area .blog_title h3 {
     font-size: 30px;
@@ -3589,6 +3749,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 48, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_create_blog.scss */
   .creative_blog_area .more_blog {
     text-align: center;
@@ -3612,6 +3773,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 63, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_create_blog.scss */
   .creative_blog_area .single_blog .blog_content {
     padding-left: 15px;
@@ -3638,6 +3800,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+
   /* line 78, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_create_blog.scss */
   .creative_blog_area .single_blog .blog_content h3 {
     font-size: 25px;
@@ -3645,6 +3808,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 78, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_create_blog.scss */
   .creative_blog_area .single_blog .blog_content h3 {
     font-size: 25px;
@@ -3727,6 +3891,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 6, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_portfolio_details.scss */
   .work_details_area .details_catagory_wrap {
     display: block;
@@ -3788,6 +3953,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 51, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_portfolio_details.scss */
   .work_details_area .banner {
     margin-bottom: 40px;
@@ -3886,6 +4052,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 36, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_team.scss */
   .creative_people .col-lg-3:nth-child(2n) .single_people {
     margin-top: 0;
@@ -3919,7 +4086,8 @@ h3 {
 }
 
 /* line 16, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_contact.scss */
-.contact-info__icon i, .contact-info__icon span {
+.contact-info__icon i,
+.contact-info__icon span {
   color: #8f9195;
   font-size: 27px;
 }
@@ -4041,6 +4209,7 @@ h3 {
 }
 
 @media (max-width: 991px) {
+
   /* line 133, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_contact.scss */
   .contact-section {
     padding: 70px 0 40px;
@@ -4048,6 +4217,7 @@ h3 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 133, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_contact.scss */
   .contact-section {
     padding: 80px 0 50px;
@@ -4781,7 +4951,7 @@ h6 {
 }
 
 /* line 619, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.default-switch input + label {
+.default-switch input+label {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -4798,7 +4968,7 @@ h6 {
 }
 
 /* line 632, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.default-switch input:checked + label {
+.default-switch input:checked+label {
   left: 19px;
 }
 
@@ -4825,7 +4995,7 @@ h6 {
 }
 
 /* line 655, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-switch input + label {
+.primary-switch input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4836,7 +5006,7 @@ h6 {
 }
 
 /* line 663, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-switch input + label:before {
+.primary-switch input+label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -4855,7 +5025,7 @@ h6 {
 }
 
 /* line 677, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-switch input + label:after {
+.primary-switch input+label:after {
   content: "";
   position: absolute;
   top: 1px;
@@ -4873,12 +5043,12 @@ h6 {
 }
 
 /* line 693, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-switch input:checked + label:after {
+.primary-switch input:checked+label:after {
   left: 19px;
 }
 
 /* line 696, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-switch input:checked + label:before {
+.primary-switch input:checked+label:before {
   background: #ff5e13;
 }
 
@@ -4905,7 +5075,7 @@ h6 {
 }
 
 /* line 720, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-switch input + label {
+.confirm-switch input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4916,7 +5086,7 @@ h6 {
 }
 
 /* line 728, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-switch input + label:before {
+.confirm-switch input+label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -4935,7 +5105,7 @@ h6 {
 }
 
 /* line 742, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-switch input + label:after {
+.confirm-switch input+label:after {
   content: "";
   position: absolute;
   top: 1px;
@@ -4953,12 +5123,12 @@ h6 {
 }
 
 /* line 758, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-switch input:checked + label:after {
+.confirm-switch input:checked+label:after {
   left: 19px;
 }
 
 /* line 761, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-switch input:checked + label:before {
+.confirm-switch input:checked+label:before {
   background: #4cd3e3;
 }
 
@@ -4985,7 +5155,7 @@ h6 {
 }
 
 /* line 785, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-checkbox input + label {
+.primary-checkbox input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -4999,7 +5169,7 @@ h6 {
 }
 
 /* line 798, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-checkbox input:checked + label {
+.primary-checkbox input:checked+label {
   background: url(../img/elements/primary-check.png) no-repeat center center/cover;
   border: none;
 }
@@ -5027,7 +5197,7 @@ h6 {
 }
 
 /* line 822, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-checkbox input + label {
+.confirm-checkbox input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -5041,7 +5211,7 @@ h6 {
 }
 
 /* line 835, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-checkbox input:checked + label {
+.confirm-checkbox input:checked+label {
   background: url(../img/elements/success-check.png) no-repeat center center/cover;
   border: none;
 }
@@ -5069,7 +5239,7 @@ h6 {
 }
 
 /* line 859, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.disabled-checkbox input + label {
+.disabled-checkbox input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -5089,7 +5259,7 @@ h6 {
 }
 
 /* line 876, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.disabled-checkbox input:checked + label {
+.disabled-checkbox input:checked+label {
   background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
   border: none;
 }
@@ -5117,7 +5287,7 @@ h6 {
 }
 
 /* line 900, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-radio input + label {
+.primary-radio input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -5131,7 +5301,7 @@ h6 {
 }
 
 /* line 913, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.primary-radio input:checked + label {
+.primary-radio input:checked+label {
   background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
   border: none;
 }
@@ -5159,7 +5329,7 @@ h6 {
 }
 
 /* line 937, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-radio input + label {
+.confirm-radio input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -5173,7 +5343,7 @@ h6 {
 }
 
 /* line 950, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.confirm-radio input:checked + label {
+.confirm-radio input:checked+label {
   background: url(../img/elements/success-radio.png) no-repeat center center/cover;
   border: none;
 }
@@ -5201,7 +5371,7 @@ h6 {
 }
 
 /* line 974, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.disabled-radio input + label {
+.disabled-radio input+label {
   position: absolute;
   left: 0;
   top: 0;
@@ -5221,7 +5391,7 @@ h6 {
 }
 
 /* line 991, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_elements.scss */
-.disabled-radio input:checked + label {
+.disabled-radio input:checked+label {
   background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
   border: none;
 }
@@ -5392,7 +5562,8 @@ h6 {
 }
 
 /* line 14, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
-.blog_area a:hover, .blog_area a :hover {
+.blog_area a:hover,
+.blog_area a :hover {
   background: -webkit-linear-gradient(131deg, #0181F5 0%, #0181F5 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5477,10 +5648,12 @@ h6 {
 }
 
 @media (max-width: 1199px) {
+
   /* line 74, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-blog .tag {
     margin-right: 8px;
   }
+
   /* line 98, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-blog .tag:after {
     display: none;
@@ -5493,6 +5666,7 @@ h6 {
 }
 
 @media (max-width: 800px) {
+
   /* line 24, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-blog {
     margin-bottom: 30px;
@@ -5518,6 +5692,7 @@ h6 {
 }
 
 @media (max-width: 1199px) {
+
   /* line 112, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-blog .single-blog-content {
     padding: 15px;
@@ -5532,6 +5707,7 @@ h6 {
 }
 
 @media (max-width: 1199px) {
+
   /* line 143, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-blog h4 {
     transition: all 300ms linear 0s;
@@ -5539,6 +5715,7 @@ h6 {
     padding-bottom: 14px;
     margin-bottom: 12px;
   }
+
   /* line 149, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-blog h4 a {
     font-size: 18px;
@@ -5562,6 +5739,7 @@ h6 {
 }
 
 @media (min-width: 992px) {
+
   /* line 160, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .full_image.single-blog .single-blog-content {
     bottom: 100px;
@@ -5723,7 +5901,7 @@ h6 {
 }
 
 /* line 358, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
-.causes_item .causes_bottom a + a {
+.causes_item .causes_bottom a+a {
   border-color: #eeeeee;
   background: #fff;
   font-size: 14px;
@@ -5788,7 +5966,7 @@ h6 {
 }
 
 /* line 431, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
-.tags .tag_btn + .tag_btn {
+.tags .tag_btn+.tag_btn {
   margin-left: 2px;
 }
 
@@ -5800,6 +5978,7 @@ h6 {
 }
 
 @media (min-width: 900px) {
+
   /* line 438, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .blog_categorie_area {
     padding-top: 80px;
@@ -5808,6 +5987,7 @@ h6 {
 }
 
 @media (min-width: 1100px) {
+
   /* line 438, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .blog_categorie_area {
     padding-top: 120px;
@@ -5886,6 +6066,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 529, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .blog_details {
     padding: 60px 30px 35px 35px;
@@ -5915,6 +6096,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 549, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .blog_details h2 {
     font-size: 24px;
@@ -5978,6 +6160,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 599, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .blog_item_img .blog_item_date {
     bottom: -20px;
@@ -5996,6 +6179,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 615, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .blog_item_img .blog_item_date h3 {
     font-size: 30px;
@@ -6010,6 +6194,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 627, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .blog_item_img .blog_item_date p {
     font-size: 18px;
@@ -6144,7 +6329,7 @@ h6 {
 }
 
 /* line 774, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
-.blog_right_sidebar .post_category_widget .cat-list li + li {
+.blog_right_sidebar .post_category_widget .cat-list li+li {
   padding-top: 15px;
 }
 
@@ -6176,7 +6361,7 @@ h6 {
 }
 
 /* line 820, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
-.blog_right_sidebar .popular_post_widget .post_item + .post_item {
+.blog_right_sidebar .popular_post_widget .post_item+.post_item {
   margin-top: 20px;
 }
 
@@ -6321,6 +6506,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 1087, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-post-area .quote-wrapper {
     padding: 30px;
@@ -6335,6 +6521,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   /* line 1101, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-post-area .quotes {
     padding: 25px 25px 25px 30px;
@@ -6418,6 +6605,7 @@ h6 {
 }
 
 @media (max-width: 600px) {
+
   /* line 1182, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-post-area .blog-author {
     padding: 20px 8px;
@@ -6433,6 +6621,7 @@ h6 {
 }
 
 @media (max-width: 600px) {
+
   /* line 1191, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-post-area .blog-author img {
     margin-right: 15px;
@@ -6516,6 +6705,7 @@ h6 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1240, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-post-area .navigation-area .nav-left {
     margin-bottom: 30px;
@@ -6558,6 +6748,7 @@ h6 {
 }
 
 @media (max-width: 991px) {
+
   /* line 1307, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .single-post-area .sidebar-widgets {
     padding-bottom: 0px;
@@ -6573,6 +6764,7 @@ h6 {
 }
 
 @media (max-width: 414px) {
+
   /* line 1314, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .comments-area {
     padding: 50px 8px;
@@ -6607,14 +6799,17 @@ h6 {
 }
 
 @media (max-width: 413px) {
+
   /* line 1354, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .comments-area .comment-list .single-comment h5 {
     font-size: 12px;
   }
+
   /* line 1358, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .comments-area .comment-list .single-comment .date {
     font-size: 11px;
   }
+
   /* line 1362, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .comments-area .comment-list .single-comment .comment {
     font-size: 10px;
@@ -6683,6 +6878,7 @@ h6 {
 }
 
 @media (max-width: 767px) {
+
   /* line 1428, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .comment-form .name {
     padding-right: 0px;
@@ -6696,6 +6892,7 @@ h6 {
 }
 
 @media (max-width: 991px) {
+
   /* line 1437, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog.scss */
   .comment-form .email {
     padding-left: 0px;
@@ -6772,6 +6969,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 2, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part {
     margin-bottom: 0px;
@@ -6780,6 +6978,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 2, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part {
     margin-bottom: 0px;
@@ -6788,6 +6987,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 2, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part {
     margin-bottom: 0px;
@@ -6803,6 +7003,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 24, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog {
     margin-bottom: 140px;
@@ -6811,6 +7012,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 24, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog {
     margin-bottom: 140px;
@@ -6819,6 +7021,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 24, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog {
     margin-bottom: 140px;
@@ -6851,6 +7054,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 48, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card .card-body {
     padding: 15px;
@@ -6860,6 +7064,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 48, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card .card-body {
     padding: 15px;
@@ -6869,6 +7074,7 @@ h6 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 48, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card .card-body {
     padding: 20px;
@@ -6917,6 +7123,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 97, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
@@ -6925,6 +7132,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 97, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
@@ -6933,6 +7141,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 97, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
@@ -6941,6 +7150,7 @@ h6 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 97, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
@@ -6960,6 +7170,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 119, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card h5 {
     margin-bottom: 10px;
@@ -6967,6 +7178,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 119, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card h5 {
     margin-bottom: 10px;
@@ -6975,6 +7187,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 119, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card h5 {
     margin-bottom: 10px;
@@ -6982,6 +7195,7 @@ h6 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 119, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card h5 {
     margin-bottom: 10px;
@@ -7007,6 +7221,7 @@ h6 {
 }
 
 @media (max-width: 576px) {
+
   /* line 150, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card ul li {
     margin-right: 10px;
@@ -7014,6 +7229,7 @@ h6 {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+
   /* line 150, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card ul li {
     margin-right: 10px;
@@ -7021,6 +7237,7 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
   /* line 150, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card ul li {
     margin-right: 10px;
@@ -7028,6 +7245,7 @@ h6 {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
   /* line 150, ../../Arafath/CL/December/230. Portfolio/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card ul li {
     margin-right: 10px;
@@ -7042,25 +7260,68 @@ h6 {
 
 /*# sourceMappingURL=style.css.map */
 
-.tiles{
-  width:33.33%;float:left;position: relative;
+.tiles {
+  width: 33.33%;
+  float: left;
+  position: relative;
 }
-.tiles img{
-  width:100%;
-  height:auto;
+
+.tiles img {
+  width: 100%;
+  height: auto;
 }
-@media (max-width:1200px){
-  .tiles{
-    width:50%;
-  }
-}
-@media (max-width:700px){
-  .tiles{
-    width:100%;
+
+@media (max-width:1200px) {
+  .tiles {
+    width: 50%;
   }
 }
 
-.tiles > .tile:before {
+@media (max-width:700px) {
+  .portfolio {
+    padding: 25px;
+
+  }
+
+  .info {
+    padding: 3px 20px !important;
+  }
+
+  .details .title {
+    /* font-family: "Quicksand"; */
+  }
+
+  .tiles {
+    width: 100%;
+  }
+
+  .tiles img {
+    box-shadow: 4px 4px 14px 0px #00000054;
+  }
+
+  .details {
+
+    position: unset !important;
+    opacity: 1 !important;
+    color: black !important;
+    text-align: center;
+    margin-top: 17px;
+  }
+
+  .tiles>.tile:before {
+    content: unset !important;
+  }
+
+  .info {
+    border: 1px solid #98d66e !important;
+    padding: 5px 18px;
+    position: relative;
+    top: -13px;
+
+  }
+}
+
+.tiles>.tile:before {
   content: "";
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
@@ -7074,51 +7335,60 @@ h6 {
   -webkit-transition-property: top, opacity;
   transition-property: top, opacity;
   -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-.details{
+
+.details {
   position: absolute;
-  bottom:5px;
+  bottom: 5px;
   z-index: 3;
-  color:white;
-  opacity:0;
-  left:10px;
+  color: white;
+  opacity: 0;
+  left: 10px;
+  padding-bottom: 35px;
+  ;
 }
-.tiles > .tile:hover:before{
-  top:30%;
+
+.tiles>.tile:hover:before {
+  top: 30%;
   opacity: 1;
 }
-.tiles:hover img{
+
+.tiles:hover img {
   z-index: 1;
 }
-.tiles:hover .details{
-  bottom:15px;
+
+.tiles:hover .details {
+  bottom: 15px;
   z-index: 3;
   opacity: 1;
   -webkit-transition-property: bottom, opacity;
   transition-property: bottom, opacity;
   -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
-.info{
-    border: 1px solid white;
-    padding: 5px 18px;
-    -webkit-transition-property: background;
-    transition-property: background;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
+.info {
+  border: 1px solid white;
+  padding: 5px 18px;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-.info:hover{
+
+.info:hover {
   background: #98d66e;
   -webkit-transition-property: background;
   transition-property: background;
   -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-.slicknav_nav a{
-  padding:15px;
+
+.slicknav_nav a {
+  padding: 15px;
 }
-.slicknav_nav a:hover{
-color:#98d66e !important;
+
+.slicknav_nav a:hover {
+  color: #98d66e !important;
 }
