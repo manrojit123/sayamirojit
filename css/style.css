@@ -14,7 +14,9 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
+.bg-dark{
+  background-color: #191919 !important;
+}
 /* line 12, ../../Arafath/CL/December/230. Portfolio/HTML/scss/theme-default.scss */
 .img {
   max-width: 100%;
@@ -7437,4 +7439,24 @@ h6 {
 
 .slicknav_nav a:hover {
   color: #98d66e !important;
+}
+
+.cv_download{
+  color: white;
+  padding: 8px 19px;
+  /* border: 1px solid red; */
+  position: relative;
+  top: 15px;
+  border-radius: 500px;
+  background: rgb(33,166,146);
+  background: linear-gradient(90deg, rgba(33,166,146,1) 0%, rgba(159,217,107,1) 100%);
+  transition: all 400ms ease-in;
+  border:none;
+}
+.cv_download a{
+  color:white;
+}
+.cv_download:hover{
+  transform: scale(1.1);
+  transition: all 300ms ease-in;
 }
