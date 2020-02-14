@@ -14,15 +14,26 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #171717;
     font-family: 'PN-Regular';
     color: #e1e1e1;
-    ;
+    overflow: hidden;
 }
 
 .carousel {
     min-height: 100vh !important;
+    position: relative;
+    top: 80px;
+    z-index: 50;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.tabs {
+    position: fixed;
+    z-index: 100;
+
 }
 
 .col-container {
