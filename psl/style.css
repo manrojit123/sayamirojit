@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'PN-Regular';
+    src: url(PN_Regular.otf);
+}
+
+@font-face {
+    font-family: 'PN-Semibold';
+    src: url(PN_Semibold.ttf);
+}
+
+@font-face {
+    font-family: 'PN-Bold';
+    src: url(PN_Bold.otf);
+}
+
+body {
+    height: 100vh;
+    background-color: #171717;
+    font-family: 'PN-Regular';
+    color: #e1e1e1;
+    ;
+}
+
+.carousel {
+    min-height: 100vh !important;
+}
+
+.col-container {
+    display: flex;
+    width: 100%;
+}
+
+.colmn {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+
+.col {
+    padding: 15px;
+}
+
+.colmn h5 {
+    font-family: 'PN-Bold';
+    background-color: white;
+    border-radius: 500px;
+    padding: 22px 10px;
+    display: inline-block;
+    margin: 0;
+    color: #171717;
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+}
+
+h4 {
+    font-size: 4.5vw;
+    background-color: #ECDDFE;
+    text-align: center;
+    color: #171717;
+    padding: 12px;
+    font-family: 'PN-Semibold';
+    border-radius: 3px;
+}
+
+.imgTeam {
+    width: 60%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.carousel .carousel-item {
+    width: 100%;
+}
+
+.tabs {
+    background-color: #1e1e1e;
+    ;
+}
+
+.tabs .tab a {
+    color: white;
+    font-family: 'PN-Semibold';
+}
+
+.tabs .indicator {
+    background-color: #6441A4;
+    height: 3px;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    color: white;
+}
