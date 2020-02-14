@@ -24,10 +24,15 @@ body {
 .carousel {
     min-height: 100vh !important;
     position: relative;
-    top: 80px;
+    top: 48px;
     z-index: 50;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+
+article .borderTop {
+    border-top: 1px solid #2f2f2f8a;
 }
 
 .tabs {
