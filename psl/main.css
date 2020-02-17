@@ -298,3 +298,7 @@ section {
 .up {
   cursor: pointer;
 }
+.panel-collapse {
+  height: 67vh;
+  overflow: scroll;
+}
