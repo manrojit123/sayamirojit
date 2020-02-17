@@ -302,3 +302,102 @@ section {
   height: 67vh;
   overflow: scroll;
 }
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel,
+#four:checked ~ .panels #four-panel,
+#five:checked ~ .panels #five-panel,
+#six:checked ~ .panels #six-panel {
+  display: block;
+}
+
+#one:checked ~ .scrollmenu #one-tab,
+#two:checked ~ .scrollmenu #two-tab,
+#three:checked ~ .scrollmenu #three-tab,
+#four:checked ~ .scrollmenu #four-tab,
+#five:checked ~ .scrollmenu #five-tab,
+#six:checked ~ .scrollmenu #six-tab {
+  background: #ecddfe;
+  color: #000;
+  /* border-top: 3px solid #000; */
+}
+
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scrollmenu label {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 3px;
+  text-decoration: none;
+  border-radius: 500px;
+  background: #1e1e1e;
+  margin-right: 15px;
+}
+
+.scrollmenu label img {
+  width: calc(100vw / 5.8);
+}
+.panel {
+  background-color: #171717 !important;
+}
+.intro h5 {
+  border-bottom: 1px solid #ffffff24;
+  padding-bottom: 10px;
+  font-size: 5vw;
+}
+.intro img {
+  width: 38vw;
+}
+.col-12,
+.col-6 {
+  padding-left: 15px;
+}
+
+.titles {
+  border-left: 3px solid #64359d;
+  padding-left: 5px;
+  font-size: 21px;
+  margin-bottom: 18px;
+}
+.media {
+  margin-bottom: 10px;
+}
+.media p {
+  opacity: 0.6;
+  margin: 0;
+}
+.media-body {
+  position: relative;
+  top: 15px;
+}
+.media-object {
+  border-radius: 500px;
+}

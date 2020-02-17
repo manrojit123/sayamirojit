@@ -1,0 +1,115 @@
+<h2>CSS Tab</h2>
+<div class="warpper">
+    <input class="radio" id="one" name="group" type="radio" checked>
+    <input class="radio" id="two" name="group" type="radio">
+    <input class="radio" id="three" name="group" type="radio">
+    <input class="radio" id="four" name="group" type="radio">
+    <input class="radio" id="five" name="group" type="radio">
+    <input class="radio" id="six" name="group" type="radio">
+    <div class="scrollmenu">
+        <label class="tab" id="one-tab" for="one"><img src="psl-img/iu.png" alt=""></label>
+        <label class="tab" id="two-tab" for="two"><img src="psl-img/kk.png" alt=""></label>
+        <label class="tab" id="three-tab" for="three"><img src="psl-img/lq.png" alt=""></label>
+        <label class="tab" id="four-tab" for="four"><img src="psl-img/ms.png" alt=""></label>
+        <label class="tab" id="five-tab" for="five"><img src="psl-img/ms.png" alt=""></label>
+        <label class="tab" id="six-tab" for="six"><img src="psl-img/ms.png" alt=""></label>
+    </div>
+    <div class="panels">
+        <div class="panel" id="one-panel">
+            <div class="panel-title">Why Learn CSS?</div>
+            <p>Without CSS, every web page would be drab plain text and images that flowed straight down the page. With
+                CSS, you can add color and background images and change the layout of your page — your web pages can
+                feel like works of art!</p>
+        </div>
+        <div class="panel" id="two-panel">
+            <div class="panel-title">Take-Away Skills</div>
+            <p>You will learn many aspects of styling web pages! You’ll be able to set up the correct file structure,
+                edit text and colors, and create attractive layouts. With these skills, you’ll be able to customize the
+                appearance of your web pages to suit your every need!</p>
+        </div>
+        <div class="panel" id="three-panel">
+            <div class="panel-title">Note on Prerequisites</div>
+            <p>We recommend that you complete Learn HTML before learning CSS.</p>
+        </div>
+        <div class="panel" id="four-panel">
+            <div class="panel-title">four on Prerequisites</div>
+            <p>We recommend that you complete Learn HTML before learning CSS.</p>
+        </div>
+        <div class="panel" id="five-panel">
+            <div class="panel-title">five on Prerequisites</div>
+            <p>We recommend that you complete Learn HTML before learning CSS.</p>
+        </div>
+        <div class="panel" id="six-panel">
+            <div class="panel-title">six on Prerequisites</div>
+            <p>We recommend that you complete Learn HTML before learning CSS.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+
+    .panel {
+        display: none;
+        animation: fadein .8s;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .panel-title {
+        font-size: 1.5em;
+        font-weight: bold
+    }
+
+    .radio {
+        display: none;
+    }
+
+    #one:checked~.panels #one-panel,
+    #two:checked~.panels #two-panel,
+    #three:checked~.panels #three-panel,
+    #four:checked~.panels #four-panel,
+    #five:checked~.panels #five-panel,
+    #six:checked~.panels #six-panel {
+        display: block
+    }
+
+    #one:checked~.scrollmenu #one-tab,
+    #two:checked~.scrollmenu #two-tab,
+    #three:checked~.scrollmenu #three-tab,
+    #four:checked~.scrollmenu #four-tab,
+    #five:checked~.scrollmenu #five-tab,
+    #six:checked~.scrollmenu #six-tab {
+        background: #ecddfe;
+        color: #000;
+        /* border-top: 3px solid #000; */
+    }
+
+    .scrollmenu {
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    .scrollmenu label {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 3px;
+        text-decoration: none;
+        border-radius: 500px;
+        background: #1e1e1e;
+        margin-right: 15px;
+    }
+
+    .scrollmenu label img {
+        width: calc(100vw / 5.8);
+    }
+</style>
