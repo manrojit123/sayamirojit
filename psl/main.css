@@ -21,12 +21,8 @@ body {
 }
 
 .container {
-  /* height: 500px; */
-  /* width: 100vw; */
   padding: 0;
-  /* margin: 10px; */
-  /* border-radius: 5px; */
-  /* box-shadow: 0 2px 3px rgba(0, 0, 0, .3); */
+  margin: 0;
 }
 
 .nav {
@@ -88,7 +84,7 @@ body {
 }
 
 .secondMatch {
-  border-top: 1px solid #694ba454;
+  border-top: 1px solid #0000000d;
 }
 
 .firstMatch li {
@@ -130,16 +126,20 @@ body {
 
 .colmn h5 {
   font-family: "PN-Bold";
-  background-color: #fffcec;
-  border-radius: 500px;
-  padding: 22px 10px;
   display: inline-block;
   margin: 0;
-  color: #171717b3;
   font-size: 20px;
   position: relative;
-  top: 25px;
+  top: 15px;
+
 }
+
+.borderTop {
+  border-top: 1px solid #ffffff08;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
 
 h4 {
   font-size: 4.5vw;
@@ -157,6 +157,10 @@ h4 {
 
 article h4 {
   margin-top: 0;
+}
+
+article h3 {
+  text-align: center;
 }
 
 .imgTeam {
@@ -527,4 +531,24 @@ thead tr th:nth-last-child(1) {
 .table-bordered>thead>tr>td,
 .table-bordered>thead>tr>th {
   border: 0px solid red;
+}
+
+@media (min-width:500px) {
+  .firstMatch .imgTeamTodayDouble {
+    width: 25vh;
+  }
+
+  .firstMatch .imgTeamTodayDouble {
+    margin-top: calc(100% / 8);
+  }
+
+  h4 {
+    font-size: 2.5vw;
+  }
+
+  .colmn h5 {
+    position: relative;
+    top: 45px;
+    ;
+  }
 }
