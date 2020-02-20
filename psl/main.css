@@ -552,3 +552,9 @@ thead tr th:nth-last-child(1) {
     ;
   }
 }
+
+.undefined h5 {
+  position: relative;
+  top: -5px;
+  ;
+}
