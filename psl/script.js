@@ -58,4 +58,34 @@ $(document).ready(function() {
       2000
     );
   });
+
+  fetchStandings();
 });
+
+var fetchStandings = function(){
+  $.getJSON("data/standings.json", function(data){
+    
+    var $table = $('#psl-standings tbody');
+
+    var counter = 1;
+
+    $.each(data, function(key, val){
+
+      var $trow = $('<tr>').append(
+        $('<td>').text(val.team),
+        $('<td>').text(val.played),
+        $('<td>').text(val.won),
+        $('<td>').text(val.lost),
+        $('<td>').text(val.tied),
+        $('<td>').text(val.noresult),
+        $('<td>').text(val.points),
+        $('<td>').text(val.nrr)
+      );
+
+      $table.append($trow);
+
+      counter++;
+
+    });
+  });
+};

@@ -524,6 +524,11 @@ thead tr th:nth-last-child(1) {
   text-align: center;
 }
 
+tbody tr td:nth-child(1) {
+  font-weight: bold;
+  font-family: 'PN-Bold';
+}
+
 .table-bordered>tbody>tr>td,
 .table-bordered>tbody>tr>th,
 .table-bordered>tfoot>tr>td,
