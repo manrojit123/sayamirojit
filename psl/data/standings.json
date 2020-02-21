@@ -1,4 +1,5 @@
-[{
+[
+  {
     "team": "Quetta Gladiators",
     "played": "1",
     "won": "1",
@@ -49,7 +50,7 @@
     "nrr": "0.000"
   },
   {
-    "team": "Lahore Qalandars",
+    "team": "Islamabad United",
     "played": "1",
     "won": "0",
     "lost": "1",
