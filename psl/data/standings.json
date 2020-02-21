@@ -1,15 +1,15 @@
 [{
-    "team": "Multan Sultans",
-    "played": "0",
-    "won": "0",
+    "team": "Quetta Gladiators",
+    "played": "1",
+    "won": "1",
     "lost": "0",
     "tied": "0",
     "noresult": "0",
-    "points": "0",
-    "nrr": "0.000"
+    "points": "2",
+    "nrr": "+0.843"
   },
   {
-    "team": "Islamabad United",
+    "team": "Lahore Qalandars",
     "played": "0",
     "won": "0",
     "lost": "0",
@@ -29,7 +29,7 @@
     "nrr": "0.000"
   },
   {
-    "team": "Quetta Gladiators",
+    "team": "Multan Sultans",
     "played": "0",
     "won": "0",
     "lost": "0",
@@ -50,12 +50,12 @@
   },
   {
     "team": "Lahore Qalandars",
-    "played": "0",
+    "played": "1",
     "won": "0",
-    "lost": "0",
+    "lost": "1",
     "tied": "0",
     "noresult": "0",
     "points": "0",
-    "nrr": "0.000"
+    "nrr": "-0.843"
   }
 ]

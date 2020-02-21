@@ -207,8 +207,14 @@ article h3 {
 }
 
 article.today {
-  background: #fffcec;
+  background: #171717;
   height: calc(100vh - 54px);
+}
+
+article.today .col-container {
+  padding-top: 35px;
+  padding-bottom: 35px;
+
 }
 
 p.edited {
