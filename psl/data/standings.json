@@ -1,55 +1,62 @@
-[{
-    "team": "Islamabad United",
-    "played": "3",
-    "won": "2",
-    "lost": "1",
-    "tied": "0",
-    "noresult": "0",
-    "points": "4",
-    "nrr": "+0.295"
-}, {
-    "team": "Quetta Gladiators",
-    "played": "3",
-    "won": "2",
-    "lost": "1",
-    "tied": "0",
-    "noresult": "0",
-    "points": "4",
-    "nrr": "+0.124"
-}, {
-    "team": "Peshawar Zalmi",
-    "played": "2",
-    "won": "1",
-    "lost": "1",
-    "tied": "0",
-    "noresult": "0",
-    "points": "2",
-    "nrr": "+0.210"
-}, {
-    "team": "Multan Sultans",
-    "played": "2",
-    "won": "1",
-    "lost": "1",
-    "tied": "0",
-    "noresult": "0",
-    "points": "2",
-    "nrr": "+0.197"
-}, {
-    "team": "Karachi Kings",
-    "played": "2",
-    "won": "1",
-    "lost": "1",
-    "tied": "0",
-    "noresult": "0",
-    "points": "2",
-    "nrr": "+0.002"
-}, {
-    "team": "Lahore Qalandars",
-    "played": "2",
-    "won": "0",
-    "lost": "2",
-    "tied": "0",
-    "noresult": "0",
-    "points": "0",
-    "nrr": "-1.028"
-}]
+[
+    {
+        "team": "Multan Sultans",
+        "played": "3",
+        "won": "2",
+        "lost": "1",
+        "tied": "0",
+        "noresult": "0",
+        "points": "4",
+        "nrr": "+0.914"
+    },
+    {
+        "team": "Islamabad United",
+        "played": "3",
+        "won": "2",
+        "lost": "1",
+        "tied": "0",
+        "noresult": "0",
+        "points": "4",
+        "nrr": "+0.295"
+    },
+    {
+        "team": "Quetta Gladiators",
+        "played": "3",
+        "won": "2",
+        "lost": "1",
+        "tied": "0",
+        "noresult": "0",
+        "points": "4",
+        "nrr": "+0.124"
+    },
+    {
+        "team": "Karachi Kings",
+        "played": "2",
+        "won": "1",
+        "lost": "1",
+        "tied": "0",
+        "noresult": "0",
+        "points": "2",
+        "nrr": "+0.002"
+    },
+    {
+        "team": "Peshawar Zalmi",
+        "played": "3",
+        "won": "1",
+        "lost": "2",
+        "tied": "0",
+        "noresult": "0",
+        "points": "2",
+        "nrr": "-0.643"
+    },
+    {
+        "team": "Lahore Qalandars",
+        "played": "2",
+        "won": "0",
+        "lost": "2",
+        "tied": "0",
+        "noresult": "0",
+        "points": "0",
+        "nrr": "-1.028"
+    }
+]
