@@ -35,6 +35,7 @@ a.btn {
   padding: 10px 25px;
   font-size: 14px;
 }
+
 /* .op-7 {
   opacity: 0.5;
 } */
@@ -55,9 +56,11 @@ h6 {
   margin: 0 0 20px 0;
   padding: 0;
 }
+
 .mg-b-0 {
   margin-bottom: 0px;
 }
+
 /* Back to top button */
 
 .back-to-top {
@@ -131,6 +134,31 @@ h6 {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.slider-nav {
+  margin-left: 8rem;
+  position: absolute;
+  bottom: 0px;
+  padding-left: 2rem;
+  ;
+}
+
+.slider-nav p {
+  display: inline-block;
+  /* background: white; */
+  padding: 6px 11px;
+  border-radius: 52px;
+  border: 2px solid white;
+  color: white;
+  margin-right: 15px;
+  transition: all 100ms ease-in;
+}
+
+.slider-nav p:hover {
+  cursor: pointer;
+  background-color: #ffc400;
+  transition: all 100ms ease-in;
 }
 
 /*--------------------------------------------------------------
@@ -297,11 +325,9 @@ header .search {
 .btn-primary {
   background-color: #ffc400;
   background: rgb(255, 171, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 171, 0, 1) 0%,
-    rgba(255, 196, 0, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 171, 0, 1) 0%,
+      rgba(255, 196, 0, 1) 100%);
   border: #111;
   border-radius: 0;
   color: #042559;
@@ -399,8 +425,8 @@ header .search {
 # Search Section
 --------------------------------------------------------------*/
 
-element.style {
-}
+element.style {}
+
 .tp-main-search {
   background: #ffffff;
   -webkit-box-shadow: 0px 3px 13px #23397421;
@@ -409,12 +435,14 @@ element.style {
   border-radius: 4px;
   padding: 60px 40px;
 }
+
 .tp-search-single-wrap {
   border-bottom: 2px solid #cfd3de;
   display: block;
   position: relative;
   width: 100%;
 }
+
 .tp-search-single-wrap input {
   border: 0;
   padding: 0 25px;
@@ -423,6 +451,7 @@ element.style {
   font-family: var(--body-font);
   background: transparent;
 }
+
 .tp-search-single-wrap i,
 .tp-search-single-wrap img {
   position: absolute;
@@ -434,6 +463,7 @@ element.style {
   -o-transition: all 0.9s ease;
   transition: all 0.9s ease;
 }
+
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
@@ -496,10 +526,28 @@ element.style {
   list-style: none;
 }
 
-.main-nav > ul > li {
+.main-nav>ul>li {
   position: relative;
   white-space: nowrap;
   float: left;
+}
+
+.main-nav>ul>li::after {
+  content: "";
+  width: 0px;
+  transition: all 1000ms ease;
+}
+
+.main-nav>ul>li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 171, 0, 1) 0%, rgba(255, 196, 0, 1) 100%);
+  height: 2px;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 3px;
+  transition: all 1000ms ease;
 }
 
 .main-nav a {
@@ -513,13 +561,14 @@ element.style {
   text-transform: uppercase;
   font-weight: 600;
 }
+
 .header-scrolled .main-nav a {
   color: #042559;
 }
 
 .main-nav a:hover,
-.main-nav .active > a,
-.main-nav li:hover > a {
+.main-nav .active>a,
+.main-nav li:hover>a {
   color: #ffc400;
   text-decoration: none;
 }
@@ -538,7 +587,7 @@ element.style {
   transition: ease all 0.3s;
 }
 
-.main-nav .drop-down:hover > ul {
+.main-nav .drop-down:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -558,12 +607,12 @@ element.style {
 }
 
 .main-nav .drop-down ul a:hover,
-.main-nav .drop-down ul .active > a,
-.main-nav .drop-down ul li:hover > a {
+.main-nav .drop-down ul .active>a,
+.main-nav .drop-down ul li:hover>a {
   color: #1bb1dc;
 }
 
-.main-nav .drop-down > a:after {
+.main-nav .drop-down>a:after {
   content: "\f107";
   font-family: FontAwesome;
   padding-left: 10px;
@@ -574,17 +623,17 @@ element.style {
   left: calc(100% - 30px);
 }
 
-.main-nav .drop-down .drop-down:hover > ul {
+.main-nav .drop-down .drop-down:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
 }
 
-.main-nav .drop-down .drop-down > a {
+.main-nav .drop-down .drop-down>a {
   padding-right: 35px;
 }
 
-.main-nav .drop-down .drop-down > a:after {
+.main-nav .drop-down .drop-down>a:after {
   content: "\f105";
   position: absolute;
   right: 15px;
@@ -620,13 +669,13 @@ element.style {
 }
 
 .mobile-nav a:hover,
-.mobile-nav .active > a,
-.mobile-nav li:hover > a {
+.mobile-nav .active>a,
+.mobile-nav li:hover>a {
   color: #8dc2fa;
   text-decoration: none;
 }
 
-.mobile-nav .drop-down > a:after {
+.mobile-nav .drop-down>a:after {
   content: "\f078";
   font-family: FontAwesome;
   padding-left: 10px;
@@ -634,11 +683,11 @@ element.style {
   right: 15px;
 }
 
-.mobile-nav .active.drop-down > a:after {
+.mobile-nav .active.drop-down>a:after {
   content: "\f077";
 }
 
-.mobile-nav .drop-down > a {
+.mobile-nav .drop-down>a {
   padding-right: 35px;
 }
 
