@@ -10,11 +10,17 @@
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Merriweather:900|Playfair+Display+SC:900|Poppins:400,500|Rozha+One|Spartan:400,700&display=swap");
 
+@font-face {
+  font-family: 'cg';
+  src: url(../fonts/GOTHIC.TTF);
+}
+
 body {
   background: #fff;
   color: #444;
   font-family: "Open Sans", sans-serif;
   font-family: "Poppins", sans-serif;
+  font-family: "cg", sans-serif;
 }
 
 a {
@@ -308,10 +314,10 @@ header .search {
 
 .hero .hero-slide .header-content {
   top: 30%;
-  margin-left: 8rem;
+  /* margin-left: 8rem; */
   /* max-width: 550px; */
   width: 100%;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .slide-content {
@@ -557,7 +563,7 @@ element.style {}
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "cg", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
 }
