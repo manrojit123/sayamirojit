@@ -143,11 +143,11 @@ h6 {
 }
 
 .slider-nav {
-  margin-left: 8rem;
+  /* margin-left: 8rem; */
   position: absolute;
   bottom: 0px;
-  padding-left: 2rem;
-  ;
+  /* padding-left: 2rem; */
+
 }
 
 .slider-nav p {
