@@ -1,55 +1,62 @@
-[{
-  "team": "Multan Sultans",
-  "played": "7",
-  "won": "5",
-  "lost": "1",
-  "tied": "0",
-  "noresult": "1",
-  "points": "11",
-  "nrr": "+1.547"
-}, {
-  "team": "Peshawar Zalmi",
-  "played": "8",
-  "won": "4",
-  "lost": "3",
-  "tied": "0",
-  "noresult": "1",
-  "points": "9",
-  "nrr": "-0.021"
-}, {
-  "team": "Islamabad United",
-  "played": "9",
-  "won": "3",
-  "lost": "5",
-  "tied": "0",
-  "noresult": "1",
-  "points": "7",
-  "nrr": "+0.259"
-}, {
-  "team": "Karachi Kings",
-  "played": "7",
-  "won": "3",
-  "lost": "3",
-  "tied": "0",
-  "noresult": "1",
-  "points": "7",
-  "nrr": "-0.249"
-}, {
-  "team": "Lahore Qalandars",
-  "played": "7",
-  "won": "3",
-  "lost": "4",
-  "tied": "0",
-  "noresult": "0",
-  "points": "6",
-  "nrr": "-0.053"
-}, {
-  "team": "Quetta Gladiators",
-  "played": "8",
-  "won": "3",
-  "lost": "5",
-  "tied": "0",
-  "noresult": "0",
-  "points": "6",
-  "nrr": "-1.052"
-}]
+[
+  {
+    "team": "Multan Sultans",
+    "played": "7",
+    "won": "5",
+    "lost": "1",
+    "tied": "0",
+    "noresult": "1",
+    "points": "11",
+    "nrr": "+1.547"
+  },
+  {
+    "team": "Peshawar Zalmi",
+    "played": "9",
+    "won": "4",
+    "lost": "4",
+    "tied": "0",
+    "noresult": "1",
+    "points": "9",
+    "nrr": "-0.560"
+  },
+  {
+    "team": "Lahore Qalandars",
+    "played": "8",
+    "won": "4",
+    "lost": "4",
+    "tied": "0",
+    "noresult": "0",
+    "points": "8",
+    "nrr": "-0.019"
+  },
+  {
+    "team": "Islamabad United",
+    "played": "9",
+    "won": "3",
+    "lost": "5",
+    "tied": "0",
+    "noresult": "1",
+    "points": "7",
+    "nrr": "+0.259"
+  },
+  {
+    "team": "Karachi Kings",
+    "played": "7",
+    "won": "3",
+    "lost": "3",
+    "tied": "0",
+    "noresult": "1",
+    "points": "7",
+    "nrr": "-0.249"
+  },
+  {
+    "team": "Quetta Gladiators",
+    "played": "8",
+    "won": "3",
+    "lost": "5",
+    "tied": "0",
+    "noresult": "0",
+    "points": "6",
+    "nrr": "-1.052"
+  }
+]
