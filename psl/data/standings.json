@@ -1,12 +1,12 @@
 [
   {
     "team": "Multan Sultans",
-    "played": "7",
+    "played": "8",
     "won": "5",
     "lost": "1",
     "tied": "0",
-    "noresult": "1",
-    "points": "11",
+    "noresult": "2",
+    "points": "12",
     "nrr": "+1.547"
   },
   {
@@ -17,7 +17,7 @@
     "tied": "0",
     "noresult": "1",
     "points": "9",
-    "nrr": "-0.560"
+    "nrr": "-0.048"
   },
   {
     "team": "Lahore Qalandars",
@@ -51,12 +51,12 @@
   },
   {
     "team": "Quetta Gladiators",
-    "played": "8",
+    "played": "9",
     "won": "3",
     "lost": "5",
     "tied": "0",
-    "noresult": "0",
-    "points": "6",
+    "noresult": "1",
+    "points": "7",
     "nrr": "-1.052"
   }
 ]
