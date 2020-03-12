@@ -286,6 +286,30 @@ header a.learnMore {
   font-weight: 500;
 }
 
+#rightArrowAnimated {
+  height: 15px;
+  width: 15px;
+  stroke: black;
+  margin-left: 0;
+  transition: all 200ms ease-in;
+}
+
+header a.learnMore:hover {
+  color: white;
+  transition: all 200ms ease-in;
+}
+
+header a.learnMore:hover #rightArrowAnimated {
+  position: relative;
+  margin-left: 5px;
+  fill: white;
+  stroke: white;
+  stroke-width: 5;
+  transition: all 200ms ease-in;
+
+
+}
+
 header .search {
   width: 14px;
   position: relative;
@@ -313,7 +337,7 @@ header .search {
 }
 
 .hero .hero-slide .header-content {
-  top: 30%;
+  top: 40vh;
   /* margin-left: 8rem; */
   /* max-width: 550px; */
   width: 100%;
@@ -337,6 +361,14 @@ header .search {
   border: #111;
   border-radius: 0;
   color: #042559;
+}
+
+.tourSearch input {
+  border: none;
+  border-bottom: 1px solid #042558;
+  padding: 17px 5px 4px 5px;
+  border-radius: 0;
+  color: #042558;
 }
 
 /** Text Animation **/
