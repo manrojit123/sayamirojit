@@ -142,10 +142,10 @@ h6 {
   }
 }
 
-.slider-nav {
-  /* margin-left: 8rem; */
+.nav-search {
+  width: 100%;
   position: absolute;
-  bottom: 0px;
+  bottom: 5vh;
   /* padding-left: 2rem; */
 
 }
@@ -166,6 +166,47 @@ h6 {
   background-color: #ffc400;
   transition: all 100ms ease-in;
 }
+.tourSearch input{
+  border: none;
+  border-bottom: 1px solid #042558;
+  padding: 5px;
+  border-radius: 0;
+  color: #042558;
+  width: 100%;
+  text-transform: capitalize;
+  transition: all  200ms ease-in;
+}
+.tourSearch input:focus{
+  border-bottom:1px solid #ffc400;
+  outline:none;
+  transition: all  200ms ease-in;
+}
+.tourSearch button{
+  width: 100%;
+}
+.boxContainer{
+  padding:15px;
+  background: white;
+  border-radius: 5px;
+}
+@media(max-width:768px){
+  .nav-search{
+    bottom:-5vh;
+  }
+  .hero .hero-slide .header-content{
+    top:40vh !important;
+  }
+  .hero-text h2{
+    margin-bottom:10px !important;
+  }
+  h2.banner-title{
+    font-size:40px !important;
+  }
+  header .tp-duration h2{
+    font-size: 18px !important;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Top Bar
@@ -280,28 +321,30 @@ header .tp-duration h2 {
   font-weight: 700;
   font-size: 23px;
 }
-
-header a.learnMore {
+.header .learnMore{
   margin-top: 50px;
-  font-weight: 500;
+
+}
+.learnMore {
+  font-weight: 600;
 }
 
 #rightArrowAnimated {
   height: 15px;
   width: 15px;
   stroke: black;
-  margin-left: 0;
+  margin-left:10px;
   transition: all 200ms ease-in;
 }
 
-header a.learnMore:hover {
+.learnMore:hover {
   color: white;
   transition: all 200ms ease-in;
 }
 
 header a.learnMore:hover #rightArrowAnimated {
   position: relative;
-  margin-left: 5px;
+  margin-left: 15px;
   fill: white;
   stroke: white;
   stroke-width: 5;
@@ -337,7 +380,7 @@ header .search {
 }
 
 .hero .hero-slide .header-content {
-  top: 40vh;
+  top: 30vh;
   /* margin-left: 8rem; */
   /* max-width: 550px; */
   width: 100%;
@@ -361,15 +404,11 @@ header .search {
   border: #111;
   border-radius: 0;
   color: #042559;
+  transition: background 500ms ease-in;;
 }
 
-.tourSearch input {
-  border: none;
-  border-bottom: 1px solid #042558;
-  padding: 17px 5px 4px 5px;
-  border-radius: 0;
-  color: #042558;
-}
+
+
 
 /** Text Animation **/
 
