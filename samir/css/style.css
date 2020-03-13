@@ -153,22 +153,29 @@ h6 {
 .slider-nav p {
   display: inline-block;
   /* background: white; */
-  padding: 6px 11px;
-  border-radius: 52px;
-  border: 2px solid white;
+  /* padding: 6px 11px; */
+  /* border-radius: 52px; */
+  /* border: 2px solid white; */
   color: white;
   margin-right: 15px;
   transition: all 100ms ease-in;
 }
+.slider-nav p i{
+  font-size:35px;
+  color:#ffc400;
+}
+.slider-nav p i:focus{
+  outline:none;
+}
 
-.slider-nav p:hover {
+.slider-nav p:hover i {
   cursor: pointer;
-  background-color: #ffc400;
+color:whie;
   transition: all 100ms ease-in;
 }
 .tourSearch input{
   border: none;
-  border-bottom: 1px solid #042558;
+  border-bottom: 1px solid #e2e2e2;
   padding: 5px;
   border-radius: 0;
   color: #042558;
@@ -189,23 +196,7 @@ h6 {
   background: white;
   border-radius: 5px;
 }
-@media(max-width:768px){
-  .nav-search{
-    bottom:-5vh;
-  }
-  .hero .hero-slide .header-content{
-    top:40vh !important;
-  }
-  .hero-text h2{
-    margin-bottom:10px !important;
-  }
-  h2.banner-title{
-    font-size:40px !important;
-  }
-  header .tp-duration h2{
-    font-size: 18px !important;
-  }
-}
+
 
 
 /*--------------------------------------------------------------
@@ -258,7 +249,7 @@ h6 {
 #header.header-scrolled,
 #header.header-pages {
   height: 70px;
-  padding: 15px 0;
+  padding: 0px 0;
   background-color: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
@@ -286,7 +277,7 @@ h6 {
 
 #header .logo img {
   padding: 0;
-  margin: 7px 0;
+  margin: 10px 0;
   max-height: 26px;
 }
 
@@ -450,7 +441,7 @@ header .search {
   animation-duration: 1s;
   opacity: 1;
   width: 100%;
-  padding: 10px 20px 30px 0;
+  padding: 10px 00px 30px 0;
 }
 
 /* Text Animation End **/
@@ -857,7 +848,7 @@ element.style {}
 --------------------------------*/
 
 #testimonials {
-  padding: 60px 0;
+  padding:345px 0;
 }
 
 #testimonials .section-header {
@@ -1225,7 +1216,7 @@ element.style {}
 
   #header {
     height: 70px;
-    padding: 15px 0;
+    padding: 0px 0;
   }
 
   #header .logo h1 {
@@ -1261,9 +1252,33 @@ element.style {}
 }
 
 @media (max-width: 767px) {
+  .nav-search{
+    top:calc(100vh - 60px);
+  }
+  .hero .hero-slide .header-content{
+    top:40vh !important;
+  }
+  .hero-text h2{
+    margin-bottom:10px !important;
+  }
+  h2.banner-title{
+    font-size:40px !important;
+  }
+  header .tp-duration h2{
+    font-size: 18px !important;
+  }
+  .tourSearch{
+    margin-top: 15px;
+  }
+  .tourSearch input{
+    margin-bottom:35px;
+  }
   #intro {
     height: auto;
-    padding: 80px 0 60px 0;
+    padding: 60px 0 0px 0;
+  }
+  #intro header{
+    height: calc(100vh - 60px);
   }
 
   #intro .container {
@@ -1272,6 +1287,9 @@ element.style {}
 
   #intro .intro-img {
     width: 80%;
+  }
+  .boxContainer{
+    box-shadow:-1px 4px 12px 0px #00000040;
   }
 
   #intro .intro-info {
@@ -1302,6 +1320,7 @@ element.style {}
   #testimonials .testimonial-item p {
     margin-left: 0;
   }
+
 }
 
 @media (max-width: 574px) {
