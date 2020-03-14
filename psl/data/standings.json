@@ -1,13 +1,13 @@
 [
   {
     "team": "Multan Sultans",
-    "played": "8",
-    "won": "5",
+    "played": "9",
+    "won": "6",
     "lost": "1",
     "tied": "0",
     "noresult": "2",
-    "points": "12",
-    "nrr": "+1.547"
+    "points": "14",
+    "nrr": "+1.307"
   },
   {
     "team": "Karachi Kings",
@@ -17,17 +17,17 @@
     "tied": "0",
     "noresult": "1",
     "points": "9",
-    "nrr": "+0.351"
+    "nrr": "-0.027"
   },
   {
     "team": "Peshawar Zalmi",
-    "played": "9",
+    "played": "10",
     "won": "4",
-    "lost": "4",
+    "lost": "5",
     "tied": "0",
     "noresult": "1",
     "points": "9",
-    "nrr": "-0.048"
+    "nrr": "-0.055"
   },
   {
     "team": "Lahore Qalandars",
