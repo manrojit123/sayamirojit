@@ -11,13 +11,13 @@
   },
   {
     "team": "Karachi Kings",
-    "played": "8",
-    "won": "4",
+    "played": "9",
+    "won": "5",
     "lost": "3",
     "tied": "0",
     "noresult": "1",
-    "points": "9",
-    "nrr": "-0.027"
+    "points": "11",
+    "nrr": "+0.014"
   },
   {
     "team": "Peshawar Zalmi",
@@ -41,13 +41,13 @@
   },
   {
     "team": "Islamabad United",
-    "played": "9",
+    "played": "10",
     "won": "3",
-    "lost": "5",
+    "lost": "6",
     "tied": "0",
     "noresult": "1",
     "points": "7",
-    "nrr": "+0.259"
+    "nrr": "+0.185"
   },
   {
     "team": "Quetta Gladiators",
