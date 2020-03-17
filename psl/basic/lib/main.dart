@@ -1,36 +1,24 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-      home: HamroApp(),
+void main() => runApp(MyApp(
+      TextInput: Text("Hello from main"),
     ));
 
-class HamroApp extends StatefulWidget {
-  @override
-  _HamroAppState createState() => _HamroAppState();
-}
-
-class _HamroAppState extends State<HamroApp> {
-  String name = "Hello Man2";
-
-  void _onClick() {
-    setState(() {
-      name = "Button is pressed";
-    });
-  }
-
+class MyApp extends StatelessWidget {
+  final Widget TextInput;
+  MyApp(this.TextInput);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Hello')),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            Text(name),
-            RaisedButton(
-              onPressed: _onClick,
-              child: Text('Click Me'),
-            )
-          ],
+    return MaterialApp(
+      title: "Hello",
+      home: new Scaffold(
+        appBar: AppBar(
+          title: Text('hello'),
+        ),
+        body: Center(
+          child: Column(
+            children: <Widget>[TextInput],
+          ),
         ),
       ),
     );
