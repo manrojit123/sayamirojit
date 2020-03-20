@@ -8,7 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Merriweather:900|Playfair+Display+SC:900|Poppins:400,500|Rozha+One|Spartan:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:900|Playfair+Display+SC:900|Raleway:800|Poppins:400,500|Rozha+One|Spartan:400,700&display=swap");
 
 @font-face {
   font-family: 'cg';
@@ -16,6 +16,13 @@
 }
 *:focus{
   outline:none;
+}
+.btn.focus, .btn:focus{
+  outline:none;
+}
+.width-100{
+  width:100%;
+  height:auto;
 }
 body {
   background: #fff;
@@ -42,6 +49,12 @@ a.btn {
   border-radius: 35px;
   padding: 10px 25px;
   font-size: 14px;
+}
+h2.title{
+  font-family: 'Raleway',sans-serif;
+  font-weight: 800;
+  font-size: 39px;
+  margin-top: 35px;
 }
 
 /* .op-7 {
@@ -164,7 +177,7 @@ h6 {
 }
 .slider-nav p i{
   font-size:35px;
-  color:#ffc400;
+  color:#f7b733;
 }
 .slider-nav p i:focus{
   outline:none;
@@ -186,7 +199,7 @@ color:whie;
   transition: all  200ms ease-in;
 }
 .tourSearch input:focus{
-  border-bottom:1px solid #ffc400;
+  border-bottom:1px solid #f7b733;
   outline:none;
   transition: all  200ms ease-in;
 }
@@ -402,14 +415,15 @@ header .search {
 }
 
 .btn-primary {
-  background-color: #ffc400;
+  background-color: #f7b733;
   background: rgb(255, 171, 0);
   background: linear-gradient(90deg,
       rgba(255, 171, 0, 1) 0%,
       rgba(255, 196, 0, 1) 100%);
   border: #111;
   border-radius: 0;
-  color: #042559;
+  color: #1d1f50;
+  font-size: 14px;
   transition: background 500ms ease-in;;
 }
 
@@ -658,7 +672,7 @@ element.style {}
 .main-nav a:hover,
 .main-nav .active>a,
 .main-nav li:hover>a {
-  color: #ffc400;
+  color: #f7b733;
   text-decoration: none;
 }
 
