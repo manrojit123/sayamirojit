@@ -182,8 +182,8 @@ article h3 {
 }
 
 .tab-content {
-  /* padding: 15px; */
-  padding-top: 54px;
+  padding-top: 0px;
+  /* padding-top: 54px; */
 }
 
 .top,
@@ -543,21 +543,24 @@ tbody tr td:nth-child(1) {
 .table-bordered>thead>tr>th {
   border: 0px solid red;
 }
-.placeTime{
+
+.placeTime {
   position: relative;
-    top: 16px;
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 2px 9px;
-    color: #000000;
-    /* font-weight: bold; */
-    border: 2px solid #ffffff1a;
-    left:-1px;
+  top: 16px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2px 9px;
+  color: #000000;
+  /* font-weight: bold; */
+  border: 2px solid #ffffff1a;
+  left: -1px;
 }
-.undef{
+
+.undef {
   position: relative;
   top: 6px;
 }
+
 @media (min-width:500px) {
   .firstMatch .imgTeamTodayDouble {
     width: 25vh;
@@ -575,21 +578,23 @@ tbody tr td:nth-child(1) {
     position: relative;
     top: 28px;
   }
-  .placeTime{
+
+  .placeTime {
     position: relative;
-      top: 36px;
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 2px 9px;
-      color: #000000;
-      /* font-weight: bold; */
-      border: 2px solid #ffffff1a;
-      left:-1px;
+    top: 36px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2px 9px;
+    color: #000000;
+    /* font-weight: bold; */
+    border: 2px solid #ffffff1a;
+    left: -1px;
   }
-  .undef{
+
+  .undef {
     position: relative;
     top: 3px;
- }
+  }
 }
 
 .undefined h5 {
@@ -597,4 +602,3 @@ tbody tr td:nth-child(1) {
   top: -5px;
   ;
 }
-
