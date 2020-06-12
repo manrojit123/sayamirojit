@@ -765,7 +765,18 @@ fieldset {
 .button:focus {
   outline: none;
 }
-
+.nav-item a{
+  position: relative;
+}
+.nav-item.active a:after{
+  content:"";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fdb515;
+  bottom: 0px;
+  left: 0px;
+}
     </style>
 </head>
 
@@ -785,7 +796,7 @@ fieldset {
                                 <li class="nav-item">
                                     <a class="nav-link" href="aboutus.html">ABOUT</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="news.html">NEWS</a>
                                 </li>
                                 <li class="nav-item">
