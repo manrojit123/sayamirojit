@@ -253,10 +253,14 @@
             border-bottom-left-radius:15px;
             border: 2px solid #da9600;
             border-top: 0px;
+            overflow: hidden;
             
         }
         .sub_menu li{
             list-style: none;
+        }
+        .sub_menu ul.dropdown_menu li:hover{
+            background: #da9b0f;
         }
         .sub_menu.show{
             display: block;
