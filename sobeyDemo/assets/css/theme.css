@@ -4355,22 +4355,27 @@ input[type="button"].btn-block {
 .nav-link:hover:after{
     content: "";
     position: absolute;
-    height: 2px;
+    height: 5px;
     width: 100%;
     background: #fdb515;
-    bottom: 0px;
+    bottom: -1px;
     left: 0px;
     transition: all 300ms ease-in;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 nav-item.active .nav-link:after {
     content: "";
     position: absolute;
-    height: 2px;
+    height: 5px;
     width: 100%;
     background: #193561;
-    bottom: 0px;
+    bottom: -1px;
     left: 0px;
     transition: all 300ms ease-in;
+    transition: all 300ms ease-in;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 .nav-link:hover,
