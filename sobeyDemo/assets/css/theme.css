@@ -16190,7 +16190,11 @@ section {
     border-bottom-left-radius:15px;
     border-bottom-right-radius:50px;
 }
-
+.carousel-cell .card .content h3{
+    margin-bottom:0px;
+    font-weight:600;
+    font-size:18px;
+}
 
 /*Home Scrolling Effect*/
 
@@ -17038,4 +17042,38 @@ article.works-accordian{
 
 footer{
     background:#152d51;
+}
+
+
+
+
+
+/* ************* */
+/* LearMore Page */
+/* &************ */
+
+.borderSeperator{
+    height: 3px;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+.contactLinks img{
+    width:15px;
+    margin-right:10px;
+    fill:white;
+}
+
+#login{
+    padding-top:150px;
+    height: 100vh;
+    background: #DE6262;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #193561, #01060d);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #193561, #01060d)
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#login .Sobeytitle h2{
+    margin-top:20px;
 }
