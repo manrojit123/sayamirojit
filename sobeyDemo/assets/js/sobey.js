@@ -1,6 +1,16 @@
 (function ($) {
   "use strict";
+  $('a[href*="#"]').on('click', function (e) {
+    e.preventDefault()
 
+    $('html, body').animate(
+      {
+        scrollTop: $($(this).attr('href')).offset().top,
+      },
+      500,
+      'linear'
+    )
+  });
 
   if ($(window).width() < 768) {
     // alert('Less than 960');
@@ -38,7 +48,8 @@
     duration: 1,
     yoyo: true
   });
-  var msgs = ["Having issues with Connectivity ", "Lower your TCO with CBRS", "Flexible Capex and Opex options"];
+  var msgs = ["Solve issues with mobile wireless connectivity ", "Want higher reliability wireless in your building?", "Need better security from your wireless network?", "Connect your devices and mobile phones to one network", "More wireless telecom control with CBRS"
+    , "Lower your TCO with CBRS"];
 
   var indx = 0;
   $("#div").text(msgs[indx]);
