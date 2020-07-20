@@ -16955,6 +16955,7 @@ article.works-accordian{
     font-weight: bold;
     color: #004987;
     padding: 0;
+    text-align: left;
   }
   
   .myaccordion .btn-link:hover,
@@ -17090,3 +17091,22 @@ footer{
 #login .Sobeytitle h2{
     margin-top:20px;
 }
+
+/* Fixed Menu */
+.fixed-menu-page{
+    margin-top:2vh;
+    margin-left:3vw;
+}
+.smart-scroll{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+  .scrolled-down{
+     transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up{
+     transform:translateY(0); transition: all 0.3s ease-in-out;
+  }
