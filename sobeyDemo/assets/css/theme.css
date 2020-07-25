@@ -3336,6 +3336,17 @@ input[type="button"].btn-block {
     .dropdown-menu{
         top:0px;
     }
+    .nav-item{
+        padding:10px 10px;
+    }
+    .dropdown-item{
+        padding:1.3rem 0.7rem
+    }
+    .dropdown-item span{
+        font-weight: 600;
+        color:#193561b3 !important;
+        
+    }
 }
 .dropdown-menu-left {
     right: auto;
@@ -4592,6 +4603,9 @@ nav-item.active .nav-link:after {
     .navbar-expand-md>.container-fluid {
         padding-right: 0;
         padding-left: 0;
+    }
+    .navbar{
+        padding-left:0;
     }
 }
 
@@ -11599,7 +11613,11 @@ section {
         padding-bottom: 4.5rem;
     }
 }
-
+@media (max-width: 768px) {
+    .space-lg{
+        padding-top:1rem;
+    }
+}
 @media (max-width: 1199.98px) {
     .main-container>section.space-xlg:first-child {
         padding-top: 7.5rem;
@@ -13577,7 +13595,7 @@ section>.decorative-divider:first-child {
 .dropdown .h4,
 .dropdown .h5,
 .dropdown .h6 {
-    color: #343a40;
+    color: #193561;
 }
 
 .dropdown .text-muted {
@@ -16025,12 +16043,23 @@ img.zoom-img {
 section {
     padding: 0.75rem 1.5rem;
 }
+@media(max-width:768px){
+    section{
+        padding:0.75rem 0.5rem;
+    }
+}
 .navbar-container > div{
     border-bottom:1px solid #0000000f;
 }
 .Sobeytitle {
     position: relative;
     margin-bottom:50px;
+}
+@media(max-width:768px){
+    .Sobeytitle{
+        margin-bottom: 15px;
+        margin-top:20px;
+    }
 }
 
 .Sobeytitle h2 {
@@ -16110,10 +16139,14 @@ section {
     }
     .navSocial li{
         display: inline-block;
-        padding-right: calc(100% / 8);
+        /* padding-right: calc(100% / 8); */
     }
     .navSocial li a{
+        padding: 15px !important;
         /* padding:calc(100%/10) !important; */
+    }
+    .navSocial li a:nth-child(1){
+        padding-left:5px !important;
     }
 }
 /*Home Header*/
@@ -16145,7 +16178,7 @@ section {
 }
 #div{
     padding-bottom: 20px;
-    height: 60px;
+    /* height: 60px; */
     display: block;
     position: relative;
     top: -25px;
@@ -16155,10 +16188,32 @@ section {
 #div2 {
     font-size: 1.3em;
 }
+@media(max-width:768px){
+    .flickity-prev-next-button{
+        display:none;
+    }
+    #div{
+        height:auto;
+        margin-top:5px;
+        top:0;
+        padding-bottom:0px;
+        height:92px;
+        text-align:center;
+    }
+    .sliderCard img{
+        width:auto;
+        height:40vh;
+        object-fit: cover;
 
+    }
+    .flickity-viewport,.flickity-slider,.main-carousel{
+        height:40vh;
+    }
+}
 @media(max-width:400px){
     .headerText{
-        font-size:2em;
+        font-size:1.3em;
+        line-height:34px;
     }
 }
 
@@ -16267,7 +16322,7 @@ section {
         position:unset;
     }
         #sobeyFor{
-        padding-top:70px;
+        padding-top:30px;
     }
 }
 @media(max-width:400px){
@@ -16478,6 +16533,13 @@ section {
     border-radius: 23px;
     width: 50vw;
     position:relative;
+}
+@media(max-width:768px){
+    .form-styled{
+        padding:10px 25px;
+        width:90vw;
+    }
+    
 }
 .submitForm{
     position: absolute !important;
@@ -17064,7 +17126,7 @@ footer{
 
 /* ************* */
 /* LearMore Page */
-/* &************ */
+/* ************* */
 
 .borderSeperator{
     height: 3px;
@@ -17097,7 +17159,7 @@ footer{
     margin-top:2vh;
     margin-left:3vw;
 }
-.smart-scroll{
+/* .smart-scroll{
     position: fixed;
     top: 0;
     right: 0;
@@ -17109,4 +17171,41 @@ footer{
   }
   .scrolled-up{
      transform:translateY(0); transition: all 0.3s ease-in-out;
-  }
+  } */
+
+
+  /* ************* */
+/* Contact Page */
+/* ************* */
+.sideBarMenu{
+    position: relative;
+}
+.sideBarMenu ul{
+    position: fixed;
+}
+.socialMedia ul li  img{
+    width:15px;
+}
+
+@media (max-width: 768px){
+    .mobileSwitchCols {
+        flex-direction: column-reverse;
+    }
+    .sideBarMenu,.sideBarMenu ul{
+        display: none;
+    }
+    .socialMedia ul li {
+        display: inline-block;
+        padding-right: calc(100% / 8);
+    }
+
+    #careers .postName{
+        font-weight:bold;
+    }
+    .departmentName{
+        font-size:14px;
+    }
+    .deadLine{
+        font-size:13px;
+    }
+}
