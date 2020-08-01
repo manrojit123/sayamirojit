@@ -69,7 +69,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="login.html"><span class="h6 mb-0">Building Assets</span></a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="videoList.html"><span class="h6 mb-0">Videos</span></a>
+                  <a class="dropdown-item" href="videoList.html.html"><span class="h6 mb-0">Videos</span></a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="documents.html"><span class="h6 mb-0">Documents</span></a>
                 </div>
@@ -128,7 +128,7 @@
       <!--end of container-->
     </div>
   </div>
-  <div id="login">
+  <div id="builder">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
@@ -137,23 +137,111 @@
               <div class="row  justify-content-center">
                 <div class="col-md-9 login-sec">
                   <div class="Sobeytitle white text-center">
-                    <h2 class="whiteText opacity10">PREMIUM USERS</h2>
-                    <h4 class="whiteText "">LOGIN</h4>
+                    <h2 class="whiteText opacity10">RENT SIMULATOR</h2>
+                    <h4 class="whiteText "">CALCULATOR</h4>
                   </div>
                 </div>
               </div>
               <div class=" row justify-content-center">
-                      <div class="col-md-4">
+                      <div class="col-12 col-md-6">
                         <form class=" form form-login">
                           <div class="form-group">
-                            <input type="text" required="required" />
-                            <label for="input" class="control-label">Name</label><i class="bar"></i>
+                            <input type="text" required="required" id="buildingSquare" value="5000" />
+                            <label for="buildingSquare" class="control-label">Building Square Footage</label><i
+                              class="bar"></i>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="inputState" class="whiteText">Building Activity</label>
+                            <select id="inputState" class="form-control">
+                              <option selected>Choose...</option>
+                              <option value="5500">Health Care</option>
+                              <option value="5000">Education</option>
+                              <option value="6000">Ind. Facility</option>
+                              <option value="6500">Lodging</option>
+                              <option value="7000"> Malls</option>
+                              <option value="7500">Office </option>
+                              <option value="8000">Retails</option>
+                              <option value="8500">Warehouse</option>
+                            </select>
+                          </div>
+
+                          <div class="div">
+                            <label for="existingCabling1" class="whiteText">Existing cabling and materials?</label><br>
+                            <div class="form-check form-check-inline"">
+                              <input class=" form-check-input" type="radio" name="existingCabling"
+                              id="existingCabling1" value="yes" checked>
+                              <label class="form-check-label" for="existingCabling1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline"">
+                              <input class=" form-check-input" type="radio" name="existingCabling"
+                              id="existingCabling2" value="no">
+                              <label class="form-check-label" for="existingCabling2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="div">
+                            <label for="existingRack1" class="whiteText">Existing rack and wiring closet/equipment room?
+                            </label><br>
+                            <div class="form-check form-check-inline"">
+                              <input class=" form-check-input" type="radio" name="existingRack" id="existingRack1"
+                              value="yes" checked>
+                              <label class="form-check-label" for="existingRack1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline"">
+                              <input class=" form-check-input" type="radio" name="existingRack" id="existingRack2"
+                              value="no">
+                              <label class="form-check-label" for="existingRack2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                          <div class="div">
+                            <label for="backHaul1" class="whiteText"> Can we use existing backhaul? </label><br>
+                            <div class="form-check form-check-inline"">
+                              <input class=" form-check-input" type="radio" name="backHaul" id="backHaul1"
+                              value="option1" checked>
+                              <label class="form-check-label" for="backHaul1">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="form-check form-check-inline"">
+                              <input class=" form-check-input" type="radio" name="backHaul" id="backHaul2"
+                              value="option2">
+                              <label class="form-check-label" for="backHaul2">
+                                No
+                              </label>
+                            </div>
                           </div>
                           <div class="form-group">
-                            <input type="text" required="required" />
-                            <label for="input" class="control-label">E-mail</label><i class="bar"></i>
+                            <input type="text" required="required" id="prepaidCapex" />
+                            <label for="prepaidCapex" class="control-label">Prepaid Capex %</label><i class="bar"></i>
                           </div>
+                          <div class="form-group">
+                            <input type="button" value="Calculate Rent" id="btnRent" class="whiteText">
+                          </div>
+
                         </form>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <h3>OUTPUT</h3>
+                        <h6>Building size</h6>
+                        <h3>Medium</h3>
+                        <h6>CBRS Access Point Coverage (sqft/AP)</h6>
+                        <h3>5500
+                          <h6># of CBRS Acces Points</h6>
+                          <h3>16</h3>
+                          <h6 class="text-danger">SIM Connected Devices per sqft</h6>
+                          <h3 class="text-danger">0.005</h3>
+                          <h6 class="text-danger"># of SIM Connected Devices</h6>
+                          <h3 class="text-danger">100</h3>
+                          <h2>ESTIMATED RENT ($/Month) : <span class="text-primary">1866</span></h2>
                       </div>
 
                   </div>
@@ -297,6 +385,98 @@
   <script type="text/javascript" src="assets/js/theme.js"></script>
   <script type="text/javascript" src="assets/js/sobey.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <script>
+    $(function () {
+      var buildingSquareFootage; // Building Square Footage
+      var buildingAcitivy; //Building Activity
+      var cablindMaterials; //Existing cabling and materials?
+      var existingRackWiring //Existing rack and wiring closet/equipment room? 
+      var existingBackhaul; //Can we use existing backhaul?
+      var prepaidCapex; //Prepaid Capex %
+      var CbrsAccessPointCoverage; //CBRS Access Point Coverage (sqft/AP)
+      var
+      noCbrsAccessPoint; //# of CBRS Acces Points                        roundup(buildingSquareFootage/CbrsAccessPointCoverage)
+      //--------------------------------------------------------------------------
+      var EstRent; //Estimated Rent                                 (12.76%*netCapex+opex)/12
+      //--------------------------------------------------------------------------
+      var simConncetedDevices //SIM Connected Devices per sqft
+      var noSimConnectedDevices //# of SIM Connected Devices
+      var radioEMS; //Radio EMS Management Software
+      var cbrsSASService; //CBRS SAS Service
+      var electricCostt; //Electrical Cost
+      var monitoringMaintenance; //Monitoring and Maintenance to NOC
+      var epcSoftware; //EPC Software
+      var upsizeBackhaul; //Upsize Backhaul Costs
+      var opexContingency; //Opex Contingency
+      //--------------------------------------------------------------------------
+      var opex;
+      //--------------------------------------------------------------------------
+      var cbrsRadio; //CBRS Radio
+      var cablingMaterial; //Cabling and Materials
+      var installationLabor; //Installation Labor
+      var switchHardware; //Switch Hardware/Head-End for Radios
+      var epcSoftware; //EPC Software / Hardwarde
+      var rfCabling; //RF/Cabling Design, Site Survey, Proj. Mgmt.
+      var modificationEquip; //Modifications to Equip Room, Closet Labor
+      var racksAggregation; //Racks, Aggregation Point, Closet Capex
+      var capexContingency; //Capex Contingency
+      var grossCapex; //Gross Capex
+      var prepaidCapex; //Prepaid Capex
+      //--------------------------------------------------------------------------
+      var netCapex; //Net Capex
+      //--------------------------------------------------------------------------
+
+      buildingSquareFootage = $('#buildingSquare').val();
+      $("#buildingSquare").change(function () {
+        buildingSquareFootage = $(this).val();
+      });
+
+      CbrsAccessPointCoverage = $('#inputState').val();
+      $('#inputState').change(function () {
+        CbrsAccessPointCoverage = $(this).val();
+        noCbrsAccessPoint = Math.round($('#buildingSquare').val() /
+        CbrsAccessPointCoverage); //# of CBRS Acces Points
+        // console.log(CbrsAccessPointCoverage);
+      }).change(); // Trigger the event
+
+
+      cablindMaterials = $('input:radio[name="existingCabling"]').val();
+      $('input:radio[name="existingCabling"]').change(function () {
+        if ($(this).val() === 'yes') {
+          cablindMaterials = "yes";
+        } else {
+          cablindMaterials = "no";
+
+        }
+        console.log('cabling Material' + cablindMaterials);
+      });
+
+      existingRackWiring = $('input:radio[name="existingRack"]').val();
+      $('input:radio[name="existingCabling"]').change(function () {
+        if ($(this).val() === 'yes') {
+          existingRackWiring = "yes";
+        } else {
+          existingRackWiring = "no";
+        }
+        console.log(existingRackWiring);
+      });
+
+
+
+
+
+
+
+      $('#btnRent').click(function () {
+        console.log(buildingSquareFootage);
+        console.log(CbrsAccessPointCoverage);
+        console.log(cablindMaterials);
+        console.log(existingRackWiring);
+      });
+
+
+    });
+  </script>
 </body>
 
 
