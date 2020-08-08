@@ -108,7 +108,7 @@ body {
 }
 
 .whiteText {
-    color: #fff;
+    color: #fff !important;
 }
 
 .whiteBG {
@@ -16040,6 +16040,14 @@ img.zoom-img {
 
 
 /*General*/
+.width-100{
+    width:100%;
+    height:auto;
+}
+.playfairFont{
+    font-family: 'Playfair Display', serif;
+    font-weight:700;
+}
 section {
     padding: 0.75rem 1.5rem;
 }
@@ -16369,9 +16377,15 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+#sobeyFor span{
+    background: #fdba24;
+    padding: 4px 22px;
+    margin-bottom: 15px;
+    display: inline-table;
+    border-radius: 60px;
+  }
 .sobeyServices li {
-    padding-right: 10em;
+    /* padding-right: 10em; */
     list-style: none;
 
 }

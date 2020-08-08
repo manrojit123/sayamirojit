@@ -15,9 +15,10 @@
   <link rel="apple-touch-icon" sizes="152x152" href="assets/image/fav/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/image/fav/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/image/fav/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href=assets/image/fav/favicon-32x32.png"> <link rel="icon"
-    type="image/png" sizes="96x96" href=assets/image/fav/favicon-96x96.png"> <link rel="icon" type="image/png"
-    sizes="16x16" href=assets/image/fav/favicon-16x16.png"> <link rel="manifest" href="assets/image/fav/manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href=assets/image/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href=assets/image/fav/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href=assets/image/fav/favicon-16x16.png">
+  <link rel="manifest" href="assets/image/fav/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -79,9 +80,6 @@
               </li>
               <li class="nav-item">
                 <a href="news.html" class="nav-link">News</a>
-              </li>
-              <li class="nav-item">
-                <a href="login.html" class="nav-link">Enterprise</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
@@ -155,8 +153,8 @@
                             <label for="inputState" class="whiteText">Building Activity</label>
                             <select id="inputState" class="form-control">
                               <option selected>Choose...</option>
-                              <option value="5500">Health Care</option>
-                              <option value="5000">Education</option>
+                              <option value="5000">Health Care</option>
+                              <option value="5500">Education</option>
                               <option value="6000">Ind. Facility</option>
                               <option value="6500">Lodging</option>
                               <option value="7000"> Malls</option>
@@ -389,58 +387,270 @@
     $(function () {
       var buildingSquareFootage; // Building Square Footage
       var buildingAcitivy; //Building Activity
-      var cablindMaterials; //Existing cabling and materials?
+      var existingCabling; //Existing cabling and materials?
       var existingRackWiring //Existing rack and wiring closet/equipment room? 
       var existingBackhaul; //Can we use existing backhaul?
       var prepaidCapex; //Prepaid Capex %
       var CbrsAccessPointCoverage; //CBRS Access Point Coverage (sqft/AP)
-      var
-      noCbrsAccessPoint; //# of CBRS Acces Points                        roundup(buildingSquareFootage/CbrsAccessPointCoverage)
+      var noCbrsAccessPoint; //# of CBRS Acces Points                        roundup(buildingSquareFootage/CbrsAccessPointCoverage)
       //--------------------------------------------------------------------------
       var EstRent; //Estimated Rent                                 (12.76%*netCapex+opex)/12
       //--------------------------------------------------------------------------
       var simConncetedDevices //SIM Connected Devices per sqft
       var noSimConnectedDevices //# of SIM Connected Devices
-      var radioEMS; //Radio EMS Management Software
+      var radioEMS = radioEmsMgmtSoftware_anchorFull * (noCbrsAccessPoint / radioEmsMgmtSoftware_Threshold); //Radio EMS Management Software      
       var cbrsSASService; //CBRS SAS Service
-      var electricCostt; //Electrical Cost
+      var electricCost; //Electrical Cost
       var monitoringMaintenance; //Monitoring and Maintenance to NOC
-      var epcSoftware; //EPC Software
+      var epcSoftwareDruid; //EPC Software Druid
+      var epcSoftwareCelona; //EPC Software Celona
+      var cellularNetworkBaseLicenceOpex; //cellular Network Based License (Druid)
       var upsizeBackhaul; //Upsize Backhaul Costs
       var opexContingency; //Opex Contingency
       //--------------------------------------------------------------------------
       var opex;
       //--------------------------------------------------------------------------
-      var cbrsRadio; //CBRS Radio
-      var cablingMaterial; //Cabling and Materials
+      var cbrsRadio; //CBRS Radio       
+      var cablingMaterials; //Cabling and Materials
       var installationLabor; //Installation Labor
       var switchHardware; //Switch Hardware/Head-End for Radios
-      var epcSoftware; //EPC Software / Hardwarde
+      var simCard;
+      var epcSoftwareDruid; //EPC Software Druid/ Hardwarde
+      var epcSoftwareCelona; //EPC Software Celona/ Hardwarde
       var rfCabling; //RF/Cabling Design, Site Survey, Proj. Mgmt.
       var modificationEquip; //Modifications to Equip Room, Closet Labor
       var racksAggregation; //Racks, Aggregation Point, Closet Capex
+      var oneUedge; //1U Edge Server
+      var epcConsultancySupport; //EPC Consultancy and Support
+      var cellularNetworkBaseLicencCapex; //cellular Network Based License (Druid)
       var capexContingency; //Capex Contingency
-      var grossCapex; //Gross Capex
-      var prepaidCapex; //Prepaid Capex
       //--------------------------------------------------------------------------
       var netCapex; //Net Capex
       //--------------------------------------------------------------------------
+      var upfront0_monthly;     //(0.12575*(netCapex-upfront0_upfront)+opex)/12
+      var upfront0_upfront;     //capex*0%
+      var upfront5_monthly;     //(0.12575*(netCapex-upfront0_upfront)+opex)/12
+      var upfront5_upfront;     //capex*5%
+      var upfront10_monthly;    //(0.12575*(netCapex-upfront0_upfront)+opex)/12
+      var upfront10_upfront;    //capex*20%
+      var upfront15_monthly;    //(0.12575*(netCapex-upfront0_upfront)+opex)/12
+      var upfront15_upfront;    //capex*25%
+      var upfront20_monthly;    //(0.12575*(netCapex-upfront0_upfront)+opex)/12
+      var upfront20_upfront;    //capex*20%
+      var upfront25_monthly;    //(0.12575*(netCapex-upfront0_upfront)+opex)/12
+      var upfront25_upfront;    //capex*25%
+      //--------------------------------------------------------------------------
+      //------------------------------ASSUMPTIONS---------------------------------
+      //--------------------------------------------------------------------------
+
+      //---------------Revenue generating units
+      var avgBuildingSize = 85000; //Avg. Building Size (sqft)
+      var coverage = 7500; //Coverage (sqft/AP)
+      var avgNoSimCards = 50;  //Avg. # of SIM Cards
+      var density = avgBuildingSize / avgNoSimCards;  //Density (sqft/SIM Card)
+
+
+      //--------------------------------------------------------------------------
+      //---------------Capex
+
+      var cbrsAccessPoint_anchorFull = 300;
+      var cbrsAccessPoint_lease = 0;
+      var cbrsAccessPoint_anchorLite = 0;
+      var cbrsAccessPoint_leaseLite = 0;
+      var cbrsAccessPoint_Threshold = 1;
+
+      var cablingMaterials_anchorFull = 250;
+      var cablingMaterials_lease = 0;
+      var cablingMaterials__anchorLite = 500;
+      var cablingMaterials_leaseLite = 0;
+      var cablindMaterials_Threshold = 1;
+
+      var installationLabor_anchorFull = 250;
+      var installationLabor_lease = 0;
+      var installationLabor_anchorLite = 500;
+      var installationLabor_leaseLite = 0;
+      var installationLabor_Threshold = 1;
+
+      var switchHardware_anchorFull = 2000;
+      var switchHardware_lease = 0;
+      var switchHardware_anchorLite = 2000;
+      var switchHardware_leaseLite = 0;
+      var switchHardware_Threshold = 48;
+
+      var epcSoftwareCelone_anchorFull = 0;
+      var epcSoftwareCelone_lease = 0;
+      var epcSoftwareCelone_anchorLite = 10000;
+      var epcSoftwareCelone_leaseLite = 0;
+      var epcSoftwareCelone_Threshold = 1;
+
+      var simCard_anchorFull = 12;
+      var simCard_lease = 0;
+      var simCard_anchorLite = 0;
+      var simCard_leaseLite = 0;
+      var simCard_Threshhold = 1;
+
+      var epcSoftwareDruid_anchorFull = 128;
+      var epcSoftwareDruid_lease = 0;
+      var epcSoftwareDruid_anchorLite = 0;
+      var epcSoftwareDruid_leaseLite = 0;
+      var epcSoftwareDruid_Threshold = 1;
+
+      var rfCabling_anchorFull = 5000;
+      var rfCabling_lease = 0;
+      var rfCabling_anchorLite = 10000;
+      var rfCabling_leaseLite = 0;
+      var rfCabling_Threshold = 150000;
+
+      var modifications_anchorFull = 2000;
+      var modifications_lease = 0;
+      var modifications_anchorLite = 4000;
+      var modifications_leaseLite = 0;
+      var modifications_Threshhole = 150000;
+
+      var racks_anchorFull = 1000;
+      var racks_lease = 0;
+      var racks_anchorLite = 1000;
+      var racks_leaseLite = 0;
+      var racks_Threshold = 25000;
+
+      var mocnGateway_anchorFull = 0;
+      var mocnGateway_lease = 7485;
+      var mocnGateway_anchorLite = 0;
+      var mocnGateway_leaseLite = 0;
+      var mocnGateway_Threshold = 100000;
+
+      var edgeServer_anchorFull = 5077;
+      var edgeServer_lease = 4255;
+      var edgeServer_anchorLite = 5077;
+      var edgeServer_leaseLite = 4255;
+      var edgeServer_Threshold = n / a;
+
+      var epcConsultancySupport_anchorFull = 16520;
+      var epcConsultancySupport_lease = 0;
+      var epcConsultancySupport_anchorLite = 16520;
+      var epcConsultancySupport_leaseLite = 0;
+      var epcConsultancySupport_Threshold = n / a
+
+      var cellularNetworkBaseLicencCapex_anchorFull = 12272;
+      var cellularNetworkBaseLicencCapex_lease = 0;
+      var cellularNetworkBaseLicencCapex_leaseLite = 0;
+      var cellularNetworkBaseLicencCapex_anchorLite = 0;
+      var cellularNetworkBaseLicencCapex_Threshold = n / a;
+
+      var leaseUpFirewall_anchorFull = 0;
+      var leaseUpFirewall_lease = 2000;
+      var leaseUpFirewall_anchorLite = 0;
+      var leaseUpFirewall_leaseLite = 2000;
+      var leaseUpFirewall_Threshold = n / a;
+
+      var activationCapexLabor_anchorFull = 0;
+      var activationCapexLabor_lease = 2000;
+      var activationCapexLabor_anchorLite = 0;
+      var activationCapexLabor_leaseLite = 4000;
+      var activationCapexLabor_Threshold = n / a;
+
+      var capexContingency_anchorFull = (10 / 100);
+      var capexContingency_lease = (10 / 100);
+      var capexContingency_anchorLite = (10 / 100);
+      var capexContingency_leaseLite = (10 / 100);
+
+      var capexContingency_anchorFull = (0 / 100);
+      var capexContingency_lease = (0 / 100);
+      var capexContingency_anchorLite = (0 / 100);
+      var capexContingency_leaseLite = (0 / 100);
+
+      //--------------------------------------------------------------------------
+      //---------------Opex
+
+      var radioEmsMgmtSoftware_anchorFull = 300;
+      var radioEmsMgmtSoftware_lease = 0;
+      var radioEmsMgmtSoftware_anchorLite = 0;
+      var radioEmsMgmtSoftware_leaseLite = 0;
+      var radioEmsMgmtSoftware_threshold = 1;
+
+      var cbrsSAS_anchorFull = 40;
+      var cbrsSAS_lease = 0;
+      var cbrsSAS_anchorLite = 0;
+      var cbrsSAS_leaseLite = 0;
+      var cbrsSAS_Threshold = 1;
+
+
+      var electricCost_anchorFull = 32;
+      var electricCost_lease = 0;
+      var electricCost_anchorLite = 32;
+      var electricCost_leaseLite = 0;
+      var electricCost_Threshold = 1;
+      var electricCost_Escalator = 1;
+
+
+      var monitoringMaintenance_anchorFull = 60;
+      var monitoringMaintenance_lease = 36;
+      var monitoringMaintenance_anchorLite = 60;
+      var monitoringMaintenance_leaseLite = 36;
+      var monitoringMaintenance_Threshold = 1;
+      var monitoringMaintenance_Escalator = 1;
+
+      var epcSoftwareCelonaOpex_anchorFull = 0;
+      var epcSoftwareCelonaOpex_lease = 0;
+      var epcSoftwareCelonaOpex_anchorLite = 0;
+      var epcSoftwareCelonaOpex_leaseLite = 0;
+      var epcSoftwareCelonaOpex_Threshold = 1;
+      var epcSoftwareCelonaOpex_Escalator = 1;
+
+      var epcSoftwareDruidOpex_anchorFull = 12;
+      var epcSoftwareDruidOpex_lease = 0;
+      var epcSoftwareDruidOpex_anchorLite = 0;
+      var epcSoftwareDruidOpex_leaseLite = 0;
+      var epcSoftwareDruidOpex_Threshold = 1;
+
+      var mocnGatewayOpex_anchorFull = 0;
+      var mocnGatewayOpex_lease = 674;
+      var mocnGatewayOpex_anchorLite = 0;
+      var mocnGatewayOpex_leaseLite = 0;
+      var mocnGatewayOpex_Threshold = 100000;
+
+      var cellularNetworkBaseLicenseOpex_anchorFull = 1104;
+      var cellularNetworkBaseLicenseOpex_lease = 0;
+      var cellularNetworkBaseLicenseOpex_anchorLite = 0;
+      var cellularNetworkBaseLicenseOpex_leaseLite = 0;
+      var cellularNetworkBaseLicenseOpex_Threshold = n / a;
+
+
+      var upsizeBackhaul_anchorFull = 2400;
+      var upsizeBackhaul_lease = 0;
+      var upsizeBackhaul_anchorLite = 2400;
+      var upsizeBackhaul_leaseLite = 0;
+      var upsizeBackhaul_Threshold = n / a;
+
+      var peeringPoint_anchorFull = 0;
+      var peeringPoint_lease = 150;
+      var peeringPoint_anchorLite = 0;
+      var peeringPoint_leaseLite = 150;
+      var peeringPoint_Threshold = n / a;
+
+      var opexContingency_anchorFull = (5 / 100);
+      var opexContingency_lease = (5 / 100);
+      var opexContingency_anchorLite = (5 / 100);
+      var opexContingency_leaseLite = (5 / 100);
+      var opexContingency_Threshold = (5 / 100);
+
+
+      var opexEscalator_anchorFull = (3 / 100);
+      var opexEscalator_lease = (3 / 100);
+      var opexEscalator_anchorLite = (3 / 100);
+      var opexEscalator_leaseLite = (3 / 100);
+      var opexEscalator_Threshold = (3 / 100);
+
+
+
+
+
+      //---------------Calculation
 
       buildingSquareFootage = $('#buildingSquare').val();
-      $("#buildingSquare").change(function () {
-        buildingSquareFootage = $(this).val();
-      });
-
       CbrsAccessPointCoverage = $('#inputState').val();
-      $('#inputState').change(function () {
-        CbrsAccessPointCoverage = $(this).val();
-        noCbrsAccessPoint = Math.round($('#buildingSquare').val() /
-        CbrsAccessPointCoverage); //# of CBRS Acces Points
-        // console.log(CbrsAccessPointCoverage);
-      }).change(); // Trigger the event
-
-
       cablindMaterials = $('input:radio[name="existingCabling"]').val();
+
       $('input:radio[name="existingCabling"]').change(function () {
         if ($(this).val() === 'yes') {
           cablindMaterials = "yes";
@@ -468,6 +678,41 @@
 
 
       $('#btnRent').click(function () {
+        $("#buildingSquare").change(function () {
+          buildingSquareFootage = $(this).val();
+        });
+        $('#inputState').change(function () {
+          CbrsAccessPointCoverage = $(this).val();
+          noCbrsAccessPoint = Math.ceil($('#buildingSquare').val() / CbrsAccessPointCoverage); //# of CBRS Acces Points
+
+          console.log(noCbrsAccessPoint);
+        }).change(); // Trigger the event
+
+
+
+
+        opex = radioEMS + cbrsSASService + electricCost + monitoringMaintenance + epcSoftwareDruid + epcSoftwareCelona + cellularNetworkBaseLicence + upsizeBackhaul + opexContingency;
+        netCapex = cbrsRadio + cablingMaterials + installationLabor + switchHardware + simCards + epcSoftwareDruid + epcSoftwareCelona + rfCabling + modificationEquip + racksAggregation + oneUedge + epcConsultancySupport + cellularNetworkBaseLicencCapex + capexContingency;
+
+        upfront0_upfront = netCapex * (0 / 100);
+        upfront0_monthly = (0.12575 * (netCapex - upfront0_upfront) + opex) / 12;
+
+        upfront5_upfront = netCapex * (5 / 100);
+        upfront5_monthly = (0.12575 * (netCapex - upfront5_upfront) + opex) / 12;
+
+        upfront10_upfront = netCapex * (10 / 100);
+        upfront10_monthly = (0.12575 * (netCapex - upfront10_upfront) + opex) / 12;
+
+        upfront15_upfront = netCapex * (15 / 100);
+        upfront15_monthly = (0.12575 * (netCapex - upfront15_upfront) + opex) / 12;
+
+        upfront20_upfront = netCapex * (20 / 100);
+        upfront20_monthly = (0.12575 * (netCapex - upfront20_upfront) + opex) / 12;
+
+        upfront25_upfront = netCapex * (25 / 100);
+        upfront25_monthly = (0.12575 * (netCapex - upfront25_upfront) + opex) / 12;
+
+
         console.log(buildingSquareFootage);
         console.log(CbrsAccessPointCoverage);
         console.log(cablindMaterials);
