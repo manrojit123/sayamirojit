@@ -4364,6 +4364,22 @@ input[type="button"].btn-block {
     /* font-weight: 600; */
     transition: all 300ms ease-in;
 }
+.nav-item.dropdown:hover > a{
+    color: #193561 !important;
+    opacity: 1;
+}
+.nav-item.dropdown:hover > a:after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #fdb515;
+    bottom: -1px;
+    left: 0px;
+    transition: all 300ms ease-in;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
 .nav-link:hover:after{
     content: "";
     position: absolute;
@@ -16411,6 +16427,7 @@ section {
     padding: 100px;
     text-align: center;
     background-repeat: no-repeat;
+    background-position: center;;
 }
 .accomplishment{
     padding:5em 0px !important;
