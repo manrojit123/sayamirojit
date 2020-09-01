@@ -15,10 +15,9 @@
   <link rel="apple-touch-icon" sizes="152x152" href="assets/image/fav/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/image/fav/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/image/fav/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href=assets/image/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href=assets/image/fav/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href=assets/image/fav/favicon-16x16.png">
-  <link rel="manifest" href="assets/image/fav/manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href=assets/image/fav/favicon-32x32.png"> <link rel="icon"
+    type="image/png" sizes="96x96" href=assets/image/fav/favicon-96x96.png"> <link rel="icon" type="image/png"
+    sizes="16x16" href=assets/image/fav/favicon-16x16.png"> <link rel="manifest" href="assets/image/fav/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -39,6 +38,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,600;0,900;1,700&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="assets/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
   <link href="assets/css/entypo.css" rel="stylesheet" type="text/css" media="all" />
@@ -143,9 +143,46 @@
                 </div>
               </div>
             </div>
+
+            <style>
+              .about_list {
+                position: relative;
+              }
+
+              .about_list li {
+                position: relative;
+                left: 20px;
+                /* margin-bottom: 55px;x */
+                margin-top: 55px;
+                x color: #4e4e4e;
+                font-weight: 400;
+                font-size: 30px;
+                font-family: 'Oleo Script', cursive;
+              }
+
+              .about_list li span {
+                position: absolute;
+                color: #193561;
+                font-size: 50px;
+                opacity: 0.3;
+                left: -21px;
+                top: -15px;
+                font-weight: bold;
+                color: #1f3a6447;
+              }
+            </style>
             <div class="row">
               <div class="col-7 aos-init" data-aos="fade-up" data-aos-delay="10" data-aos-easing="ease-out-cubic">
-                <img src="assets/image/company-info/about us.svg" class="width-100">
+                <ul class="list-unstyled about_list">
+                  <li><span>01</span>Executive team with over 100 years combined experience with indoor wireless systems
+                  </li>
+
+                  <li><span>02</span>10,000 indoor wireless installations in over 25 countries</li>
+
+                  <li><span>03</span>Pioneers in indoor Distributed Antenna Systems (DAS) and outdoor Small-Cells</li>
+
+                  <li><span>04</span>Leaders in CBRS indoor systems</li>
+                </ul>
               </div>
             </div>
           </div>
