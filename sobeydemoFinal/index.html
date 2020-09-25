@@ -140,30 +140,34 @@
                   data-target="#learnMorePop">Learn More <i class="icon-chevron-right"></i></a>
               </li>
               <li class="list-inline-item">
-                <a href="" class="btn brandBlueText watchVideo" data-toggle="modal"
-                  data-src="https://www.youtube.com/embed/6n0OTiIEea8" data-target="#myModal">Watch
+                <a href="" class="btn brandBlueText watchVideo" data-toggle="modal" data-target="#videoModal">Watch
                   Videos</a>
               </li>
             </ul>
           </div>
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modalLarge" role="document">
+
+
+          <div id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+            class="modal fade text-left">
+            <div role="document" class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-body">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
-                  <div class="container-fluid p-0">
+                </div>
+                <div class="modal-header row d-flex justify-content-between mx-1 mx-sm-3 mb-0 pb-0 border-0">
+                  <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#dasVideoTab" role="tab"
+                      aria-controls="nav-home" aria-selected="true">DAS</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#cbrsVideoTab" role="tab"
+                      aria-controls="nav-profile" aria-selected="false">CBRS</a>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="dasVideoTab" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
-                      <div class="col-12">
-                        <div class="embed-responsive embed-responsive-16by9">
-                          <iframe class="embed-responsive-item"
-                            src="https://www.youtube.com/embed/6n0OTiIEea8?autoplay=0&modestbranding=1&showinfo=0"
-                            id="video" allowscriptaccess="always" allow="autoplay"
-                            allowFullScreen='allowFullScreen'></iframe>
-                        </div>
-                      </div>
                       <div class="col-12">
                         <div class="embed-responsive embed-responsive-16by9">
                           <iframe class="embed-responsive-item"
@@ -174,11 +178,23 @@
                       </div>
                     </div>
                   </div>
-                  <!-- 16:9 aspect ratio -->
+                  <div class="tab-pane fade show " id="cbrsVideoTab" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/6n0OTiIEea8?autoplay=0&modestbranding=1&showinfo=0"
+                            id="video" allowscriptaccess="always" allow="autoplay"
+                            allowFullScreen='allowFullScreen'></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div id="learnMorePop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
             class="modal fade text-left">
             <div role="document" class="modal-dialog">
@@ -189,197 +205,198 @@
                   </button>
                 </div>
                 <div class="modal-header row d-flex justify-content-between mx-1 mx-sm-3 mb-0 pb-0 border-0">
-                  <div class="tabs active" id="tab01">
-                    <h6 class="text-muted">DAS</h6>
-                  </div>
-                  <div class="tabs " id="tab02">
-                    <h6 class="font-weight-bold">CBRS</h6>
+                  <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#dasTab" role="tab"
+                      aria-controls="nav-home" aria-selected="true">DAS</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#cbrsTab" role="tab"
+                      aria-controls="nav-profile" aria-selected="false">CBRS</a>
                   </div>
                 </div>
                 <div class="line"></div>
-
-                <fieldset class="show" id="tab011">
-                  <div class="answer-description" id="a-text504">
-                    <p>A <strong>D</strong><strong>istributed antenna system (DAS)</strong> is a
-                      network of antennas, connected to a common source, distributed throughout a
-                      building or an area to improve network performance. The spacing between
-                      antennas is such that each antenna gives full coverage without overlapping
-                      with other antennas, hence reducing the number of antennas needed to cover
-                      the whole building. This network of antennas is also power efficient in
-                      comparison to a single, larger antenna covering a wide area.</p>
-                    <p>A Distributed Antenna System can be designed for use indoors or outdoors and
-                      can be used to provide wireless coverage in hotels, subways, airports,
-                      hospitals, businesses, roadway tunnels etc. The wireless services typically
-                      provided by a DAS include PCS, cellular, Wi-Fi, police, fire, and emergency
-                      services.&nbsp;</p>
-                    <p style="text-align: center;"><img
-                        src="https://cdn.everythingrf.com/live/d_in-building_distributed_antenna_system_636994582376559169.jpg"
-                        class="imageload"
-                        data-original="https://cdn.everythingrf.com/live/d_in-building_distributed_antenna_system_636994582376559169.jpg"
-                        style=""></p>
-                    <p>A DAS has two basic components, a signal source, and a distribution
-                      system.<strong></strong> The signal source is the input to the DAS network.
-                      It can be an on-site BTS (Base Transceiver Station), a small cell or an
-                      off-air system (via an antenna on the roof). The second part of a DAS
-                      network would be the distribution system. Once the signal is received by the
-                      signal source, it must be distributed throughout the building. There are
-                      four types of distribution systems: active (using fiber optic or ethernet
-                      cable), passive, hybrid, and digital.</p>
-                    <p><strong>Passive DAS:</strong> A passive DAS uses passive RF components such
-                      as coaxial cable, splitters, tapers and couplers to distribute signal inside
-                      a building. This system runs the wireless signals through "leaky" feeder
-                      cables that act as antennas all over the building; the signal leakage
-                      distributes the signals throughout a building.</p>
-                    <p style="text-align: center;"><img
-                        src="https://cdn.everythingrf.com/live/passive DAS img_636997123060696102.png" class="imageload"
-                        data-original="https://cdn.everythingrf.com/live/passive DAS img_636997123060696102.png"
-                        style=""></p>
-                    <p><strong>Active DAS:</strong> An active DAS system converts the analog RF
-                      signal from the signal source to a digital signal for distribution. A master
-                      unit performs this analog-to-digital conversion. After conversion, this
-                      digital signal is transmitted through fiber optic or Ethernet cables to the
-                      antenna systems, which convert the signal back to analog and transmit it
-                      throughout the building.</p>
-                    <p style="text-align: center;"><img
-                        src="https://cdn.everythingrf.com/live/1564115523182_636997123238346382.png" class="imageload"
-                        data-original="https://cdn.everythingrf.com/live/1564115523182_636997123238346382.png" style="">
-                    </p>
-                    <p><strong>Hybrid DAS:</strong> A hybrid DAS system uses both fiber optic cables
-                      and coaxial cables to distribute the signal throughout a building. In this
-                      system, the analog RF signal from the signal source is converted into a
-                      digital signal for distribution. This digital signal is transmitted through
-                      fiber optic or Ethernet cables to a Remote Radio Head (RRU) installed on
-                      each floor of a building. The RRU then converts the digital signal to an
-                      analog RF signal. This analog RF signal is then connected to multiple
-                      antennas on that floor with coaxial cables and other passive components.</p>
-                    <p style="text-align: center;"><img
-                        src="https://cdn.everythingrf.com/live/Hybrid DAS img_636997123367096714.png" class="imageload"
-                        data-original="https://cdn.everythingrf.com/live/Hybrid DAS img_636997123367096714.png"
-                        style=""></p>
-                    <p><strong>Digital DAS:</strong> This system operates according to the Common
-                      Public Radio Interface (CPRI) specification, which allows a base band unit
-                      (BBU, which is a kind of BTS) to communicate directly with the DAS master
-                      unit and through to the remote units without any conversion to an analog RF
-                      interface.</p>
-                    <p><strong>Advantages of using DAS:</strong></p>
-                    <ul>
-                      <li>Better defined coverage</li>
-                      <li>Fewer coverage holes</li>
-                      <li>Same coverage using a lower overall power</li>
-                      <li>Individual antennas do not need to be as high as a single antenna for
-                        the equivalent coverage</li>
-                    </ul>
-                    <p><strong>Disadvantages of using DAS:</strong></p>
-                    <ul>
-                      <li>Higher cost as a result of additional infrastructure required</li>
-                      <li>Possible greater visual impact in some applications as a result of
-                        greater number of antennas, although they are likely to be much lower in
-                        height.</li>
-                    </ul>
-                    <p style="text-align: center;"><img
-                        src="https://cdn.everythingrf.com/live/d_outdoor_distributed_antenna_system_636994582751669838.jpg"
-                        class="imageload"
-                        data-original="https://cdn.everythingrf.com/live/d_outdoor_distributed_antenna_system_636994582751669838.jpg"
-                        style=""></p>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="dasTab" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="answer-description" id="a-text504">
+                      <p>A <strong>D</strong><strong>istributed antenna system (DAS)</strong> is a
+                        network of antennas, connected to a common source, distributed throughout a
+                        building or an area to improve network performance. The spacing between
+                        antennas is such that each antenna gives full coverage without overlapping
+                        with other antennas, hence reducing the number of antennas needed to cover
+                        the whole building. This network of antennas is also power efficient in
+                        comparison to a single, larger antenna covering a wide area.</p>
+                      <p>A Distributed Antenna System can be designed for use indoors or outdoors and
+                        can be used to provide wireless coverage in hotels, subways, airports,
+                        hospitals, businesses, roadway tunnels etc. The wireless services typically
+                        provided by a DAS include PCS, cellular, Wi-Fi, police, fire, and emergency
+                        services.&nbsp;</p>
+                      <p style="text-align: center;"><img
+                          src="https://cdn.everythingrf.com/live/d_in-building_distributed_antenna_system_636994582376559169.jpg"
+                          class="imageload"
+                          data-original="https://cdn.everythingrf.com/live/d_in-building_distributed_antenna_system_636994582376559169.jpg"
+                          style=""></p>
+                      <p>A DAS has two basic components, a signal source, and a distribution
+                        system.<strong></strong> The signal source is the input to the DAS network.
+                        It can be an on-site BTS (Base Transceiver Station), a small cell or an
+                        off-air system (via an antenna on the roof). The second part of a DAS
+                        network would be the distribution system. Once the signal is received by the
+                        signal source, it must be distributed throughout the building. There are
+                        four types of distribution systems: active (using fiber optic or ethernet
+                        cable), passive, hybrid, and digital.</p>
+                      <p><strong>Passive DAS:</strong> A passive DAS uses passive RF components such
+                        as coaxial cable, splitters, tapers and couplers to distribute signal inside
+                        a building. This system runs the wireless signals through "leaky" feeder
+                        cables that act as antennas all over the building; the signal leakage
+                        distributes the signals throughout a building.</p>
+                      <p style="text-align: center;"><img
+                          src="https://cdn.everythingrf.com/live/passive DAS img_636997123060696102.png"
+                          class="imageload"
+                          data-original="https://cdn.everythingrf.com/live/passive DAS img_636997123060696102.png"
+                          style=""></p>
+                      <p><strong>Active DAS:</strong> An active DAS system converts the analog RF
+                        signal from the signal source to a digital signal for distribution. A master
+                        unit performs this analog-to-digital conversion. After conversion, this
+                        digital signal is transmitted through fiber optic or Ethernet cables to the
+                        antenna systems, which convert the signal back to analog and transmit it
+                        throughout the building.</p>
+                      <p style="text-align: center;"><img
+                          src="https://cdn.everythingrf.com/live/1564115523182_636997123238346382.png" class="imageload"
+                          data-original="https://cdn.everythingrf.com/live/1564115523182_636997123238346382.png"
+                          style="">
+                      </p>
+                      <p><strong>Hybrid DAS:</strong> A hybrid DAS system uses both fiber optic cables
+                        and coaxial cables to distribute the signal throughout a building. In this
+                        system, the analog RF signal from the signal source is converted into a
+                        digital signal for distribution. This digital signal is transmitted through
+                        fiber optic or Ethernet cables to a Remote Radio Head (RRU) installed on
+                        each floor of a building. The RRU then converts the digital signal to an
+                        analog RF signal. This analog RF signal is then connected to multiple
+                        antennas on that floor with coaxial cables and other passive components.</p>
+                      <p style="text-align: center;"><img
+                          src="https://cdn.everythingrf.com/live/Hybrid DAS img_636997123367096714.png"
+                          class="imageload"
+                          data-original="https://cdn.everythingrf.com/live/Hybrid DAS img_636997123367096714.png"
+                          style=""></p>
+                      <p><strong>Digital DAS:</strong> This system operates according to the Common
+                        Public Radio Interface (CPRI) specification, which allows a base band unit
+                        (BBU, which is a kind of BTS) to communicate directly with the DAS master
+                        unit and through to the remote units without any conversion to an analog RF
+                        interface.</p>
+                      <p><strong>Advantages of using DAS:</strong></p>
+                      <ul>
+                        <li>Better defined coverage</li>
+                        <li>Fewer coverage holes</li>
+                        <li>Same coverage using a lower overall power</li>
+                        <li>Individual antennas do not need to be as high as a single antenna for
+                          the equivalent coverage</li>
+                      </ul>
+                      <p><strong>Disadvantages of using DAS:</strong></p>
+                      <ul>
+                        <li>Higher cost as a result of additional infrastructure required</li>
+                        <li>Possible greater visual impact in some applications as a result of
+                          greater number of antennas, although they are likely to be much lower in
+                          height.</li>
+                      </ul>
+                      <p style="text-align: center;"><img
+                          src="https://cdn.everythingrf.com/live/d_outdoor_distributed_antenna_system_636994582751669838.jpg"
+                          class="imageload"
+                          data-original="https://cdn.everythingrf.com/live/d_outdoor_distributed_antenna_system_636994582751669838.jpg"
+                          style=""></p>
+                    </div>
                   </div>
-                </fieldset>
-                <fieldset id="tab021">
-                  <div id="drr-container" class="cbrsDescription " itemprop="articleBody">
-                    <p>First off, CBRS is an acronym for Citizens Broadband Radio Service, and the
-                      upshot for IT pros is that it could enable enterprises to build their own
-                      private <a
-                        href="https://www.networkworld.com/article/3330603/5g-versus-4g-how-speed-latency-and-application-support-differ.html">4G/5G</a>
-                      networks and result in improved 4G/5G offerings from service providers.
-                      Here’s a primer on CBRS — because you are going to want to know about this.
-                    </p>
-                    <h2>Citizens Band/CB, as in CB radio?</h2>
-                    <p>No, good buddy, this has nothing to do with the Citizens’ Band radio service
-                      used by truckers for two-way voice communications and that lives in the
-                      27MHz band in the U.S. &nbsp;CBRS lives in the 3.5GHz band.</p>
-                    <h2>What is CBRS then?</h2>
-                    <p>CBRS is a band of radio-frequency spectrum from 3.5GHz to 3.7GHz that the
-                      Federal Communications Commission has designated for sharing among three
-                      tiers of users: incumbent users, priority licensees and generally
-                      authorized, which is unlicensed.</p>
-                    <p>The incumbents are those who have historically held exclusive rights to the
-                      band: satellite ground stations and the Navy. Priority licenses will be
-                      auctioned off June 25 and will allow licensees to use the band in particular
-                      U.S. counties so long as they don't interfere with the incumbents and
-                      tolerate interference from the incumbents. Generally authorized access gives
-                      users the right to use the band as long as they don't interfere with the
-                      other two categories of users.</p>
-                    <h2>Who's making sure there's no interference among users?</h2>
-                    <p>A network of sensors – the Environmental Sensing Capability (ESC) – detects
-                      use of CBRS. Devices that want to use the CBRS band put in requests to a
-                      cloud-based Spectrum Access System (SAS) to reserve unused channels in a
-                      particular geographic area. If channels are free, SAS can grant the
-                      requests. When devices with permission to use channels are done with them,
-                      they are put back into the pool that the SAS can draw from to grant further
-                      requests.</p>
-                    <h2>How did the 3.5 GHz band suddenly become available for new commercial
-                      services? Isn’t spectrum a super scarce resource?</h2>
-                    <p>The freeing up of the 3550-3700 MHz band stems from the 2010 National
-                      Broadband Plan issued by the FCC, which set out to make 500 MHz of
-                      additional spectrum available for new mobile uses. The <a
-                        href="https://apps.fcc.gov/edocs_public/attachmatch/FCC-15-47A1.pdf" rel="nofollow">FCC zeroed
-                        in on the 3.5 GHz band (which has dubbed the
-                        "innovation band") in rules issued in April of 2015</a>, then <a
-                        href="https://www.fcc.gov/document/fcc-puts-final-rules-place-new-citizens-broadband-radio-service"
-                        rel="nofollow">reaffirmed those rules about a year later</a>. In the
-                      meantime, it has worked out the details of implementation.</p>
-                    <aside class="nativo-promo nativo-promo-1 smartphone" id=""> </aside>
-                    <h2>So who’s going to use this spectrum?</h2>
-                    <p>Carriers look forward to using it to extend coverage and capacity of their 4G
-                      LTE and 5G networks. As we know from their efforts to horn in on the 5 GHz
-                      band used for Wi-Fi via a technology called <a
-                        href="http://www.networkworld.com/article/2998252/mobile-wireless/lte-u-a-quick-explainer.html">LTE-U</a>,
-                      carriers seek access to more spectrum. But cable operators looking to get
-                      into wireless also want in on this action, as will assorted managed service
-                      providers, which could include building management companies. What’s more,
-                      enterprises could use the spectrum to set up their own 4G and 5G networks
-                      with which they could connect their IoT devices. Including. The services
-                      work both indoors and outdoors.</p>
-                    <h2>What sort of applications will CBRS be used for?</h2>
-                    <p>Service providers are expected to use CBRS to replace last-mile fiber access,
-                      deliver fixed wireless services and even point-to-multipoint offerings.
-                      Enterprises and managed service providers could exploit it for IoT
-                      connectivity and even for Wi-Fi replacement or supplementary services. LTE
-                      services could hit 1Gbps indoors and maybe 5 or 10 times that for outdoor
-                      uses with line-of-sight access. 5G could be 10 times LTE.</p>
-                    <aside class="nativo-promo nativo-promo-1 tablet desktop" id=""> </aside>
-                    <h2>How expensive is it?</h2>
-                    <p>CBRS backers say the economics of this technology are much better than those
-                      of distributed antenna systems, and they contend the speed and consistency
-                      of service will be much better than Wi-Fi. CBRS supporters also say
-                      imaginative new services will be enabled by the availability of more cheap
-                      spectrum. <a
-                        href="https://www.networkworld.com/article/3528851/managed-4g-5g-service-connects-to-amazon-microsoft-clouds.html">Federated
-                        Wireless has introduced a 4G/5G service</a> being sold through AWS and
-                      Microsoft Azure as connectivity to the cloud.&nbsp;</p>
-                    <h2>Where will software, equipment and services come from to support all this?
-                    </h2>
-                    <p>Here’s one clue: Almost 40 vendors, from the Big 4 carriers to service
-                      provider equipment vendors Ericsson and Nokia to enterprise equipment
-                      companies like Cisco and Ruckus to chipmakers like Intel and Qualcomm have
-                      banded together in the <a href="https://www.cbrsalliance.org/" rel="nofollow">CBRS Alliance</a>.
-                      Look for smartphone and computer
-                      makers to join too, once carriers make their requirements clear. Samsung
-                      already belongs to the CBRS Alliance.</p>
-                    <div class="end-note">
-                      <div id="" class="blx blxParticleendnote blxM2005  blox4_html  blxC23909">
-                        Join the Network World communities on <a href="https://www.facebook.com/NetworkWorld/"
-                          target="_blank">Facebook</a> and <a href="https://www.linkedin.com/company/network-world"
-                          target="_blank">LinkedIn</a> to comment on topics that are top of
-                        mind. </div>
+                  <div class="tab-pane fade show " id="cbrsTab" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div id="drr-container" class="cbrsDescription " itemprop="articleBody">
+                      <p>First off, CBRS is an acronym for Citizens Broadband Radio Service, and the
+                        upshot for IT pros is that it could enable enterprises to build their own
+                        private <a
+                          href="https://www.networkworld.com/article/3330603/5g-versus-4g-how-speed-latency-and-application-support-differ.html">4G/5G</a>
+                        networks and result in improved 4G/5G offerings from service providers.
+                        Here’s a primer on CBRS — because you are going to want to know about this.
+                      </p>
+                      <h2>Citizens Band/CB, as in CB radio?</h2>
+                      <p>No, good buddy, this has nothing to do with the Citizens’ Band radio service
+                        used by truckers for two-way voice communications and that lives in the
+                        27MHz band in the U.S. &nbsp;CBRS lives in the 3.5GHz band.</p>
+                      <h2>What is CBRS then?</h2>
+                      <p>CBRS is a band of radio-frequency spectrum from 3.5GHz to 3.7GHz that the
+                        Federal Communications Commission has designated for sharing among three
+                        tiers of users: incumbent users, priority licensees and generally
+                        authorized, which is unlicensed.</p>
+                      <p>The incumbents are those who have historically held exclusive rights to the
+                        band: satellite ground stations and the Navy. Priority licenses will be
+                        auctioned off June 25 and will allow licensees to use the band in particular
+                        U.S. counties so long as they don't interfere with the incumbents and
+                        tolerate interference from the incumbents. Generally authorized access gives
+                        users the right to use the band as long as they don't interfere with the
+                        other two categories of users.</p>
+                      <h2>Who's making sure there's no interference among users?</h2>
+                      <p>A network of sensors – the Environmental Sensing Capability (ESC) – detects
+                        use of CBRS. Devices that want to use the CBRS band put in requests to a
+                        cloud-based Spectrum Access System (SAS) to reserve unused channels in a
+                        particular geographic area. If channels are free, SAS can grant the
+                        requests. When devices with permission to use channels are done with them,
+                        they are put back into the pool that the SAS can draw from to grant further
+                        requests.</p>
+                      <h2>How did the 3.5 GHz band suddenly become available for new commercial
+                        services? Isn’t spectrum a super scarce resource?</h2>
+                      <p>The freeing up of the 3550-3700 MHz band stems from the 2010 National
+                        Broadband Plan issued by the FCC, which set out to make 500 MHz of
+                        additional spectrum available for new mobile uses. The <a
+                          href="https://apps.fcc.gov/edocs_public/attachmatch/FCC-15-47A1.pdf" rel="nofollow">FCC zeroed
+                          in on the 3.5 GHz band (which has dubbed the
+                          "innovation band") in rules issued in April of 2015</a>, then <a
+                          href="https://www.fcc.gov/document/fcc-puts-final-rules-place-new-citizens-broadband-radio-service"
+                          rel="nofollow">reaffirmed those rules about a year later</a>. In the
+                        meantime, it has worked out the details of implementation.</p>
+                      <aside class="nativo-promo nativo-promo-1 smartphone" id=""> </aside>
+                      <h2>So who’s going to use this spectrum?</h2>
+                      <p>Carriers look forward to using it to extend coverage and capacity of their 4G
+                        LTE and 5G networks. As we know from their efforts to horn in on the 5 GHz
+                        band used for Wi-Fi via a technology called <a
+                          href="http://www.networkworld.com/article/2998252/mobile-wireless/lte-u-a-quick-explainer.html">LTE-U</a>,
+                        carriers seek access to more spectrum. But cable operators looking to get
+                        into wireless also want in on this action, as will assorted managed service
+                        providers, which could include building management companies. What’s more,
+                        enterprises could use the spectrum to set up their own 4G and 5G networks
+                        with which they could connect their IoT devices. Including. The services
+                        work both indoors and outdoors.</p>
+                      <h2>What sort of applications will CBRS be used for?</h2>
+                      <p>Service providers are expected to use CBRS to replace last-mile fiber access,
+                        deliver fixed wireless services and even point-to-multipoint offerings.
+                        Enterprises and managed service providers could exploit it for IoT
+                        connectivity and even for Wi-Fi replacement or supplementary services. LTE
+                        services could hit 1Gbps indoors and maybe 5 or 10 times that for outdoor
+                        uses with line-of-sight access. 5G could be 10 times LTE.</p>
+                      <aside class="nativo-promo nativo-promo-1 tablet desktop" id=""> </aside>
+                      <h2>How expensive is it?</h2>
+                      <p>CBRS backers say the economics of this technology are much better than those
+                        of distributed antenna systems, and they contend the speed and consistency
+                        of service will be much better than Wi-Fi. CBRS supporters also say
+                        imaginative new services will be enabled by the availability of more cheap
+                        spectrum. <a
+                          href="https://www.networkworld.com/article/3528851/managed-4g-5g-service-connects-to-amazon-microsoft-clouds.html">Federated
+                          Wireless has introduced a 4G/5G service</a> being sold through AWS and
+                        Microsoft Azure as connectivity to the cloud.&nbsp;</p>
+                      <h2>Where will software, equipment and services come from to support all this?
+                      </h2>
+                      <p>Here’s one clue: Almost 40 vendors, from the Big 4 carriers to service
+                        provider equipment vendors Ericsson and Nokia to enterprise equipment
+                        companies like Cisco and Ruckus to chipmakers like Intel and Qualcomm have
+                        banded together in the <a href="https://www.cbrsalliance.org/" rel="nofollow">CBRS Alliance</a>.
+                        Look for smartphone and computer
+                        makers to join too, once carriers make their requirements clear. Samsung
+                        already belongs to the CBRS Alliance.</p>
+                      <div class="end-note">
+                        <div id="" class="blx blxParticleendnote blxM2005  blox4_html  blxC23909">
+                          Join the Network World communities on <a href="https://www.facebook.com/NetworkWorld/"
+                            target="_blank">Facebook</a> and <a href="https://www.linkedin.com/company/network-world"
+                            target="_blank">LinkedIn</a> to comment on topics that are top of
+                          mind. </div>
+
+                      </div>
+
 
                     </div>
-
-
                   </div>
-                </fieldset>
-
-                <div class="line"></div>
-
+                </div>
               </div>
             </div>
           </div>
