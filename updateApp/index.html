@@ -15,6 +15,7 @@
     body {
       background: #EBDFFF;
       padding-bottom: 10vh;
+      overflow-x:hidden;
     }
 
     .title {
@@ -36,7 +37,7 @@
       font-weight: 900;
       font-size: 1.5em;
       /* color: #193561; */
-      /* text-align: center; */
+      text-align: center;
       width: 100%;
     }
 
@@ -64,9 +65,7 @@
       padding-bottom: 30px;
     }
 
-    .top img {
-      /* margin-bottom: 20px; */
-    }
+  
 
     .img-100 {
       width: 100%;
@@ -130,11 +129,26 @@
       background: none;
       border: none;
     }
+    .upper{
+      position: fixed;
+    z-index: 99;
+    width: 100%;
+    background: #fbf8ff;
+    text-align: center;
+    }
+
+    .bottom{
+      padding-top: 65px;;
+    }
+    .container-fluid{
+      padding-left:10px;
+      padding-right:10px;
+    }
   </style>
 </head>
 
-<body>
-  <section class="top">
+<body class="top">
+  <section class="upper">
     <div class="container-fluid p-8vw">
       <div class="row">
         <div class="col-12">
@@ -144,6 +158,10 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="bottom">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-6">
           <img src="1.png" alt="" class="img-100">
