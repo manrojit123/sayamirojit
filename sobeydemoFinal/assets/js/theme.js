@@ -29,6 +29,20 @@ $(document).ready(function () {
       });
   });
 
+  var placeholderHeight = $('.placeholder').height();
+  var placeholderWidth = $('.placeholder').width();
+  var sliderParentHeight = $('.sliderParent').height();
+  var sliderParentWidth = $('.sliderParent').width();
+
+  var carouselHeight = ((sliderParentWidth*placeholderHeight)/placeholderWidth);
+  console.log(placeholderWidth+","+placeholderHeight+","+sliderParentWidth+","+sliderParentHeight);
+  console.log(carouselHeight);
+  
+
+//   var ad = document.querySelector('.flickity-viewport');
+// ad.style.height = carouselHeight; 
+
+
 
   if ($(window).width() < 768) {
       $('.menu-item-has-children').click(function () {
@@ -89,6 +103,7 @@ $(document).ready(function () {
       draggable: true,
       // freeScroll: true,
       pageDots: false,
+      prevNextButtons: false,
       wrapAround: true,
       autoPlay: 3000,
       pauseAutoPlayOnHover: false,
