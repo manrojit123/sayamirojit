@@ -15401,7 +15401,7 @@ section {
 }
 
 .headerHome {
-    min-height: auto;
+    min-height: 80vh;
 }
 
 
