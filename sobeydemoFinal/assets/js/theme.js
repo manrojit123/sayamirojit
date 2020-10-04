@@ -103,7 +103,7 @@ $(document).ready(function () {
       draggable: true,
       // freeScroll: true,
       pageDots: false,
-      prevNextButtons: false,
+    //   prevNextButtons: false,
       wrapAround: true,
       autoPlay: 3000,
       pauseAutoPlayOnHover: false,
