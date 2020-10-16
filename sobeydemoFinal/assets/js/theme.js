@@ -1,22 +1,27 @@
 $(document).ready(function () {
-    var carousel = document.querySelector('.carousel');
-    if ($('.carousel').length) {
-        var flkty = new Flickity(carousel, {
-            initialIndex: Math.floor(Math.random() * 15),
-            draggable: true,
-            // freeScroll: true,
-            pageDots: false,
-            //   prevNextButtons: false,
-            wrapAround: true,
-            autoPlay: 3000,
-            pauseAutoPlayOnHover: false,
-            lazyLoad: true
-        });
-        flkty.on('lazyLoad.flickity', function (event, cellElement) {
-            var img = event.originalEvent.target;
-            console.log(event.originalEvent.type, img.src);
-        });
-    }
+    $('.cardLoad').on('load', function (event) {
+        $('.placeholder').hide();
+        var carousel = document.querySelector('.carousel');
+        if ($('.carousel').length) {
+            var flkty = new Flickity(carousel, {
+                initialIndex: Math.floor(Math.random() * 15),
+                draggable: true,
+                // freeScroll: true,
+                pageDots: false,
+                //   prevNextButtons: false,
+                wrapAround: true,
+                autoPlay: 3000,
+                pauseAutoPlayOnHover: false,
+                lazyLoad: true
+            });
+            flkty.on('lazyLoad.flickity', function (event, cellElement) {
+                var img = event.originalEvent.target;
+                console.log(event.originalEvent.type, img.src);
+            });
+        }
+
+    });
+
 
     $(".tabs").click(function () {
         $(".tabs").removeClass("active");
