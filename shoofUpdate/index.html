@@ -14,6 +14,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
   <title>Shoof Update</title>
   <style>
+    li{
+      outline:none;
+    }
     body {
       background: #EBDFFF;
       padding-bottom: 17vh;
@@ -113,6 +116,7 @@
 
       .download img {
         height: 100px;
+        margin-bottom: 30px;
       }
     }
 
@@ -136,39 +140,7 @@
 </head>
 
 <body>
-  <section class="top">
-    <div class="container-fluid p-8vw">
-      <div class="row">
-        <div class="col-12">
-          <div class="title white text-left">
-            <h2 class="puprpleText opactiy10">YOU ARE MISSING</h2>
-            <h4 class="blackText">WHATS NEWS ON v3.0.1?</h4>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <img src="1.png" alt="" class="img-100">
-        </div>
-        <div class="col-12 col-md-6">
-          <img src="2.png" alt="" class="img-100">
-        </div>
-        <div class="col-12 col-md-6">
-          <img src="3.png" alt="" class="img-100">
-        </div>
-        <div class="col-12 col-md-6">
-          <img src="4.png" alt="" class="img-100">
-        </div>
-        <div class="col-12 col-md-6">
-          <img src="5.png" alt="" class="img-100">
-        </div>
-        <div class="col-12 col-md-6">
-          <img src="6.png" alt="" class="img-100">
-        </div>
 
-      </div>
-    </div>
-  </section>
 
   <section class="download">
     <div class="container-fluid p-8vw">
@@ -183,8 +155,8 @@
       <div class="row">
         <div class="col-12 text-center">
           <ul class="list-inline">
-            <li class="list-inline-item"><a href=""><img src="apk.svg" alt=""></a></li>
-            <li class="list-inline-item"><a href=""><img src="playStore.svg" alt=""></a></li>
+            <li class="list-inline-item"><a href="https://otvweb.vodafone.com.qa/releases/shoofv3.0.0.apk"><img src="apk.svg" alt=""></a></li>
+            <li class="list-inline-item"><a href="https://play.google.com/store/apps/details?id=com.osolutions.otv&fbclid=IwAR2nGzHEdLI2mUNpyaUBxDV0IIMiAd1ko0a0TVXtG2bYSPZDpu1Iak8hDU0"><img src="playStore.svg" alt=""></a></li>
           </ul>
         </div>
       </div>
@@ -228,9 +200,9 @@
         </div>
         <div class="col-md-6">
           <ol class="w3-center">
-            <li> <button class="w3-button demo" onclick="currentDiv(1)">Go to <b>Settings</b></button></li>
+            <li> <button class="w3-button demo selected" onclick="currentDiv(1)">Go to <b>Settings</b></button></li>
             <li> <button class="w3-button demo" onclick="currentDiv(2)">Scroll and Find <b>Apps</b></button></li>
-            <li> <button class="w3-button demo" onclick="currentDiv(3)">>Search <b>SHOOF</b></button></li>
+            <li> <button class="w3-button demo" onclick="currentDiv(3)">Search <b>SHOOF</b></button></li>
             <li> <button class="w3-button demo" onclick="currentDiv(4)">Press <b>SHOOF</b> and Press
                 <b>Uninstall</b></button></li>
             <li> <button class="w3-button demo" onclick="currentDiv(5)">Press <b>OK</b> to Confirm</button></li>
@@ -246,7 +218,7 @@
                 complete</button></li>
             <li> <button class="w3-button demo" onclick="currentDiv(11)">Press <b>Install</b>. </button></li>
             <li> <button class="w3-button demo" onclick="currentDiv(12)">Wait for installation to complete</button></li>
-            <li> <button class="w3-button demo" onclick="currentDiv(13)">>Press <b>Open</b>.</button></li>
+            <li> <button class="w3-button demo" onclick="currentDiv(13)">Press <b>Open</b>.</button></li>
             <li> <button class="w3-button demo" onclick="currentDiv(14)"><b>Congratulations!</b> You can enjoy all the
                 latest features.</button></li>
           </ol>
@@ -332,9 +304,14 @@
       for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-red", "active");
 
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active');
+      }
+
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", " active");
       }
       x[slideIndex - 1].style.display = "block";
 

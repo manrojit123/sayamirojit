@@ -803,9 +803,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-3">
-                    <img alt="Image" src="http://sobey-networks.local/wp-content/themes/sobeyTheme/assets/image/logoWhite.svg" class="mb-4" />
+                    <img alt="Image" src="assets/image/logoWhite.svg" class="mb-4" />
                     <p class="text-muted contactLinks">
-                        <!-- <a href=""><img src="http://sobey-networks.local/wp-content/themes/sobeyTheme/assets/image/social/skype.svg"> </a><br> -->
+                        <!-- <a href=""><img src="assets/image/social/skype.svg"> </a><br> -->
                         <!-- <a href="mailto:john.georges1@sobeynetworks.com"><img src=""></a><br> -->
                         <!-- <a href="mailto:john.georges1@sobeynetworks.com"><img src="">+</a> -->
                     </p>
@@ -814,7 +814,6 @@
                     <p class="text-right mt-2">Copyright&copy;2020 SobeyNetworks. All rights reserved.</p>
                 </div>
                 <!--end of col-->
-
                 <!--end of col-->
             </div>
             <!--end of row-->
@@ -822,67 +821,4 @@
         <!--end of container-->
     </footer>
 </body>
-<script>
-    $(document).ready(function() {
-                if ($(window).width() < 768) {
-                    $('.menu-item-has-children').click(function() {
-                        $(this).toggleClass('show');
-                        $(this).find('.sub-menu').toggleClass('show');
-                    });
-                    $(".menu-item-has-children > a").click(function(ev) {
-                        ev.preventDefault();
-                    });
-                } else {
-                    $('.menu-item-has-children').hover(function() {
-                        $(this).toggleClass('show');
-                        $(this).find('.sub-menu').toggleClass('show');
-                    });
-                }
-                // external js: flickity.pkgd.js
-
-                var msgs = ["Solve issues with mobile wireless connectivity ", "Want higher reliability wireless in your building?", "Need better security from your wireless network?", "Connect your devices and mobile phones to one network", "More wireless telecom control with CBRS", "Lower your TCO with CBRS"];
-
-                var indx = 0;
-                $("#div").text(msgs[indx]);
-                setInterval(function() {
-                    $("#div").fadeOut(
-                        500,
-                        function() {
-                            indx++;
-                            if (indx >= msgs.length) indx = 0;
-                            $(this).text(msgs[indx]);
-                            $(this).fadeIn(3000);
-                        });
-                }, 3000);
-
-                gsap.to("#scrollDown", {
-                    y: 5,
-                    repeat: -1,
-                    duration: 1,
-                    yoyo: true,
-                });
-
-                gsap.to("#scrollDown .arrow", {
-                    y: 20,
-                    repeat: -1,
-                    duration: 1,
-                    yoyo: true,
-                });
-
-                var carousel = document.querySelector('.carousel');
-                var flkty = new Flickity(carousel, {
-                    initialIndex: Math.floor(Math.random() * carousel.children.length),
-                    draggable: true,
-                    // freeScroll: true,
-                    pageDots: false,
-                    wrapAround: true,
-                    autoPlay: 3000,
-                    pauseAutoPlayOnHover: false,
-                    lazyLoad: true
-                });
-
-                var forHeight = $('. ').height();
-                $('.arrowheight').css('height', forHeight);
-</script>
-
 </html>
