@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // $('.cardLoad').on('load', function (event) {
+    $('.cardLoad').on('load', function (event) {
     //     alert('asdf');
         $('.placeholder').hide();
         var carousel = document.querySelector('.carousel');
@@ -21,7 +21,7 @@ $(document).ready(function () {
             });
         }
 
-    // });
+    });
 
 
     $(".tabs").click(function () {
