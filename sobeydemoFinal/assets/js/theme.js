@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.cardLoad').on('load', function (event) {
+    // $('.cardLoad').on('load', function (event) {
     //     alert('asdf');
         $('.placeholder').hide();
         var carousel = document.querySelector('.carousel');
@@ -21,7 +21,12 @@ $(document).ready(function () {
             });
         }
 
-    });
+    // });
+
+    var sliderHeight = $('.sliderSection').height(); 
+    var scrollDownHeight = $('.scrollDown').height(); 
+    var heightDetermined = sliderHeight +scrollDownHeight;
+    $('.headerHome').css('min-height',heightDetermined);
 
 
     $(".tabs").click(function () {

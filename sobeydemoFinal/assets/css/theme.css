@@ -16446,6 +16446,11 @@ article.works .listingFirst {
     right: 0;
     margin: 0 auto;
     top: 21%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .about_video_wrapper {
@@ -16456,6 +16461,7 @@ article.works .listingFirst {
 
 .videoCollectionBox {
     margin-bottom: 80px;
+    position: relative;
 }
 
 .about_video_icon:after {
@@ -16609,6 +16615,13 @@ footer {
     width: 15px;
 }
 
+
+@media (max-width: 991px) {
+    #menu-primary-menu>li{
+            display: block !important;
+    padding: 15px;
+    }
+}
 @media (max-width: 768px) {
     .mobileSwitchCols {
         flex-direction: column-reverse;
@@ -16918,3 +16931,72 @@ a:hover {
         border-top-left-radius: 15px;
     }
 }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+    .sliderParent{
+        flex: 0 0 66.66667% !important;
+        max-width: 66.66667% !important;
+    }
+    .headerHome{
+        min-height:60vh !important;
+    }
+    #div{
+        min-height:75px !important;
+    }
+    .headerText{
+
+    }   
+    .box1{
+        padding: 45px !important;
+    }
+    #difference .col-md-4{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    #connectivity{
+        margin-top: 30px;
+    }
+    #connectivity img{
+        margin-top: 60px;
+    }    
+
+ }
+
+ .navbar-toggler{
+    position:relative;
+    padding: 1.25rem 0.95rem;
+ }
+ .navbar-toggler .bar1{
+    background: #fdb515;
+    width: 14px;
+    height: 2px;
+    position:absolute;
+    top:4px;
+
+ }
+ .navbar-toggler .bar2{
+    position:absolute;
+    background: #193561;
+    width: 14px;
+    height: 2px;
+    top:11px;
+
+ }
+  .navbar-toggler .bar3{
+    position:absolute;
+    background: #fdb515;
+    width: 14px;
+    height: 2px;
+top:17px;
+ }
+
+ .learnMore.active{
+    color: #193561 !important;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    opacity: 1;
+}   
