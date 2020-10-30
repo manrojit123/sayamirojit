@@ -1,6 +1,6 @@
-$(document).ready(function () {
-    // $('.cardLoad').on('load', function (event) {
-    //     alert('asdf');
+$(document).ready(function() {
+    $('.cardLoad').on('load', function(event) {
+        // alert('asdf');
         $('.placeholder').hide();
         var carousel = document.querySelector('.carousel');
         if ($('.carousel').length) {
@@ -15,21 +15,21 @@ $(document).ready(function () {
                 pauseAutoPlayOnHover: false,
                 lazyLoad: true
             });
-            flkty.on('lazyLoad.flickity', function (event, cellElement) {
+            flkty.on('lazyLoad.flickity', function(event, cellElement) {
                 var img = event.originalEvent.target;
                 console.log(event.originalEvent.type, img.src);
             });
         }
 
-    // });
+    });
 
-    var sliderHeight = $('.sliderSection').height(); 
-    var scrollDownHeight = $('.scrollDown').height(); 
-    var heightDetermined = sliderHeight +scrollDownHeight;
-    $('.headerHome').css('min-height',heightDetermined);
+    var sliderHeight = $('.sliderSection').height();
+    var scrollDownHeight = $('.scrollDown').height();
+    var heightDetermined = sliderHeight + scrollDownHeight;
+    $('.headerHome').css('min-height', heightDetermined);
 
 
-    $(".tabs").click(function () {
+    $(".tabs").click(function() {
         $(".tabs").removeClass("active");
         $(".tabs h6").removeClass("font-weight-bold");
         $(".tabs h6").addClass("text-muted");
@@ -42,7 +42,7 @@ $(document).ready(function () {
         $("fieldset").removeClass("show");
         $(next_fs).addClass("show");
         current_fs.animate({}, {
-            step: function () {
+            step: function() {
                 current_fs.css({
                     'display': 'none',
                     'position': 'relative'
@@ -70,15 +70,15 @@ $(document).ready(function () {
 
 
     if ($(window).width() < 768) {
-        $('.menu-item-has-children').click(function () {
+        $('.menu-item-has-children').click(function() {
             $(this).toggleClass('show');
             $(this).find('.sub-menu').toggleClass('show');
         });
-        $(".menu-item-has-children > a").click(function (ev) {
+        $(".menu-item-has-children > a").click(function(ev) {
             ev.preventDefault();
         });
     } else {
-        $('.menu-item-has-children').hover(function () {
+        $('.menu-item-has-children').hover(function() {
             $(this).toggleClass('show');
             $(this).find('.sub-menu').toggleClass('show');
         });
@@ -97,10 +97,10 @@ $(document).ready(function () {
 
     var indx = 0;
     $("#div").text(msgs[indx]);
-    setInterval(function () {
+    setInterval(function() {
         $("#div").fadeOut(
             500,
-            function () {
+            function() {
                 indx++;
                 if (indx >= msgs.length) indx = 0;
                 $(this).text(msgs[indx]);
