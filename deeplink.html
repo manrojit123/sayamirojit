@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Test jS</title>
+</head>
+
+<body>
+  This is a test ad.
+
+</body>
+
+<script>
+var fallbackFunction = function() {
+	window.location.replace('market://details?id=np.com.nepalipatro&referrer=specialparam');
+};
+var addIFrame = function() {
+	var iframe = document.createElement("iframe");
+	iframe.style.border = "none";
+	iframe.style.width = "1px";
+	iframe.style.height = "1px";
+	iframe.src = 'your_uri_scheme://';
+	document.body.appendChild(iframe);
+};
+addIFrame();
+setTimeout(fallbackFunction, 250);
+
+
+</script>
+</html>
