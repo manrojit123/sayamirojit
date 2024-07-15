@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-	  <style>
-		  /*  Responsive Swiper.js using Cube effect 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <style>
+    /*  Responsive Swiper.js using Cube effect 
     https://swiperjs.com/demos
 
 Responsive slider with 3D cube effect using swiper.js. Features slide count and next/previous buttons +++ a few photos I took of the "Krewe of Barkus" dog parade during Mardi Gras in New Orleans some time back.
@@ -16,7 +16,7 @@ Responsive slider with 3D cube effect using swiper.js. Features slide count and 
 .cube-parent-container {
   width: 100%;
 
-  max-width: 525px;
+  /* max-width: 525px; */
   margin: 0;
 }
 
@@ -84,6 +84,16 @@ Responsive slider with 3D cube effect using swiper.js. Features slide count and 
 }
 
 /*  *** END SWIPER CSS *** */
+
+
+
+
+
+
+
+
+
+
 
 /*  demo page styling */
 
@@ -189,98 +199,91 @@ body {
   margin-left: 10px; /* Optional: space between h2 and audio */
 }
 
-	  </style>
-	  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </head>
-  <body>
+   </style>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
     <figure class="cube-parent-container">
 
-  <!-- Swiper -->
-  <div class="swiper cubeSwiper">
-    <div class="swiper-wrapper">
+        <!-- Swiper -->
+        <div class="swiper cubeSwiper">
+          <div class="swiper-wrapper">
+      
+            <!-- begin slides -->
+      
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-dutches-980.jpg" /> </div>
+      
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-band-980_1.jpg" /> </div>
+      
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-2016-sottek-4.jpg" /> </div>
+      
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-trumpet-player-sottek.jpg" /> </div>
+      
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-band.jpg" /> </div>
+      
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus_1.jpg" /> </div>
+      
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-1.jpg" /> </div>
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-2.jpg" /> </div>
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-3.jpg" /> </div>
+      
+            <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-4.jpg" /> </div>
+            <!-- end slides -->
+      
+          </div>
+          <!-- // end swiper wrapper  -->
+      
+          <!-- Pagination as three column grid  -->
+      
+          <div class="pagination-container">
+            <!-- Using non breaking space - &nbsp; - to layout text/entity icon in button   -->
+            <button class="cube-button-prev">← &nbsp;prev</button>
+            <div class="cube-pagination-fraction"></div>
+            <button class="cube-button-next">next&nbsp; →</button>
+          </div>
+          <!-- // end pagination container  -->
+      
+        </div>
+        <!-- // end swiper  -->
+      
+      </figure>
+      
+      
+    <script>
+        // Swiper.js demos @ ---> https://swiperjs.com/demos
 
-      <!-- begin slides -->
+        var swiper = new Swiper(".cubeSwiper", {
+            // swiper effect
+            effect: "cube",
+            grabCursor: true,
+            speed: 2000,
+            loop: true,
+            autoplay: {
+                delay: 2500,
 
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-dutches-980.jpg" /> </div>
+                // Pause on hover
+                pauseOnMouseEnter: true,
 
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-band-980_1.jpg" /> </div>
+                disableOnInteraction: false
+            },
 
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-2016-sottek-4.jpg" /> </div>
+            // Pagination as slide count
 
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-trumpet-player-sottek.jpg" /> </div>
+            pagination: {
+                el: ".cube-pagination-fraction",
+                type: "fraction"
+            },
 
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-band.jpg" /> </div>
+            // prev next buttons
 
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus_1.jpg" /> </div>
+            navigation: {
+                nextEl: ".cube-button-next",
+                prevEl: ".cube-button-prev"
+            }
+        });
 
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-1.jpg" /> </div>
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-2.jpg" /> </div>
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-3.jpg" /> </div>
+    </script>
+</body>
 
-      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-4.jpg" /> </div>
-      <!-- end slides -->
-
-    </div>
-    <!-- // end swiper wrapper  -->
-
-    <!-- Pagination as three column grid  -->
-
-    <div class="pagination-container">
-      <!-- Using non breaking space - &nbsp; - to layout text/entity icon in button   -->
-      <button class="cube-button-prev">← &nbsp;prev</button>
-      <div class="cube-pagination-fraction"></div>
-      <button class="cube-button-next">next&nbsp; →</button>
-    </div>
-    <!-- // end pagination container  -->
-
-  </div>
-  <!-- // end swiper  -->
-
-</figure>
-
-<div class="click-dat-heart">
-  <h2 class="glitter-text"><span class="pink">click dat</span> <span class="red">❤</span> <span class="pink"></span> </h2>
-
-  <audio controls>
-    <source src="https://assets.codepen.io/191814/Click+dat+Heart+Codepen.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
-	  <script>
-		  // Swiper.js demos @ ---> https://swiperjs.com/demos
-
-var swiper = new Swiper(".cubeSwiper", {
-  // swiper effect
-  effect: "cube",
-  grabCursor: true,
-  speed: 2000,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-
-    // Pause on hover
-    pauseOnMouseEnter: true,
-
-    disableOnInteraction: false
-  },
-
-  // Pagination as slide count
-
-  pagination: {
-    el: ".cube-pagination-fraction",
-    type: "fraction"
-  },
-
-  // prev next buttons
-
-  navigation: {
-    nextEl: ".cube-button-next",
-    prevEl: ".cube-button-prev"
-  }
-});
-
-	  </script>
-  </body>
-	
 </html>
-
