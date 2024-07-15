@@ -1,170 +1,286 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <!-- codingflicks.com -->
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Slider html css javascript</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+	<link src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+	  <style>
+		  /*  Responsive Swiper.js using Cube effect 
+    https://swiperjs.com/demos
 
-*{
-    box-sizing: border-box;
-}
-body{
-    margin:0;
-    padding:0;
-    font-size:10px;
-    font-family: 'Montserrat',sans-serif;
-    background-color: rgb(71, 88, 122);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    perspective: 500px;
+Responsive slider with 3D cube effect using swiper.js. Features slide count and next/previous buttons +++ a few photos I took of the "Krewe of Barkus" dog parade during Mardi Gras in New Orleans some time back.
 
-}
-h1{
-    color:white;
-    font-size:1.6rem;
-    margin-bottom: 0;
-}
-p{
-    color:white;
-    font-size: .8rem;
-    margin-bottom: 2rem;
+---->  Slider with coverflow effect here
+       https://codepen.io/mark_sottek/pen/ZEPYYjp    */
+
+.cube-parent-container {
+  width: 100%;
+
+  max-width: 525px;
+  margin: 0;
 }
 
-.container{
-    width: 300px;
-    height: 300px;
-    position: relative;
-    perspective: 500px;
-}
-.container-movement{
-    animation-name: container-animation;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
-.left{
-    background-size: cover;
-    background-position: center;
-    /* background-color: red; */
-    width: 300px;
-    height:300px;
-    position: absolute;
-    transform-origin: center center -150px;
-    transform: rotateY(0deg);
-    z-index:1;
-}
-.left-move-left{
-    animation-name: left-animation;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
+/*  Aspect ratio as 1/1 or square */
+
+.cubeSwiper .swiper-slide {
+  aspect-ratio: 1/1;
 }
 
-.right{
-    background-size: cover;
-    background-position: center;
+/*  Set slide image to cover */
 
-    /* background-color: blueviolet; */
-    width:300px;
-    height: 300px;
-    position: absolute;
-    transform-origin: center center -150px;
-    transform: rotateY(90deg);
-    z-index: 0;
-   
-}
-.right-move-left{
-    animation-name: right-animation;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
+.cubeSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes left-animation{
-    0%{
-        transform: rotateY(0);
-        z-index:1;
-    }
-    100%{
-        transform:rotateY(-90deg);
-        z-index:0;
-    }
-}
-@keyframes right-animation{
-    0%{
-        transform:rotateY(90deg);
-        z-index:0;
-    }
-    100%{
-        transform: rotateY(0);
-        z-index:1;
-    }
+/*  Pagination as three column grid  */
+.cubeSwiper .pagination-container {
+  padding-top: 25px;
+  /*  pagination grid container width set in absolute pixels as using 
+      transform scale for responsiveness.  */
+  width: 250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  /* Scale down pagination - i.e. bigger or smaller at your break points */
+  transform: scale(0.80);
 }
 
-@keyframes container-animation{
-    0%{
-        transform: translateZ(0);
-    }
-    50%{
-        transform: translateZ(-200px);
-    }
-    100%{
-        transform: translateZ(0);
-    }
+/* fraction/slide count */
+
+.cubeSwiper .cube-pagination-fraction {
+  color: rgba(255, 0, 255, 0.8);
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
+  text-align: center;
+  position: relative;
 }
-description{
-  margin-top:10px;
-  color:white;
+
+/* prev/next buttons */
+
+.cube-button-prev,
+.cube-button-next {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  transition: all 500ms ease;
+  filter: brightness(0.8);
+  letter-spacing: 1px;
+  font-weight: 700;
 }
-    </style>  
+
+.cube-button-prev:hover,
+.cube-button-next:hover {
+  color: red;
+  filter: brightness(0.95);
+}
+
+/*  *** END SWIPER CSS *** */
+
+/*  demo page styling */
+
+body {
+  background: black;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding-bottom: 50vh;
+
+}
+.click-dat-heart {
+  margin-top: 50px;
+  max-width: 80vw;
+  text-align: center;
+  transform: scale(0.80);
+}
+.click-dat-heart h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.click-dat-heart {
+  display: flex;
+  align-items: center; /* This will vertically align items */
+  flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+}
+
+.click-dat-heart h2 {
+  display: flex;
+  align-items: center; /* Vertically align text inside h2 */
+  margin: 0; /* Remove default margin */
+}
+
+.click-dat-heart h2 span {
+  display: inline-block; /* Ensure spans remain inline within the h2 */
+}
+
+.click-dat-heart audio {
+  margin-left: 10px; /* Optional: space between h2 and audio */
+}
+
+.pink {
+  color: pink;
+  background: url(https://assets.codepen.io/191814/pink_glitter.gif) repeat;
+}
+
+.red {
+  color: red;
+  background: url(https://assets.codepen.io/191814/red-glitter.gif) repeat;
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+/*  Set the properties for the glitter text */
+
+.gold,
+.pink,
+.blue,
+.green,
+.red {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/*  Override the font size to make some things a bit smaller or bigger. */
+
+/*  Set the properties for the glitter text */
+
+.glitter-text {
+  font-weight: 800;
+  letter-spacing: 3px;
+
+  font-size: 50px;
+  padding: 1.3vh;
+
+  text-align: center;
+  font-family: comic sans ms;
+}
+
+.click-dat-heart {
+  display: flex;
+  align-items: center; /* This will vertically align items */
+  flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+}
+
+.click-dat-heart h2 {
+  display: flex;
+  align-items: center; /* Vertically align text inside h2 */
+  margin: 0; /* Remove default margin */
+}
+
+.click-dat-heart h2 span {
+  display: inline-block; /* Ensure spans remain inline within the h2 */
+}
+
+.click-dat-heart audio {
+  margin-left: 10px; /* Optional: space between h2 and audio */
+}
+
+	  </style>
+	  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-<body>
-    <h1>3D Cube Image Slider</h1>
-    <p>Click the image to show next one</p>
-    <div class="container">
-        <div class="left"></div>
-        <div class="right"></div>
+    <figure class="cube-parent-container">
+
+  <!-- Swiper -->
+  <div class="swiper cubeSwiper">
+    <div class="swiper-wrapper">
+
+      <!-- begin slides -->
+
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-dutches-980.jpg" /> </div>
+
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-band-980_1.jpg" /> </div>
+
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-2016-sottek-4.jpg" /> </div>
+
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-trumpet-player-sottek.jpg" /> </div>
+
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-band.jpg" /> </div>
+
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus_1.jpg" /> </div>
+
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-1.jpg" /> </div>
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-2.jpg" /> </div>
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-3.jpg" /> </div>
+
+      <div class="swiper-slide"> <img alt="Hail Barkus!" src="https://assets.codepen.io/191814/barkus-3d-4.jpg" /> </div>
+      <!-- end slides -->
+
     </div>
-  <description>Images credit pexels.com</description>
-    <script>
-	    const left = document.querySelector('.left');
-const right = document.querySelector('.right');
-const container = document.querySelector('.container');
-//Populate the following list with the URLs to your images
-const imgList = ["https://images.pexels.com/photos/2760248/pexels-photo-2760248.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-"https://images.pexels.com/photos/1554740/pexels-photo-1554740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", "https://images.pexels.com/photos/950308/pexels-photo-950308.jpeg?auto=compress&cs=tinysrgb&h=650&w=940","https://images.pexels.com/photos/2887879/pexels-photo-2887879.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-"https://images.pexels.com/photos/3341813/pexels-photo-3341813.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500","https://images.pexels.com/photos/2810197/pexels-photo-2810197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"];
-let counter = 0;
-left.style.backgroundImage =`url("${imgList[counter]}")`;
-right.style.backgroundImage = `url("${imgList[counter+1]}")`;
+    <!-- // end swiper wrapper  -->
 
-left.addEventListener('click', e => {
-    e.target.classList.add('left-move-left');
-    right.classList.add('right-move-left');
-    container.classList.add('container-movement'); 
-    console.log(container.classList);   
+    <!-- Pagination as three column grid  -->
+
+    <div class="pagination-container">
+      <!-- Using non breaking space - &nbsp; - to layout text/entity icon in button   -->
+      <button class="cube-button-prev">← &nbsp;prev</button>
+      <div class="cube-pagination-fraction"></div>
+      <button class="cube-button-next">next&nbsp; →</button>
+    </div>
+    <!-- // end pagination container  -->
+
+  </div>
+  <!-- // end swiper  -->
+
+</figure>
+
+<div class="click-dat-heart">
+  <h2 class="glitter-text"><span class="pink">click dat</span> <span class="red">❤</span> <span class="pink"></span> </h2>
+
+  <audio controls>
+    <source src="https://assets.codepen.io/191814/Click+dat+Heart+Codepen.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+	  <script>
+		  // Swiper.js demos @ ---> https://swiperjs.com/demos
+
+var swiper = new Swiper(".cubeSwiper", {
+  // swiper effect
+  effect: "cube",
+  grabCursor: true,
+  speed: 2000,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+
+    // Pause on hover
+    pauseOnMouseEnter: true,
+
+    disableOnInteraction: false
+  },
+
+  // Pagination as slide count
+
+  pagination: {
+    el: ".cube-pagination-fraction",
+    type: "fraction"
+  },
+
+  // prev next buttons
+
+  navigation: {
+    nextEl: ".cube-button-next",
+    prevEl: ".cube-button-prev"
+  }
 });
 
-left.addEventListener('animationend', e=>{
-    e.target.classList.remove('left-move-left');
-    right.classList.remove('right-move-left');
-
-   
-    e.target.style.backgroundImage = 'url("'+imgList[++counter]+'")';
-    if (counter+1 >= imgList.length){
-        counter=-1;
-    }
-    right.style.backgroundImage = 'url("'+imgList[counter+1]+'")';
-    container.classList.remove('container-movement');  
-    console.log(container.classList); 
-});
-    </script>
-</body>
-
+	  </script>
   </body>
+	
 </html>
 
