@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Navigation Routes</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    nav a { margin: 0 10px; cursor: pointer; }
+    section { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#radio">Radio</a>
+    <a href="#radio/1">Radio 1</a>
+    <a href="#radio/2">Radio 2</a>
+    <a href="#radio/3">Radio 3</a>
+  </nav>
+  <section id="content"></section>
+
+  <script>
+    function loadContent(hash) {
+      const url = hash ? `${hash}.html` : 'radio.html';
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => {
+          document.getElementById('content').innerHTML = '<h1>404</h1><p>Page not found.</p>';
+        });
+    }
+
+    function handleHashChange() {
+      const hash = window.location.hash.slice(1);
+      loadContent(hash);
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('load', handleHashChange);
+  </script>
+</body>
+</html>
