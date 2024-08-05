@@ -1,0 +1,11 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.radio_app",
+        "sha256_cert_fingerprints": ["27:BD:78:B4:45:51:F2:1B:7E:E4:A8:DA:1F:54:5E:89:DB:65:50:D0:0A:30:11:DA:0C:25:17:2A:BC:F8:BA:FD"]
+      }
+    }
+  ]
+  
