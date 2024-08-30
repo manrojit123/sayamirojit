@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Sidebar Info</title>
+<style>
+    /* style.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+#countryList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#countryList li {
+  padding: 8px;
+  margin-bottom: 2px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.sidebar {
+  height: 0; /* Initially, the sidebar height is 0 */
+  width: 100%; /* Sidebar takes full width */
+  position: fixed; /* Fixed position to stay in place on scroll */
+  z-index: 1; /* Ensures sidebar is above other content */
+  bottom: 0; /* Positions the sidebar at the bottom */
+  background-color: #111; /* Sidebar background color */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  transition: 0.5s; /* Smooth transition for opening/closing */
+  padding-top: 60px; /* Space for close button and content */
+  color: white; /* Text color */
+}
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  color: white;
+} */
+
+
+
+/* .sidebar a.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+} */
+</style>
+</head>
+<body>
+
+<div id="countryList">
+  <ul>
+    <li onclick="showInfo('Nepal')">Nepal</li>
+    <li onclick="showInfo('India')">India</li>
+    <li onclick="showInfo('China')">China</li>
+  </ul>
+</div>
+
+<div id="infoSidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+  <div id="countryInfo"></div>
+</div>
+
+<script>
+    // script.js
+
+// Sample JSON data for the countries
+const countryData = {
+  "Nepal": {
+    "capital": "Kathmandu",
+    "population": "29 million",
+    "language": "Nepali"
+  },
+  "India": {
+    "capital": "New Delhi",
+    "population": "1.3 billion",
+    "language": "Hindi, English"
+  },
+  "China": {
+    "capital": "Beijing",
+    "population": "1.4 billion",
+    "language": "Mandarin"
+  }
+};
+
+// Function to open the sidebar and show info for the selected country
+function showInfo(country) {
+  const sidebar = document.getElementById("infoSidebar");
+  const countryInfo = document.getElementById("countryInfo");
+
+  // Update the sidebar content with the country's data
+  countryInfo.innerHTML = `<h2>${country}</h2>
+                           <p>Capital: ${countryData[country].capital}</p>
+                           <p>Population: ${countryData[country].population}</p>
+                           <p>Language: ${countryData[country].language}</p>`;
+
+  // Open the sidebar
+  sidebar.style.width = "250px";
+}
+
+// Function to close the sidebar
+function closeSidebar() {
+  document.getElementById("infoSidebar").style.width = "0";
+}
+</script>
+</body>
+</html>

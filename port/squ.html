@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html style="font-family: Barlow; font-weight: 400;margin:0;height: 100%;">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    table td {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      color: #003f95;
+    }
+
+    table td:last-child {
+      font-weight: 600;
+    }
+
+    #average-gsa {
+      position: relative;
+    }
+
+    #grip-hand {
+      position: relative;
+    }
+
+    #average-g {
+      position: relative;
+    }
+
+    #both-hand-activity {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body style="margin:0;height: 100%;background:#F8FDFF">
+  <div class="container" style="display: flex; flex-direction: column; height: 100%; ">
+    <!-- header -->
+    <div class="header">
+      <div style="position: absolute; display: flex; justify-items: center">
+        <p style="
+            color: #ffffff !important;
+            font-size: 24px;
+            line-height: normal;
+            font-weight: 700;
+            padding-left:16px;
+          ">
+          Squegg PRO Report
+        </p>
+      </div>
+      <div style="width: 100%">
+        <svg width="100%" height="60" viewBox="0 0 100% 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="60" fill="#053D76" />
+        </svg>
+      </div>
+    </div>
+    <!-- body -->
+    <div class="content" style="flex: 1; overflow: auto;">
+      <div style="color: #000; display: flex; flex-direction: column; flex: 1">
+
+        <div style="display: flex; flex-direction: column">
+          <div style="display: flex;padding:16px 10px;">
+            <div style="
+         display: flex;
+         flex-direction: column;
+         padding: 12px;
+         background-color: #fff;
+         border: 1px solid #E6E9F0;
+         border-radius: 4px;
+         padding: 12px;
+         gap: 8px;
+         flex: 1; ">
+              <div style="display: flex;flex-direction: column;">
+                <span style="font-weight: 700;font-size: 14px; color: #001F63;">Clinic
+                  Information</span>
+              </div>
+              <div style="width: 100%;height: 1px;background-color: #E6E9F0;"></div>
+              <table width="100%" style="font-size: 10px">
+                <tr>
+                  <td>Clinic Name:</td>
+                  <td>{{clinicName}}</td>
+                </tr>
+
+                <tr>
+                  <td>Clinic Address:</td>
+                  <td>{{addressLine1}} {{addressLine2}}</td>
+                </tr>
+                <tr>
+                  <td>Clinic NPI:</td>
+                  <td>{{npiNumber}}</td>
+                </tr>
+                <tr>
+                  <td>Clinic Email:</td>
+                  <td>{{clinicEmail}}</td>
+                </tr>
+                <tr>
+                  <td>Clinic Phone Number:</td>
+                  <td>{{clinicPhone}}</td>
+                </tr>
+              </table>
+
+            </div>
+
+            <div style="
+     display: flex;
+     flex-direction: column;
+     padding: 12px;
+     background-color: #fff;
+     border: 1px solid #E6E9F0;
+     border-radius: 4px;
+     padding: 12px;
+     gap: 8px;
+     margin-left: 16px;
+     flex: 1;">
+              <div style="display: flex;flex-direction: column;">
+                <span style="font-weight: 700; font-size: 14px; color: #001F63;">Patient's
+                  Information</span>
+              </div>
+              <div style="width: 100%;height: 1px;background-color: #E6E9F0;"></div>
+              <table id='patient-info-table' width="100%" style="font-size: 10px">
+                <tr>
+                  <td>Patient Name:</td>
+                  <td>{{name}}</td>
+                </tr>
+                <tr>
+                  <td>Date of Birth:</td>
+                  <td>{{dateOfBirth}} ({{age}} yo)</td>
+                </tr>
+              </table>
+
+              <script>
+                var diagnosesValue = '{{diagnosesValue}}'
+                diagnosesValue = JSON.parse(diagnosesValue)
+                var diagnosesDOI = '{{diagnosesDOI}}'
+                diagnosesDOI = JSON.parse(diagnosesDOI)
+                var diagnosesDOS = '{{diagnosesDOS}}'
+                diagnosesDOS = JSON.parse(diagnosesDOS)
+
+                const table = document.getElementById('patient-info-table');
+
+                for (let i = 0; i < diagnosesValue.length; i++) {
+                  const tr = document.createElement('tr');
+
+                  const td1 = document.createElement('td');
+                  td1.textContent = 'Dx:';
+                  tr.appendChild(td1);
+
+                  const td2 = document.createElement('td');
+                  td2.textContent = diagnosesValue[i];
+                  tr.appendChild(td2);
+
+                  table.appendChild(tr);
+
+                  const trDOI = document.createElement('tr');
+
+                  const tdDOI1 = document.createElement('td');
+                  tdDOI1.textContent = 'DOI:';
+                  trDOI.appendChild(tdDOI1);
+
+                  const tdDOI2 = document.createElement('td');
+                  tdDOI2.textContent = diagnosesDOI[i] ?? '-';
+                  trDOI.appendChild(tdDOI2);
+
+                  table.appendChild(trDOI);
+
+                  const trDOS = document.createElement('tr');
+
+                  const tdDOS1 = document.createElement('td');
+                  tdDOS1.textContent = 'DOS:';
+                  trDOS.appendChild(tdDOS1);
+
+                  const tdDOS2 = document.createElement('td');
+                  tdDOS2.textContent = diagnosesDOS[i] ?? '-';
+                  trDOS.appendChild(tdDOS2);
+
+                  table.appendChild(trDOS);
+                }
+
+              </script>
+            </div>
+          </div>
+
+          <div style="
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #E6E9F0;
+            width: fit-content;
+            margin-inline: auto;
+            gap: 6px;
+            padding: 8px 24px;
+            border-radius: 4px;">
+            <span style="color: #003f95; font-weight: 700; font-size: 18px;">Active
+              Days:
+              {{activeDaysCount}} Days</span>
+            <span style="font-weight: 600; font-size: 14px; color: #003f95">{{activeDaysDateRange}}</span>
+          </div>
+
+          <div style="
+            display: flex;
+            grid-gap: 10px;
+            margin: 16px 10px;
+            border-radius: 12px;
+            gap: 16px;
+          ">
+            <div style="
+              padding: 18px;
+              display: flex;
+              flex-direction: column;
+              background-color: #fff;
+              border: 1px solid #e6e9f0;
+              border-radius: 4px;
+            ">
+              <div style="display: flex; flex-direction: column;  margin-bottom: 16px">
+                <span
+                  style="font-size: 16px; font-weight: 600; color: #001F63; margin-bottom: 6px;text-align: center;">Grip
+                  Strength
+                  Assessment
+                  History</span>
+                <span
+                  style="font-size: 14px; font-weight: 500; color: #003F95;text-align: center;">{{gripStrengthAssessmentDateRange}}</span>
+                <div style="display: flex;padding: 2px;
+              justify-content: space-between;
+              border-radius: 6px;
+              margin-top: 16px;
+              border: 1px solid #E6E9F0;
+              background: #fff;
+              ">
+                  <div style="display: flex;padding: 3px 10px;flex: 1;justify-content: center;">
+                    <span>W</span>
+                  </div>
+                  <div style="display: flex;padding: 3px 10px;background-color: #003F95;flex: 1;
+border-radius: 6px; justify-content: center;color: #fff;">
+                    <span>M</span>
+                  </div>
+                  <div style="display: flex;padding: 3px 10px;flex: 1;justify-content: center;">
+                    <span>3M</span>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div id="grip-hand"
+                  style="font-size: 10px; font-weight: 400;  color: #001F63;text-transform: capitalize; margin-bottom: 6px;">
+                  <span style="text-transform: capitalize;">{{gripStrengthHand}}</span>
+                  Hand Assessment
+                  <script>
+                    var gripHand = document.getElementById("grip-hand");
+                    var averageGripStrengthXOffset = parseInt('{{averageGripStrengthXOffset}}');
+                    var adjustedOffset = averageGripStrengthXOffset > 20 ? averageGripStrengthXOffset - 20 : averageGripStrengthXOffset;
+                    gripHand.style.left = adjustedOffset + "px";
+                  </script>
+                </div>
+                <div id="average-gsa" style="
+                  display: flex;
+                  flex-direction: column;
+                  padding: 4px 6px;
+                  border-radius: 4px;
+                  color: #fff;
+                  width: fit-content;
+                  background-color: #003f95;
+                ">
+                  <span style="font-size: 8px; margin-bottom: 4px;">
+                    <script>
+                      var averageGripStrengthXOffset = parseInt('{{averageGripStrengthXOffset}}');
+                      if (averageGripStrengthXOffset > 0) {
+                        document.write("Daily Average");
+                      } else {
+                        document.write("Average");
+                      }
+                    </script>
+                  </span>
+                  <div style="font-size: 10px;font-weight: 700; margin-bottom: 4px">{{gripStrengthAssessmentAverage}}
+                    <span id="'unit-placeholder'" style="font-size: 8px;font-weight: 400">{{unit}}</span>
+                  </div>
+                  <span style="font-size: 8px">{{gripStrengthAssessmentDateRange}}</span>
+                  <script>
+                    var averageGsa = document.getElementById("average-gsa");
+                    var averageGripStrengthXOffset = parseInt('{{averageGripStrengthXOffset}}');
+                    var adjustedOffset = averageGripStrengthXOffset;
+                    averageGsa.style.left = adjustedOffset + "px";
+                  </script>
+                </div>
+                <div style="width: 100%; margin-top: 8px;">
+                  <img style="width: 100%;" src="data:image/png;base64, {{assessmentChartImage}}" alt />
+                </div>
+              </div>
+            </div>
+            <div style="
+              display: flex;
+              flex-direction: column;
+              padding: 18px;
+              border: 1px solid #e6e9f0;
+              background-color: #fff;
+              border-radius: 4px;
+              ">
+              <div style="display: flex; flex-direction: column; margin-bottom: 16px;">
+                <span
+                  style="font-size: 16px; font-weight: 600; color: #001F63; margin-bottom: 6px;text-align: center;">Activity</span>
+                <span
+                  style="font-size: 14px; font-weight: 500; color: #003F95;text-align: center;">{{activityDateRange}}</span>
+                <div style="display: flex;padding: 2px;
+              justify-content: space-between;
+              border-radius: 6px;
+              margin-top: 16px;
+              border: 1px solid #E6E9F0;
+              background: #fff; ">
+                  <div style="display: flex;padding: 3px 10px;flex: 1;justify-content: center;">
+                    <span>W</span>
+                  </div>
+                  <div style="display: flex;padding: 3px 10px;background-color: #003F95;flex: 1;
+                    border-radius: 6px; justify-content: center;color: #fff;">
+                    <span>M</span>
+                  </div>
+                  <div style="display: flex;padding: 3px 10px;flex: 1;justify-content: center;">
+                    <span>3M</span>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div id="both-hand-activity"
+                  style="font-size: 10px; font-weight: 400; color: #001f63;  margin-bottom: 6px">
+                  <span>Both Hands Activity Summery</span>
+                  <script>
+                    var bothHandActivity = document.getElementById("both-hand-activity");
+                    var averageGripXOffset = parseInt('{{averageGripXOffset}}');
+                    var adjustedOffset = averageGripXOffset > 20 ? averageGripXOffset - 20 : averageGripXOffset;
+                    bothHandActivity.style.left = adjustedOffset + "px";
+                  </script>
+                </div>
+                <div style="
+                  display: flex;
+                  flex-direction: column;
+                  padding: 4px 6px;
+                  border-radius: 4px;
+                  color: #fff;
+                  width: fit-content;
+                  background-color: #003f95;
+                " id="average-g">
+                  <span style="font-size: 8px; margin-bottom:4px">
+                    <script>
+                      var averageGripXOffset = parseInt('{{averageGripXOffset}}');
+                      if (averageGripXOffset > 0) {
+                        document.write("Daily Average");
+                      } else {
+                        document.write("Average");
+                      }
+                    </script>
+                  </span>
+                  <div style="font-size: 10px;font-weight: 700; margin-bottom: 4px">{{activityAverage}}
+                    <span style="font-size: 8px;font-weight: 400">Grip</span>
+                  </div>
+                  <span style="font-size: 8px">{{activityDateRange}}</span>
+
+                  <script>
+                    var averageG = document.getElementById("average-g");
+                    var averageGripXOffset = parseInt('{{averageGripXOffset}}');
+                    var adjustedOffset = averageGripXOffset;
+                    averageG.style.left = adjustedOffset + "px";
+                  </script>
+                </div>
+                <div style="width: 100%; margin-top: 8px;">
+                  <img style="width: 100%;" src="data:image/png;base64, {{activityChartImage}}" alt />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- footer -->
+
+    <div class="header">
+      
+        <div style="position: absolute;display: flex;align-items: center;justify-content: space-between;width: 100%;padding: 12px 0;">
+          <div style="display: flex; flex-direction: column; margin-left: 13px;">
+            <span
+              style="font-size: 6px; font-weight: 700; margin-bottom:2px">Powered
+              by:</span>
+            <svg width="79" height="16" viewBox="0 0 79 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="78.2222" height="16" fill="url(#pattern0)" />
+              <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox"
+                  width="1" height="1">
+                  <use xlink:href="#image0_2566_20327"
+                    transform="matrix(0.0045045 0 0 0.022022 0 -0.0065065)" />
+                </pattern>
+                <image id="image0_2566_20327" width="222" height="46"
+                  xlink:href="data:image/png;base64,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" />
+              </defs>
+            </svg>
+            <span style="font-weight: 500; font-size: 11px">mysquegg.com</span>
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <span
+              style="font-size: 10px; color: #001f63; margin-bottom:2px">Clinic
+              Name</span>
+            <span
+              style="font-size: 12px; color: #003f95; font-weight: 600;">{{clinicName}}</span>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 10px; color: #001f63;margin-bottom:2px">Clinic
+              Phone Number</span>
+            <span
+              style="font-size: 12px; color: #003f95; font-weight: 600">{{clinicPhone}}</span>
+          </div>
+          <div style="display: flex; flex-direction: column;margin-right: 13px;">
+            <span style="font-size: 10px; color: #001f63;margin-bottom:2px">Clinic
+              Email Address</span>
+            <span
+              style="font-size: 12px; color: #003f95; font-weight: 600">{{clinicEmail}}</span>
+          </div>
+        </div>
+      <div style="width: 100%">
+        <svg width="100%" height="60" viewBox="0 0 100% 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="60" fill="#E6E9F0" />
+        </svg>
+      </div>
+    </div>
+
+
+    
+    
+
+    
+  </div>
+
+
+</body>
+
+</html>

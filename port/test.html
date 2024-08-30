@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bubble Popup Example</title>
+    <style>
+.pop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.pop-effect {
+  padding: 20px 40px;
+  font-size: 24px;
+  background-color: #ff4081;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Initial scale */
+  transform: scale(1) translateX(10px);
+  /* animation: popAnimation 0.5s ease backwards; */
+  /* Animation */
+  opacity: 0;
+  
+}
+.pop-effect.clicked{
+  /* Trigger the animation on hover */
+  animation: popAnimation 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+}
+
+/* Keyframes for the popping animation */
+@keyframes popAnimation {
+  0% {
+    transform: scale(1) translateY(10px);
+    opacity:0.4;
+    scale:0%;
+  }
+  25%{
+    scale:100%;
+    transform: scale(1.29); /* Scale up */
+  }
+  50% {
+    transform: scale(1); /* Scale up */
+  }
+  75% {
+    transform: scale(1.2); /* Scale back down */
+  }  
+  100% {
+    transform: scale(1) translateY(0px); /* Scale back down */
+    opacity:1;
+    
+  }
+}
+#mousePosition {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="pop-container">
+       
+        <div class="pop-effect" id="hovbut">Hover Over Me!</div>
+      
+        <p id="p_hover">Hover Me</p>
+
+      </div>
+
+
+      <div id="mousePosition">Move your mouse around!</div>
+<!-- Chat Icon Trigger -->
+<div class="chat-icon" id="chatTrigger">
+    💬
+</div>
+
+<!-- Chat Bubble Popup -->
+<div id="chatBubble" class="chat-bubble-popup">
+    <div class="chat-content">
+        <span id="closeChat" class="close-chat">&times;</span>
+        <p>Hello! How can we help you?</p>
+    </div>
+</div>
+
+<script>
+    var button = document.getElementById('p_hover');
+    var buttonHover = document.getElementById('hovbut');
+
+// Listen for mouse enter event
+button.addEventListener('mouseenter', function() {
+    buttonHover.classList.toggle('clicked');
+});
+
+// Listen for mouse leave event
+button.addEventListener('mouseleave', function() {
+    buttonHover.classList.toggle('clicked');
+});
+
+
+// Select the element where you want to display the mouse coordinates
+const positionDisplay = document.getElementById('mousePosition');
+
+// Add an event listener to the entire document for the mousemove event
+document.addEventListener('mousemove', function(event) {
+  // Get the mouse X and Y positions from the event object
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  // Display the mouse coordinates in the selected element
+  positionDisplay.textContent = `Mouse Position - X: ${mouseX}, Y: ${mouseY}`;
+});
+
+
+
+    // script.js
+document.getElementById('chatTrigger').onclick = function() {
+    var chatBubble = document.getElementById('chatBubble');
+    chatBubble.style.display = chatBubble.style.display === 'block' ? 'none' : 'block';
+}
+
+document.getElementById('closeChat').onclick = function() {
+    document.getElementById('chatBubble').style.display = 'none';
+}
+</script>
+</body>
+</html>

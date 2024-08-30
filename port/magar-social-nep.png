@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English to Nepali Converter</title>
+<script>
+function convertToNepali() {
+    var englishInput = document.getElementById("englishInput").value;
+    
+    // Example simplistic conversion logic for demonstration
+    var nepaliOutput = englishInput.replace(/a/g, "अ").replace(/b/g, "ब").replace(/c/g, "क");
+    // Add more transliteration rules here
+    
+    document.getElementById("nepaliOutput").value = nepaliOutput;
+}
+</script>
+</head>
+<body>
+
+<h2>English to Nepali Converter</h2>
+
+<label for="englishInput">English Input:</label><br>
+<input type="text" id="englishInput" name="englishInput" oninput="convertToNepali()"><br>
+
+<label for="nepaliOutput">Nepali Output (Unicode):</label><br>
+<textarea id="nepaliOutput" name="nepaliOutput" rows="4" cols="50" readonly></textarea><br>
+
+</body>
+</html>
