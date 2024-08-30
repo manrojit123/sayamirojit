@@ -1,71 +1,575 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Navigation Routes</title>
-  <style>
-    body { font-family: Arial, sans-serif; }
-    nav a { margin: 0 10px; cursor: pointer; }
-    section { margin-top: 20px; }
-  </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KR6HQMGZ');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SayamiRojit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css?v=1">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2556345873449569"
+     crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
+
 <body>
-  <nav>
-    <a href="/radio">Radio</a>
-    <a href="/radio/1">Radio 1</a>
-    <a href="/radio/2">Radio 2</a>
-    <a href="/radio/3">Radio 3</a>
-  </nav>
-  <section id="content"></section>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KR6HQMGZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header>
+        <img src="img/grainy.png" style="display:none">
 
-  <script>
-    function loadContent(path) {
-      let url;
-      switch (path) {
-        case '/radio':
-          url = 'index.html';
-          break;
-        case '/radio/1':
-          url = '1.html';
-          break;
-        case '/radio/2':
-          url = '2.html';
-          break;
-        case '/radio/3':
-          url = '3.html';
-          break;
-        default:
-          url = '404.html';
-          break;
-      }
-      fetch(url)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('content').innerHTML = data;
-        })
-        .catch(error => {
-          document.getElementById('content').innerHTML = '<h1>404</h1><p>Page not found.</p>';
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.svg" alt="" style="height:40px;">
+                    <img src="img/ipcam.svg" style="display:none;">
+                </a>
+
+                <div id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works">Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <style>
+
+    </style>
+    <div class="mobileNaviagation">
+        <ul>
+            <li>
+                <a href="index.html"><img src="img/logo.svg" alt="" style="height:40px;"></a>
+            </li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#services">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1">
+            <div class="outline_text d-none d-lg-block">
+                Portfolio
+            </div>
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-12">
+                        <div class="slider_text text-center">
+                            <span>Hello,</span>
+                            <h3>
+                                I am <span class="underlineNoWrap">Rojit Sayami</span>, currently working as Web Designer at <a href="https://nepalipatro.com.np/?utm_source=nepali_patro_new&utm_medium=mobile_banner_new&utm_campaign=FEDAN_new" class="doNotWrap" target="_blank">Nepali Patro, Nepal</a> while also taking on freelance
+                                projects that excites me.
+                            </h3>
+
+                            <a href="mailto: sayami.rojit@gmail.com">Start Project</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <div id="works"></div>
+    <div class="text-center filters">
+        <button class="btn btn-default filter-button" data-filter="all">All</button>
+        <button class="btn btn-default filter-button" data-filter="frontend">Front End</button>
+        <!-- <button class="btn btn-default filter-button" data-filter="wordpress">Wordpress</button> -->
+        <button class="btn btn-default filter-button" data-filter="branding">Branding</button>
+        <button class="btn btn-default filter-button" data-filter="uiux">UI/UX</button>
+    </div>
+    <div class="container-fluid">
+        <div class="portfolio row">
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all uiux">
+                <div class="card">
+                    <img src="img/portfolio/15.png" />
+                    <div class="containers">
+                        <h4><b>iGIF Kids</b><span class="float-right">UI + Graphic</span></h4>
+                        <h5>Amojee.Inc</h5>
+                        <p>Interactive GIFs for Kids</p>
+                    </div>
+                    <div class="d-flex twoBtn">
+                        <a class="btnGreen" href="https://play.google.com/store/apps/details?id=com.amojee.kids" target="_blank">Android</a>
+                        <a class="btnGreen" href="https://apps.apple.com/us/app/igif-kids/id1453195434" target="_blank">iOS</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all uiux">
+                <div class="card">
+
+                    <img src="img/portfolio/14.png" />
+                    <div class="containers">
+                        <h4><b>iGIF </b><span class="float-right">UI + Graphic</span>
+                        </h4>
+                        <h5>Amojee.Inc</h5>
+                        <p>GIFs are now interactive!</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="https://apps.apple.com/np/app/igif-funny-interactive-gifs/id1347549942" target="_blank">iOS</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all uiux">
+                <div class="card">
+
+                    <img src="img/portfolio/16.png" />
+                    <div class="containers">
+                        <h4><b>Gíkee </b><span class="float-right">UI + Graphic</span></h4>
+                        <h5>Amojee.Inc</h5>
+                        <p>Byte-sized Tech News using iGIF</p>
+                    </div>
+                    <div class="d-flex twoBtn">
+                        <a class="btnGreen" href="https://play.google.com/store/apps/containers?id=com.amojee.igifnews" target="_blank">Android</a>
+                        <a class="btnGreen" href=" https://apps.apple.com/gy/app/g%C3%ADkee/id1463918795" target="_blank">iOS</a>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all uiux">
+                <div class="card">
+
+                    <img src="img/portfolio/17.png" />
+                    <div class="containers">
+                        <h4><b>Shoof</b><span class="float-right">UI + Graphic</span></h4>
+                        <h5>Vodafone Qatar</h5>
+                        <p>Entertainment App for Qatar</p>
+                    </div>
+                    <div class="d-flex twoBtn">
+                        <a class="btnGreen" href="https://play.google.com/store/apps/details?id=com.osolutions.otv&hl=en&gl=US" target="_blank">Android</a>
+                        <a class="btnGreen" href="https://apps.apple.com/us/app/shoof/id1342541769?ls=1" target="_blank">iOS</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all branding">
+                <div class="card">
+                    <img src="img/portfolio/7.png" />
+                    <div class="containers">
+                        <h4><b>Gíkee</b><span class="float-right">Logo</span></h4>
+                        <h5>Amojee.Inc</h5>
+                        <p>Logo Design for Gíkee</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="https://play.google.com/store/apps/containers?id=com.amojee.igifnews" target="_blank">Visit</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all branding">
+                <div class="card">
+
+                    <img src="img/portfolio/8.png" />
+                    <div class="containers">
+                        <h4><b>iGIF Kids</b><span class="float-right">Logo</span></h4>
+                        <h5>Amojee.Inc</h5>
+                        <p>Logo Design for iGIF Kids</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen disabled" href="#m" target="_blank" onclick="event.preventDefault();">No Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all branding">
+                <div class="card">
+
+                    <img src="img/portfolio/9.png" />
+                    <div class="containers">
+                        <h4><b>ZeroneBits</b><span class="float-right">Logo</span></h4>
+                        <h5>ZeroneBits Pvt. Ltd</h5>
+                        <p>Logo Design for ZeroneBits</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="https://www.zeronebits.com" target="_blank">Visit</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all branding">
+                <div class="card">
+
+                    <img src="img/portfolio/10.png" />
+                    <div class="containers">
+                        <h4><b>ZeroneTracker</b><span class="float-right">Logo</span></h4>
+                        <h5>ZeroneBits Pvt. Ltd</h5>
+                        <p>Logo for Tracking app</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen disabled" href="#" target="_blank" onclick="event.preventDefault();">No Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all branding">
+                <div class="card">
+
+                    <img src="img/portfolio/11.png" />
+                    <div class="containers">
+                        <h4><b>EyeFinity IT</b><span class="float-right">Logo</span></h4>
+                        <h5>Realm Infotech</h5>
+                        <p>Sister Company of Realm Infotech</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen disabled" href="#" target="_blank" onclick="event.preventDefault();">No Link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all branding">
+                <div class="card">
+
+                    <img src="img/portfolio/12.png" />
+                    <div class="containers">
+                        <h4><b>Realm Infotech</b><span class="float-right">Logo</span></h4>
+                        <h5>Realm Infotech</h5>
+                        <p>Logo for IT Institute</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="https://www.realminfotek.com/" target="_blank">Visit</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all branding">
+            <div class="card">
+
+                <img src="img/portfolio/13.png" />
+                <div class="containers">
+                    <h4><b>Project: Sajiload [Logo]</b><span class="float-right">UI + Graphic</span></h4>
+                    <h5>Front-End</h5>
+                    <p>Website for Lasse Olssen, Swedish Photographer</p>
+                </div>
+                <div class="d-flex oneBtn">
+                    <a class="btnGreen" href="#" target="_blank">Visit</a>
+                </div>
+            </div>
+        </div> -->
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all frontend">
+                <div class="card">
+                    <img src="img/portfolio/1.png" alt="Avatar" style="width:100%">
+                    <div class="containers">
+                        <h4><b>Lasse Olsson</b><span class="float-right">Front End</span></h4>
+                        <h5>Front-End</h5>
+                        <p>Website for Lasse Olssen, Swedish Photographer</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="https://www.lasseolsson.com" target="_blank">Website</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-xs-12 col-md-6 col-lg-4 cardWrapper filter all frontend">
+                <div class="card">
+
+                    <img src="img/portfolio/2.png" />
+                    <div class="containers">
+                        <h4><b>Amojee Website</b><span class="float-right">Front End</span></h4>
+                        <h5>Front-End</h5>
+                        <p>Portfolio Website for Amojee</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="https://www.amojee.com" target="_blank">Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all frontend">
+                <div class="card">
+
+                    <img src="img/portfolio/3.png" />
+                    <div class="containers">
+                        <h4><b>CG Corp Global</b><span class="float-right">Front End</span></h4>
+                        <h5>Chaudhary Group</h5>
+                        <p>Chaudhary Group's (Multi-national Company) Website</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="http://www.cgcorpglobal.com" target="_blank">Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all frontend wordpress">
+            <div class="card">
+
+                <img src="img/portfolio/4.png" />
+                <div class="containers">
+                    <h4><b>Project: PDRCUS [Front-End + WordPress]</b><span class="float-right">UI + Graphic</span></h4>
+                    <h5>Front-End</h5>
+                    <p>Website for Lasse Olssen, Swedish Photographer</p>
+                </div>
+                <div class="d-flex oneBtn">
+                    <a class="btnGreen" href="https://www.pdrcus.org" target="_blank">Visit</a>
+                </div>
+            </div>
+        </div> -->
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all frontend">
+                <div class="card">
+
+                    <img src="img/portfolio/6-1.png" />
+                    <div class="containers">
+                        <h4><b>FE+ Business Solution</b><span class="float-right">Front End</span></h4>
+                        <h5>Front-End</h5>
+                        <p>IT Solutions and Excel Training Company</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="http://feplus.com.np/" target="_blank">Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all frontend">
+            <div class="card">
+
+                <img src="img/portfolio/6.png" />
+                <div class="containers">
+                    <h4><b>Project: TMC Nepal [Front-End]</b><span class="float-right">UI + Graphic</span></h4>
+                    <h5>Front-End</h5>
+                    <p>Website for Lasse Olssen, Swedish Photographer</p>
+                </div>
+                <div class="d-flex oneBtn">
+                    <a class="btnGreen" href="http://tmc-nepal.com/" target="_blank">Visit</a>
+                </div>
+            </div>
+        </div> -->
+
+            <div class="col-xs-12 col-md-6 col-lg-4 cardWrapper filter all frontend">
+                <div class="card">
+
+                    <img src="img/portfolio/5.png" />
+                    <div class="containers">
+                        <h4><b> ZeroneBits</b><span class="float-right">Front End</span></h4>
+                        <h5>ZeroneBits Pvt. Ltd.</h5>
+                        <p>IT Comapny Website</p>
+                    </div>
+                    <div class="d-flex oneBtn">
+                        <a class="btnGreen" href="https://www.zeronebits.com/" target="_blank">Website</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div style="clear:both"></div>
+
+        </div>
+    </div>
+
+
+    <!-- service_area  -->
+    <div id="services"></div>
+    <div class="service_area">
+        <div class="outline_text white d-none d-lg-block">
+            Services
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="single_service">
+                        <div class="icon">
+                            <img src="img/svg_icon/1.svg" alt="">
+                        </div>
+                        <h3>Front-End / WordPress</h3>
+                        <p>Have been involved with Front-End of more than 5 websites and 3 WordPress developement. <br><br>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="single_service">
+                        <div class="icon">
+                            <img src="img/svg_icon/2.svg" alt="">
+                        </div>
+                        <h3>UI Design</h3>
+                        <p>Involvement in Mobile UI Design and website designs for Amojee, WINepal, INGOs. <br><br>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="single_service">
+                        <div class="icon">
+                            <img src="img/svg_icon/3.svg" alt="">
+                        </div>
+                        <h3>Branding & Others</h3>
+                        <p>Experience with more than 8 logo design and various graphics design, menu design and so on.
+                            <br><br>
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ service_area  -->
+
+    <!-- discuss_projects_start  -->
+    <div id="contact"></div>
+    <div class="discuss_projects">
+        <div class="outline_text white project d-none d-lg-block">
+            Let’s talk
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="project_text text-center">
+                        <h3>Let’s start your project with me</h3>
+                        <div class="d-flex">
+                            <a class="btnGreen" href="mailto: sayami.rojit@gmail.com">Start Project</a>
+                            <br>  
+                            <a class="btnGreen" href="viber://pa?chatURI=nepalipatro">Message Me</a>
+                            <br>
+                            <a class="btnGreen" href="viber://chat?number=9823506636">Message Me 2</a>
+                            <br>
+                            <a class="btnGreen" href="viber://pa/info?uri=<nepalipatro>">View Info</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- discuss_projects_end  -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+
+
+    <!--contact js-->
+
+
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            // $('a.nav-link').bind('click', function(event) {
+            //     var $anchor = $(this);
+            //     $('html, body').stop().animate({
+            //         scrollTop: $($anchor.attr('href')).offset().top
+            //     }, 1500, 'easeInOutExpo');
+            //     event.preventDefault();
+            // });
+
+
+
+            $(".filter-button").click(function() {
+                var value = $(this).attr('data-filter');
+
+                if (value == "all") {
+                    //$('.filter').removeClass('hidden');
+                    $('.filter').show('1000');
+                } else {
+                    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.' + value).hide('3000');
+                    $('.filter').filter('.' + value).show('3000');
+
+                }
+            });
+
+            $(".filter-button").removeClass("active");
+
+
+            $(this).addClass("active");
+
         });
-    }
 
-    function handleRoute() {
-      const path = window.location.pathname;
-      loadContent(path);
-    }
+        $(".filters .btn").click(function() {
+            $(".filter-button").removeClass("active");
+            $(this).addClass("active");
 
-    window.addEventListener('popstate', handleRoute);
+        });
 
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', event => {
-        event.preventDefault();
-        const path = event.target.getAttribute('href');
-        window.history.pushState({}, path, path);
-        loadContent(path);
-      });
-    });
+        function page_scroll() {
 
-    window.addEventListener('load', handleRoute);
-  </script>
+        }
+        // $(window).scroll(collapseNavbar);
+    </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDz69DSsps1LYGpuqcI-SeyeCnVe29f89Q",
+        authDomain: "sayamirojit-46b71.firebaseapp.com",
+        projectId: "sayamirojit-46b71",
+        storageBucket: "sayamirojit-46b71.appspot.com",
+        messagingSenderId: "291866847231",
+        appId: "1:291866847231:web:5a2426ef2c6ced561a69ca",
+        measurementId: "G-M78ZC7ZRJW"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
 </body>
+
 </html>

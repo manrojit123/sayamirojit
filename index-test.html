@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Navigation Routes</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    nav a { margin: 0 10px; cursor: pointer; }
+    section { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/radio">Radio</a>
+    <a href="/radio/1">Radio 1</a>
+    <a href="/radio/2">Radio 2</a>
+    <a href="/radio/3">Radio 3</a>
+  </nav>
+  <section id="content"></section>
+
+  <script>
+    function loadContent(path) {
+      let url;
+      switch (path) {
+        case '/radio':
+          url = 'index.html';
+          break;
+        case '/radio/1':
+          url = '1.html';
+          break;
+        case '/radio/2':
+          url = '2.html';
+          break;
+        case '/radio/3':
+          url = '3.html';
+          break;
+        default:
+          url = '404.html';
+          break;
+      }
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => {
+          document.getElementById('content').innerHTML = '<h1>404</h1><p>Page not found.</p>';
+        });
+    }
+
+    function handleRoute() {
+      const path = window.location.pathname;
+      loadContent(path);
+    }
+
+    window.addEventListener('popstate', handleRoute);
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        const path = event.target.getAttribute('href');
+        window.history.pushState({}, path, path);
+        loadContent(path);
+      });
+    });
+
+    window.addEventListener('load', handleRoute);
+  </script>
+</body>
+</html>
